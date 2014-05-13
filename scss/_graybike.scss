@@ -1,12 +1,11 @@
 $title-size: rem-calc(53);
-
 //Header Styles
 .site-header {
   margin-top: rem-calc(30);
   margin-bottom: rem-calc(20);
   .site-title{
-    
-    font-weight: 600;
+    font-family: "Open Sans Condensed", "Open Sans", sans-serif;
+    font-weight: 700;
     font-size: $title-size;
     text-align: center;
     margin-bottom: rem-calc(20);
@@ -21,6 +20,7 @@ $title-size: rem-calc(53);
 .taglines {
   text-align: center;
   margin: rem-calc(40) 0;
+  @include text-shadow(0px 2px 0px rgba(255, 255, 255, 1));
 }
 
 .nav-link {
@@ -37,5 +37,5 @@ $title-size: rem-calc(53);
 //Index Styles
 .section-header {
   text-align: center;
-   @include text-shadow(0px 2px 0px rgba(255, 255, 255, 1));
+  @include text-shadow(0px 2px 0px rgba(255, 255, 255, 1));
 }
