@@ -1,20 +1,95 @@
 ---
 layout: default
+title: HOME
 ---
-
-<div class="home">
-
-<!--   <h1>Posts</h1>
-
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
- -->
+<div class="row">
+    <div class="small-12 columns taglines">
+        <h2>
+        I design & build <span id="services">custom software</span>.
+        </h2>
+    </div>
 </div>
+<div class="row" id="work">
+    <div class="small-12 columns">
+        <h3 class="section-header">WORK</h3>
+    </div>
+</div>
+<div class="row" id="about">
+    <div class="small-12 columns">
+        <h3 class="section-header">ABOUT</h3>
+    </div>
+    <div class="small-12 columns">
+        <p>Gray Bike is a one-person software consultancy ran by me, Pavan Trikutam. I'm an entrepreneur, developer, and designer living in San Francisco. I help small businesses, non-profits, and startups use technology to solve their business problems.</p>
+        <p>In addition to helping folks build technology, I am co-founder and chief technologist of <a href="http://www.truecurrency.com">True Currency</a>, a site which helps travelers save money when shopping abroad. I also mentor students learning front-end web development at <a href="http://www.thinkful.com/">Thinkful</a>.</p>
+        <p>Interested in working together? <a href="/#hire">Let's Talk.</a></p>
+    </div>
+    <div class="small-12 columns">
+        <h2 class="section-header"><small>SERVICES OFFERED</small></h2>
+    </div>
+</div>
+<div class="row" id="hire">
+    <div class="small-12 columns">
+        <h3 class="section-header">HIRE ME</h3>
+    </div>
+    <div class="small-12 medium-4 columns">
+        <p>Got a cool project? I'd love to hear about it! Send me a little info and we'll get started!</p>
+    </div>
+    <div class="small-12 medium-8 columns">
+        <form>
+            <div class="row">
+                <div class="large-12 columns">
+                    <label>What's your name/company?
+                        <input type="text" placeholder="Name/Company" />
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-12 columns">
+                    <label>What's your email?
+                        <input type="text" placeholder="Email" />
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-12 columns">
+                    <label>What's your budget?
+                        <select>
+                            <option value="3to5">$3,000 - $5,000</option>
+                            <option value="5to10">$5,000 - $10,000</option>
+                            <option value="10to20">$10,000 - $12,000</option>
+                            <option value="20plus">$20,000+</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-12 columns">
+                    <label>Tell me about your project!
+                        <textarea placeholder="Project description"></textarea>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+              <div class="large-12 columns">
+                <button type="submit">Submit</button>
+              </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+//Code to Rotate Services.
+// var services = ["android apps", "websites", "eCommerce storefronts", "custom software"];
+// $(document).ready(function() {
+//   var i = 0;
+//   window.setInterval(function() {
+        //     $("#services span:first-child").slideUp().hide();
+        //     $("#services span:nth-child(2)").html(services[i]).show().slideUp();
+        //     // console.log(services[i]);
+        //     i = i + 1;
+        //     if (i >= services.length) {
+        //       i = 0;
+        //     };
+//   }, 1500);
+// });
+</script>

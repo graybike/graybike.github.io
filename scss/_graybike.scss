@@ -1,0 +1,41 @@
+$title-size: rem-calc(53);
+
+//Header Styles
+.site-header {
+  margin-top: rem-calc(30);
+  margin-bottom: rem-calc(20);
+  .site-title{
+    
+    font-weight: 600;
+    font-size: $title-size;
+    text-align: center;
+    margin-bottom: rem-calc(20);
+    a, a:hover {
+      border-top: rem-calc(10) solid $gray_b1;
+      border-bottom: rem-calc(10) solid $gray_b1;
+      color: $gray_b1;
+    }
+  }
+}
+
+.taglines {
+  text-align: center;
+  margin: rem-calc(40) 0;
+}
+
+.nav-link {
+  text-align: center;
+  // margin-bottom: rem-calc(10);
+}
+
+// @media #{$medium-up} { 
+//   .nav-link {
+//       line-height: $title-size * $header-line-height;
+//   }
+// }
+
+//Index Styles
+.section-header {
+  text-align: center;
+   @include text-shadow(0px 2px 0px rgba(255, 255, 255, 1));
+}
