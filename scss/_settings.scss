@@ -16,7 +16,7 @@
 //COLORS
 $gray: #767676;
 // $gray_b1: #a3a3a3;
-$gray_b1: $gray;
+$gray_b1: #A5A5A5;
 
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
@@ -130,7 +130,7 @@ $primary-color: $gray;
 // $header-font-family: $body-font-family;
 $header-font-weight: 400;
 // $header-font-style: normal;
-$header-font-color: $gray_b1;
+$header-font-color: $gray;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
@@ -157,7 +157,7 @@ $header-font-color: $gray_b1;
 
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
-// $paragraph-font-weight: normal;
+$paragraph-font-weight: 300;
 // $paragraph-font-size: 1rem;
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: rem-calc(20);

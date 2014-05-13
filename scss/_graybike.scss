@@ -12,7 +12,7 @@ $title-size: rem-calc(53);
     a, a:hover {
       border-top: rem-calc(10) solid $gray_b1;
       border-bottom: rem-calc(10) solid $gray_b1;
-      color: $gray_b1;
+      color: $gray;
     }
   }
 }
@@ -26,6 +26,16 @@ $title-size: rem-calc(53);
 .nav-link {
   text-align: center;
   // margin-bottom: rem-calc(10);
+  .hire {
+    border: 3px solid $gray;
+    padding: 5px;
+  }
+
+  .hire:hover {
+    border: 3px solid $gray;
+    color: #fff;
+    background: $gray;
+  }
 }
 
 // @media #{$medium-up} { 
