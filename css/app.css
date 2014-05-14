@@ -7975,14 +7975,35 @@ a:hover {
 }
 /* line 120, ../scss/_graybike.scss */
 .home .section.blue {
+  max-width: 100%;
   background: #00688a;
   color: #fff;
 }
-/* line 123, ../scss/_graybike.scss */
+/* line 124, ../scss/_graybike.scss */
 .home .section.blue h3 {
   color: #fff;
 }
-/* line 126, ../scss/_graybike.scss */
+/* line 127, ../scss/_graybike.scss */
 .home .section.blue a:hover {
   color: #fff;
+}
+/* line 130, ../scss/_graybike.scss */
+.home .section.blue label {
+  color: #fff;
+}
+/* line 133, ../scss/_graybike.scss */
+.home .section.blue .row {
+  max-width: 62.5rem;
+  margin: auto;
+}
+/* line 140, ../scss/_graybike.scss */
+.home #hire button {
+  border: 2px solid #fff;
+  background-color: #00688a;
+  color: #fff;
+}
+/* line 144, ../scss/_graybike.scss */
+.home #hire button:hover {
+  background: #fff;
+  color: #00688a;
 }

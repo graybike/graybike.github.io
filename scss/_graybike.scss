@@ -118,6 +118,7 @@ a:hover {
   }
 
   .section.blue {
+    max-width: 100%;
     background: $blue;
     color: #fff;
     h3 {
@@ -125,6 +126,26 @@ a:hover {
     }
     a:hover {
       color: #fff;
+    }
+    label {
+      color: #fff;
+    }
+    .row {
+      max-width: rem-calc(1000);
+      margin: auto;
+    }
+  }
+
+  #hire {
+    button {
+      border: 2px solid #fff;
+      background-color: $blue;  
+      color: #fff;
+      &:hover {
+        background: #fff;
+        color: $blue;  
+      }
+      
     }
   }
 
