@@ -7934,50 +7934,55 @@ a:hover {
 }
 
 /* line 77, ../scss/_graybike.scss */
+.home .tagline-container {
+  max-width: 100%;
+}
+/* line 81, ../scss/_graybike.scss */
 .home .taglines {
   text-align: center;
   margin: 2.5rem 0;
+  padding: 1.875rem 0;
 }
-/* line 81, ../scss/_graybike.scss */
+/* line 85, ../scss/_graybike.scss */
 .home .taglines h2 {
   color: #fff;
 }
-/* line 94, ../scss/_graybike.scss */
+/* line 93, ../scss/_graybike.scss */
 .home .section-header {
   text-align: center;
   font-weight: 600;
   margin-bottom: 1.875rem;
 }
-/* line 102, ../scss/_graybike.scss */
+/* line 99, ../scss/_graybike.scss */
 .home .section-subheader {
   text-align: center;
   font-weight: 400;
   color: #a5a5a5;
 }
-/* line 111, ../scss/_graybike.scss */
+/* line 107, ../scss/_graybike.scss */
 .home .project {
   margin-bottom: 0.9375rem;
 }
-/* line 112, ../scss/_graybike.scss */
+/* line 108, ../scss/_graybike.scss */
 .home .project img {
   border: 2px solid #767676;
 }
-/* line 122, ../scss/_graybike.scss */
+/* line 114, ../scss/_graybike.scss */
 .home .row.section {
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
   padding: 5px;
 }
-/* line 128, ../scss/_graybike.scss */
+/* line 120, ../scss/_graybike.scss */
 .home .section.blue {
   background: #00688a;
   color: #fff;
 }
-/* line 131, ../scss/_graybike.scss */
+/* line 123, ../scss/_graybike.scss */
 .home .section.blue h3 {
   color: #fff;
 }
-/* line 134, ../scss/_graybike.scss */
+/* line 126, ../scss/_graybike.scss */
 .home .section.blue a:hover {
   color: #fff;
 }

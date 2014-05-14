@@ -74,34 +74,30 @@ a:hover {
 
 
 .home {
+  .tagline-container {
+    max-width: 100%;
+
+  }
   .taglines {
     text-align: center;
     margin: rem-calc(40) 0;
-    // @include text-shadow(0px 1px 0px $gray_b2);
+    padding: rem-calc(30) 0;
     h2 {
+      // font-size: rem-calc(37);
       color: #fff;
     }
   }
 
 
-  // @media #{$medium-up} { 
-  //   .nav-link {
-  //       line-height: $title-size * $header-line-height;
-  //   }
-  // }
-
   //Index Styles
   .section-header {
     text-align: center;
-    // color: $blue;
-    // @include text-shadow(0px 1px 0px $gray_b2);
     font-weight: 600;
     margin-bottom: rem-calc(30);
   }
 
   .section-subheader {
     text-align: center;
-    // @include text-shadow(0px 1px 0px $gray_b2);
     font-weight: 400;
     color: $gray_b1;
   }
@@ -111,10 +107,6 @@ a:hover {
   .project {
     img {
       border: 2px solid $gray;
-      // opacity: 0.6;
-      // &:hover {
-      //   opacity: 1;
-      // }
     }
     margin-bottom: rem-calc(15);
   }
@@ -136,16 +128,4 @@ a:hover {
     }
   }
 
-
-  //about styles 
-  // .client-logo {
-  //   @include filter(grayscale(100%));
-  //   @include transition-duration(0.3s);
-  //   @include transition-timing-function(ease-out);
-  //   &:hover {
-  //     @include transition-duration(0.3s);
-  //     @include transition-timing-function(ease-out);
-  //     @include filter(grayscale(0%));
-  //   }
-  // }
 }
