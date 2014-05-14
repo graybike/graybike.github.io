@@ -17,6 +17,11 @@
 $gray: #767676;
 // $gray_b1: #a3a3a3;
 $gray_b1: #A5A5A5;
+$gray_b2: lighten($gray, 40%);
+
+$blue: #07baf2;
+
+$orange: #f09246;
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
@@ -45,7 +50,7 @@ $gray_b1: #A5A5A5;
 // Global
 
 // We use these to control various global styles
-$body-bg: #f0f0f0;
+// $body-bg: #f0f0f0;
 $body-font-color: $gray;
 $body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $body-font-weight: 300;

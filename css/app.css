@@ -60,7 +60,7 @@ body {
 
 /* line 309, ../bower_components/foundation/scss/foundation/components/_global.scss */
 body {
-  background: #f0f0f0;
+  background: white;
   color: #767676;
   padding: 0;
   margin: 0;
@@ -7849,12 +7849,17 @@ a:hover {
   border-bottom: none;
 }
 
-/* line 15, ../scss/_graybike.scss */
+/* line 14, ../scss/_graybike.scss */
+.orange {
+  color: #f09246;
+}
+
+/* line 19, ../scss/_graybike.scss */
 .site-header {
   margin-top: 1.875rem;
   margin-bottom: 1.25rem;
 }
-/* line 19, ../scss/_graybike.scss */
+/* line 23, ../scss/_graybike.scss */
 .site-header .site-title {
   font-family: "Open Sans Condensed", "Open Sans", sans-serif;
   font-weight: 700;
@@ -7865,44 +7870,44 @@ a:hover {
   height: 93px;
   overflow: hidden;
 }
-/* line 28, ../scss/_graybike.scss */
+/* line 32, ../scss/_graybike.scss */
 .site-header .site-title img {
   padding-top: 10px;
 }
-/* line 31, ../scss/_graybike.scss */
+/* line 35, ../scss/_graybike.scss */
 .site-header .site-title div {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-/* line 34, ../scss/_graybike.scss */
+/* line 38, ../scss/_graybike.scss */
 .site-header .site-title a, .site-header .site-title a:hover {
   border: none;
 }
-/* line 37, ../scss/_graybike.scss */
+/* line 41, ../scss/_graybike.scss */
 .site-header .site-title:hover div {
   margin-top: -93px;
 }
-/* line 40, ../scss/_graybike.scss */
+/* line 44, ../scss/_graybike.scss */
 .site-header .site-title span, .site-header .site-title span:hover {
   border-top: 0.625rem solid #a5a5a5;
   border-bottom: 0.625rem solid #a5a5a5;
   color: #767676;
 }
 
-/* line 49, ../scss/_graybike.scss */
+/* line 53, ../scss/_graybike.scss */
 .nav-link {
   text-align: center;
 }
-/* line 51, ../scss/_graybike.scss */
+/* line 55, ../scss/_graybike.scss */
 .nav-link a {
   border: none;
 }
-/* line 54, ../scss/_graybike.scss */
+/* line 58, ../scss/_graybike.scss */
 .nav-link .hire {
-  color: #767676;
-  border: 3px solid #767676;
+  color: #f09246;
+  border: 3px solid #f09246;
   padding: 5px;
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
@@ -7913,11 +7918,11 @@ a:hover {
   -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-/* line 62, ../scss/_graybike.scss */
+/* line 66, ../scss/_graybike.scss */
 .nav-link .hire:hover {
-  border: 3px solid #767676;
+  border: 3px solid #f09246;
   color: #fff;
-  background: #767676;
+  background: #f09246;
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
@@ -7928,45 +7933,44 @@ a:hover {
   transition-timing-function: ease-out;
 }
 
-/* line 73, ../scss/_graybike.scss */
+/* line 77, ../scss/_graybike.scss */
 .home .taglines {
   text-align: center;
   margin: 2.5rem 0;
-  text-shadow: 0px 2px 0px white;
+  text-shadow: 0px 1px 0px gainsboro;
 }
-/* line 87, ../scss/_graybike.scss */
+/* line 81, ../scss/_graybike.scss */
+.home .taglines h2 {
+  color: #f09246;
+}
+/* line 94, ../scss/_graybike.scss */
 .home .section-header {
   text-align: center;
-  text-shadow: 0px 2px 0px white;
+  text-shadow: 0px 1px 0px gainsboro;
   font-weight: 600;
   margin-bottom: 1.875rem;
 }
-/* line 94, ../scss/_graybike.scss */
+/* line 101, ../scss/_graybike.scss */
 .home .section-subheader {
   text-align: center;
-  text-shadow: 0px 2px 0px white;
+  text-shadow: 0px 1px 0px gainsboro;
   font-weight: 600;
   color: #a5a5a5;
 }
-/* line 103, ../scss/_graybike.scss */
+/* line 110, ../scss/_graybike.scss */
 .home .project {
   margin-bottom: 0.9375rem;
 }
-/* line 104, ../scss/_graybike.scss */
+/* line 111, ../scss/_graybike.scss */
 .home .project img {
-  border: 2px solid #767676;
-  opacity: 0.6;
+  border: 1px solid #767676;
 }
-/* line 107, ../scss/_graybike.scss */
-.home .project img:hover {
-  opacity: 1;
-}
-/* line 114, ../scss/_graybike.scss */
+/* line 121, ../scss/_graybike.scss */
 .home .row.section {
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
 }
-/* line 121, ../scss/_graybike.scss */
+/* line 128, ../scss/_graybike.scss */
 .home .client-logo {
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
@@ -7980,7 +7984,7 @@ a:hover {
   -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-/* line 125, ../scss/_graybike.scss */
+/* line 132, ../scss/_graybike.scss */
 .home .client-logo:hover {
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;

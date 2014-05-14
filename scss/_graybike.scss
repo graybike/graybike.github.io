@@ -11,6 +11,10 @@ a:hover {
   border-bottom: none;
 }
 
+.orange {
+  color: $orange;
+}
+
 //Header Styles
 .site-header {
   margin-top: rem-calc(30);
@@ -52,17 +56,17 @@ a:hover {
     border: none;
   }
   .hire {
-    color: $gray;
-    border: 3px solid $gray;
+    color: $orange;
+    border: 3px solid $orange;
     padding: 5px;
     @include transition-duration(0.3s);
     @include transition-timing-function(ease-out);
   }
 
   .hire:hover {
-    border: 3px solid $gray;
+    border: 3px solid $orange;
     color: #fff;
-    background: $gray;
+    background: $orange;
     @include transition-duration(0.3s);
     @include transition-timing-function(ease-out);
   }
@@ -73,7 +77,10 @@ a:hover {
   .taglines {
     text-align: center;
     margin: rem-calc(40) 0;
-    @include text-shadow(0px 2px 0px rgba(255, 255, 255, 1));
+    @include text-shadow(0px 1px 0px $gray_b2);
+    h2 {
+      color: $orange;
+    }
   }
 
 
@@ -86,14 +93,14 @@ a:hover {
   //Index Styles
   .section-header {
     text-align: center;
-    @include text-shadow(0px 2px 0px rgba(255, 255, 255, 1));
+    @include text-shadow(0px 1px 0px $gray_b2);
     font-weight: 600;
     margin-bottom: rem-calc(30);
   }
 
   .section-subheader {
     text-align: center;
-    @include text-shadow(0px 2px 0px rgba(255, 255, 255, 1));
+    @include text-shadow(0px 1px 0px $gray_b2);
     font-weight: 600;
     color: $gray_b1;
   }
@@ -102,11 +109,11 @@ a:hover {
   //Work Styles
   .project {
     img {
-      border: 2px solid $gray;
-      opacity: 0.6;
-      &:hover {
-        opacity: 1;
-      }
+      border: 1px solid $gray;
+      // opacity: 0.6;
+      // &:hover {
+      //   opacity: 1;
+      // }
     }
     margin-bottom: rem-calc(15);
   }
