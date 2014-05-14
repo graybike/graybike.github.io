@@ -89,7 +89,16 @@ a:hover {
     text-align: center;
     @include text-shadow(0px 2px 0px rgba(255, 255, 255, 1));
     font-weight: 600;
+    margin-bottom: rem-calc(30);
   }
+
+  .section-subheader {
+    text-align: center;
+    @include text-shadow(0px 2px 0px rgba(255, 255, 255, 1));
+    font-weight: 600;
+    color: $gray_b1;
+  }
+
 
   //Work Styles
   .project {
@@ -106,5 +115,14 @@ a:hover {
   .row.section {
     margin-top: rem-calc(30);
     margin-bottom: rem-calc(30);
+  }
+
+
+  //about styles 
+  .client-logo {
+    @include filter(grayscale(100%));
+    &:hover {
+      @include filter(grayscale(0%));
+    }
   }
 }
