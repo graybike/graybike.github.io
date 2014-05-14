@@ -81,7 +81,7 @@ a:hover {
   .taglines {
     text-align: center;
     margin: rem-calc(40) 0;
-    padding: rem-calc(30) 0;
+    
     h2 {
       // font-size: rem-calc(37);
       color: #fff;
@@ -121,6 +121,7 @@ a:hover {
     max-width: 100%;
     background: $blue;
     color: #fff;
+    padding: rem-calc(30) 0;
     h3 {
       color: #fff;
     }
