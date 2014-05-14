@@ -30,7 +30,6 @@ a:hover {
     }
     div {
        @include transition(all 0.2s ease-in-out);
-       backface-visibility: hidden;
     }
     a, a:hover {
       border: none;
