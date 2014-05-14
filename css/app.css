@@ -7850,8 +7850,8 @@ a:hover {
 }
 
 /* line 14, ../scss/_graybike.scss */
-.orange {
-  color: #f09246;
+.blue {
+  color: #00688a;
 }
 
 /* line 19, ../scss/_graybike.scss */
@@ -7906,8 +7906,8 @@ a:hover {
 }
 /* line 58, ../scss/_graybike.scss */
 .nav-link .hire {
-  color: #f09246;
-  border: 3px solid #f09246;
+  color: #00688a;
+  border: 3px solid #00688a;
   padding: 5px;
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
@@ -7920,9 +7920,9 @@ a:hover {
 }
 /* line 66, ../scss/_graybike.scss */
 .nav-link .hire:hover {
-  border: 3px solid #f09246;
+  border: 3px solid #00688a;
   color: #fff;
-  background: #f09246;
+  background: #00688a;
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
@@ -7937,40 +7937,51 @@ a:hover {
 .home .taglines {
   text-align: center;
   margin: 2.5rem 0;
-  text-shadow: 0px 1px 0px gainsboro;
 }
 /* line 81, ../scss/_graybike.scss */
 .home .taglines h2 {
-  color: #f09246;
+  color: #fff;
 }
 /* line 94, ../scss/_graybike.scss */
 .home .section-header {
   text-align: center;
-  text-shadow: 0px 1px 0px gainsboro;
   font-weight: 600;
   margin-bottom: 1.875rem;
 }
-/* line 101, ../scss/_graybike.scss */
+/* line 102, ../scss/_graybike.scss */
 .home .section-subheader {
   text-align: center;
-  text-shadow: 0px 1px 0px gainsboro;
-  font-weight: 600;
+  font-weight: 400;
   color: #a5a5a5;
 }
-/* line 110, ../scss/_graybike.scss */
+/* line 111, ../scss/_graybike.scss */
 .home .project {
   margin-bottom: 0.9375rem;
 }
-/* line 111, ../scss/_graybike.scss */
+/* line 112, ../scss/_graybike.scss */
 .home .project img {
-  border: 1px solid #767676;
+  border: 2px solid #767676;
 }
-/* line 121, ../scss/_graybike.scss */
+/* line 122, ../scss/_graybike.scss */
 .home .row.section {
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
+  padding: 5px;
 }
 /* line 128, ../scss/_graybike.scss */
+.home .section.blue {
+  background: #00688a;
+  color: #fff;
+}
+/* line 131, ../scss/_graybike.scss */
+.home .section.blue h3 {
+  color: #fff;
+}
+/* line 134, ../scss/_graybike.scss */
+.home .section.blue a:hover {
+  color: #fff;
+}
+/* line 141, ../scss/_graybike.scss */
 .home .client-logo {
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
@@ -7984,7 +7995,7 @@ a:hover {
   -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-/* line 132, ../scss/_graybike.scss */
+/* line 145, ../scss/_graybike.scss */
 .home .client-logo:hover {
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
