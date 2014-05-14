@@ -77,19 +77,42 @@ a:hover {
 
 
 .home {
+  .section.blue {
+    max-width: 100%;
+    background: $blue;
+    color: #fff;
+    padding: rem-calc(30) 0;
+    h3 {
+      color: #fff;
+    }
+    a:hover {
+      color: #fff;
+    }
+    label {
+      color: #fff;
+    }
+    .row {
+      max-width: rem-calc(1000);
+      margin: auto;
+    }
+  }
+
   .tagline-container {
     max-width: 100%;
-
+    background: $blue url('/images/comp-notebook-background.jpg') !important;
+    background-attachment: fixed !important;
+    background-position: center center !important;
+    background-size: cover !important;
   }
   .taglines {
     text-align: center;
-    margin: rem-calc(40) 0;
+    margin: rem-calc(120) 0;
     
     h2 {
-      // font-size: rem-calc(37);
       font-family: "Roboto Slab", serif;
       font-weight: 300;
       color: #fff;
+      text-transform: uppercase;
     }
   }
 
@@ -123,25 +146,6 @@ a:hover {
     padding: 5px;
   }
 
-  .section.blue {
-    max-width: 100%;
-    background: $blue;
-    color: #fff;
-    padding: rem-calc(30) 0;
-    h3 {
-      color: #fff;
-    }
-    a:hover {
-      color: #fff;
-    }
-    label {
-      color: #fff;
-    }
-    .row {
-      max-width: rem-calc(1000);
-      margin: auto;
-    }
-  }
 
   #hire {
     button {
