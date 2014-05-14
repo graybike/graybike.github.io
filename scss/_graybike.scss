@@ -84,6 +84,8 @@ a:hover {
     
     h2 {
       // font-size: rem-calc(37);
+      font-family: "Roboto Slab", serif;
+      font-weight: 300;
       color: #fff;
     }
   }
@@ -91,8 +93,9 @@ a:hover {
 
   //Index Styles
   .section-header {
+    font-family: "Roboto Slab", serif;
+    font-weight: 300;
     text-align: center;
-    font-weight: 600;
     margin-bottom: rem-calc(30);
   }
 
