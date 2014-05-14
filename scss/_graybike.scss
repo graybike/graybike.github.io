@@ -26,11 +26,14 @@ a:hover {
     font-size: $title-size;
     text-align: center;
     margin-bottom: rem-calc(20);
-    padding-top: 20px;
+    // padding-top: 20px;
     height: 93px;
     overflow: hidden;
-    img {
-      padding-top: 10px;
+    .site-logo {
+      margin-top: -10px;
+    }
+    .site-text {
+      padding-top: 20px;
     }
     div {
        @include transition(all 0.2s ease-in-out);
@@ -38,8 +41,8 @@ a:hover {
     a, a:hover {
       border: none;
     }
-    &:hover div {
-      margin-top: -93px;
+    &:hover .site-logo {
+      margin-top: -113px;
     }
     span, span:hover {
       border-top: rem-calc(10) solid $gray_b1;
