@@ -138,14 +138,14 @@ a:hover {
 
 
   //about styles 
-  .client-logo {
-    @include filter(grayscale(100%));
-    @include transition-duration(0.3s);
-    @include transition-timing-function(ease-out);
-    &:hover {
-      @include transition-duration(0.3s);
-      @include transition-timing-function(ease-out);
-      @include filter(grayscale(0%));
-    }
-  }
+  // .client-logo {
+  //   @include filter(grayscale(100%));
+  //   @include transition-duration(0.3s);
+  //   @include transition-timing-function(ease-out);
+  //   &:hover {
+  //     @include transition-duration(0.3s);
+  //     @include transition-timing-function(ease-out);
+  //     @include filter(grayscale(0%));
+  //   }
+  // }
 }
