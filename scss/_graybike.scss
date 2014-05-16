@@ -58,7 +58,9 @@ a:hover {
   a {
     border: none;
   }
-  .hire {
+}
+
+.blue-button {
     color: $blue;
     border: 3px solid $blue;
     padding: 5px;
@@ -66,14 +68,13 @@ a:hover {
     @include transition-timing-function(ease-out);
   }
 
-  .hire:hover {
+  .blue-button:hover {
     border: 3px solid $blue;
     color: #fff;
     background: $blue;
     @include transition-duration(0.3s);
     @include transition-timing-function(ease-out);
   }
-}
 
 .section.blue {
   max-width: 100%;
@@ -109,8 +110,8 @@ a:hover {
 }
 
 .row.section {
-  // margin-top: rem-calc(20);
-  margin-bottom: rem-calc(40);
+  margin-top: rem-calc(20);
+  margin-bottom: rem-calc(20);
   padding: 5px;
 }
 
