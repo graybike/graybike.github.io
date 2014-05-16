@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div class="work">
+    <div class="row section blue hero-container">
+    <div class="row">
+      <div class="small-10 small-offset-1 columns hero">
+        <h2>{{page.title}}</h2>
+        {% for category in page.categories %}
+          <span class="radius secondary label">{{ category }}</span>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+  {{ content }}
+</div>

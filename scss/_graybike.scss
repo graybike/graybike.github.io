@@ -36,20 +36,20 @@ a:hover {
       padding-top: 20px;
     }
     div {
-       @include transition(all 0.2s ease-in-out);
-    }
-    a, a:hover {
-      border: none;
-    }
-    &:hover .site-logo {
-      margin-top: -113px;
-    }
-    span, span:hover {
-      border-top: rem-calc(10) solid $gray_b1;
-      border-bottom: rem-calc(10) solid $gray_b1;
-      color: $gray;
-    }
+     @include transition(all 0.2s ease-in-out);
+   }
+   a, a:hover {
+    border: none;
   }
+  &:hover .site-logo {
+    margin-top: -113px;
+  }
+  span, span:hover {
+    border-top: rem-calc(10) solid $gray_b1;
+    border-bottom: rem-calc(10) solid $gray_b1;
+    color: $gray;
+  }
+}
 }
 
 
@@ -75,94 +75,54 @@ a:hover {
   }
 }
 
-
-.home {
-  .section.blue {
-    max-width: 100%;
-    background: $blue;
+.section.blue {
+  max-width: 100%;
+  background: $blue;
+  color: #fff;
+  padding: rem-calc(30) 0;
+  h3 {
     color: #fff;
-    padding: rem-calc(30) 0;
-    h3 {
-      color: #fff;
-    }
-    a:hover {
-      color: #fff;
-    }
-    label {
-      color: #fff;
-    }
-    .row {
-      max-width: rem-calc(1000);
-      margin: auto;
-    }
   }
-
-  .tagline-container {
-    max-width: 100%;
-    background: $blue url('/images/comp-notebook-background-dark.jpg') !important;
-    background-attachment: fixed !important;
-    background-position: center center !important;
-    background-size: cover !important;
+  a:hover {
+    color: #fff;
   }
-  .taglines {
-    text-align: center;
-    margin: rem-calc(120) 0;
-    a {
-      border: none;
-    }
-    h2 {
-      font-family: "Roboto Slab", serif;
-      font-weight: 300;
-      color: #fff;
-      text-transform: uppercase;
-    }
-    .orbit-bullets-container, .orbit-slide-number, .orbit-timer, .orbit-prev, .orbit-next {
-      display: none;
-    }
+  label {
+    color: #fff;
   }
-
-
-  //Index Styles
-  .section-header {
+  .row {
+    max-width: rem-calc(1000);
+    margin: auto;
+  }
+}
+.hero {
+  text-align: center;
+  margin: rem-calc(70) 0;
+  a {
+    border: none;
+  }
+  h2 {
     font-family: "Roboto Slab", serif;
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: rem-calc(30);
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
   }
+}
 
-  .section-subheader {
-    text-align: center;
-    font-weight: 400;
-    color: $gray_b1;
-  }
+.row.section {
+  // margin-top: rem-calc(20);
+  margin-bottom: rem-calc(40);
+  padding: 5px;
+}
 
+.section-header {
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: rem-calc(30);
+}
 
-  //Work Styles
-  .project {
-    img {
-      border: 2px solid $gray;
-    }
-    margin-bottom: rem-calc(15);
-  }
-
-  .row.section {
-    margin-top: rem-calc(30);
-    margin-bottom: rem-calc(30);
-    padding: 5px;
-  }
-
-
-  #hire {
-    button {
-      border: 2px solid #fff;
-      background-color: $blue;  
-      color: #fff;
-      &:hover {
-        background: #fff;
-        color: $blue;  
-      }
-      
-    }
-  }
-
+.section-subheader {
+  text-align: center;
+  font-weight: 400;
+  color: $gray_b1;
 }

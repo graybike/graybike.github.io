@@ -1,0 +1,44 @@
+.home {
+  
+
+  .tagline-container {
+    max-width: 100%;
+    background: $blue url('/images/comp-notebook-background-dark.jpg') !important;
+    background-attachment: fixed !important;
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+  
+  .taglines {
+    margin: rem-calc(120) 0;
+  }
+
+
+  //Index Styles
+
+
+  //Work Styles
+  .project {
+    img {
+      border: 2px solid $gray;
+    }
+    margin-bottom: rem-calc(15);
+  }
+
+  
+
+
+  #hire {
+    button {
+      border: 2px solid #fff;
+      background-color: $blue;  
+      color: #fff;
+      &:hover {
+        background: #fff;
+        color: $blue;  
+      }
+      
+    }
+  }
+
+}
