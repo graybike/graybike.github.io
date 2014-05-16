@@ -28,7 +28,6 @@ $(document).ready(function() {
             default:
                 break;
         }
-        console.log(verbIndex);
         $(".rotate-nouns").text(nouns[nounIndex]);
         $(".rotate-verbs").text(verbs[verbIndex]);
     }, 2000);
