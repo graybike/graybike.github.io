@@ -107,12 +107,17 @@ a:hover {
   .taglines {
     text-align: center;
     margin: rem-calc(120) 0;
-    
+    a {
+      border: none;
+    }
     h2 {
       font-family: "Roboto Slab", serif;
       font-weight: 300;
       color: #fff;
       text-transform: uppercase;
+    }
+    .orbit-bullets-container, .orbit-slide-number, .orbit-timer, .orbit-prev, .orbit-next {
+      display: none;
     }
   }
 

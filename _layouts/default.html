@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+{% include head.html %}
 
-    <body>
+<body>
 
-    {% include header.html %}
+  {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrap">
+  <div class="page-content">
+    <div class="wrap">
       {{ content }}
-      </div>
     </div>
+  </div>
 
-    {% include footer.html %}
-
-    </body>
+  {% include footer.html %}
+  <script src='/js/jquery-2.1.1.min.js'  type='text/javascript'></script>
+  <script src='/js/jquery.simple-text-rotator.min.js'  type='text/javascript'></script>
+  <script src="bower_components/foundation/js/foundation.min.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    $(document).ready(function() {
+    if ($(document).width() > 735) { //Ensure navigation links are at the right height if the screen is large enough.
+      $(".nav-link").css("top", $(".nav-link").parent().height()/4);  
+    }
+    // $(".rotate-taglines").textrotator({
+    //   animation: "flipUp",
+    //   separator: "|",
+    //   speed: 2000
+    // });
+    
+  });
+</script>
+</body>
 </html>
