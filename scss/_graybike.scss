@@ -62,7 +62,7 @@ a:hover {
 
 .blue-button {
     color: $blue;
-    border: 3px solid $blue;
+    border: 3px solid $blue !important;
     padding: 5px;
     @include transition-duration(0.3s);
     @include transition-timing-function(ease-out);
