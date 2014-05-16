@@ -7,7 +7,7 @@ title: HOME
     <div class="row">
       <div class="small-12 columns taglines">
           <h2>
-          I <span class="rotate-verbs">design & build|craft|create & revise</span> <span class="rotate-nouns">custom software</span>.
+          I <span class="rotate-verbs">design & build|craft|create & revise</span> <span class="rotate-nouns">custom software|websites|mobile apps|user experiences|content strategy</span>.
           </h2>
       </div>
     </div>
@@ -27,11 +27,50 @@ title: HOME
     </div>
   </div>
   <script>
-    $(document).ready(function() {
-      if ($(document).width() > 735) { //Ensure navigation links are at the right height if the screen is large enough.
-        $(".nav-link").css("top", $(".nav-link").parent().height()/4);  
-      }
+  //Code to Rotate Services.
+  // var services = ["android apps", "websites", "eCommerce storefronts", "custom software"];
+  $(document).ready(function() {
+    if ($(document).width() > 735) { //Ensure navigation links are at the right height if the screen is large enough.
+      $(".nav-link").css("top", $(".nav-link").parent().height()/4);  
+    }
+    var verbs = [];
+    $.each($(".rotate-verbs").text().split("|"), function(key, value) { 
+      verbs.push(value); 
     });
+    var nouns = [];
+    $.each($(".rotate-nouns").text().split("|"), function(key, value) { 
+      nouns.push(value); 
+    });
+    console.log(verbs);
+    console.log(nouns);
+  //   var i = 0;
+    $(".rotate-nouns").text(nouns[0]);
+    $(".rotate-verbs").text(verbs[0]);
+    window.setInterval(function() {
+      var nounIndex = $.inArray($(".rotate-nouns").text(), nouns);
+      
+      
+      var verbIndex = $.inArray($(".rotate-verbs").text(), verbs);
+      nounIndex = nounIndex + 1;
+      if(nounIndex == nouns.length) nounIndex = 0;
+      console.log("NOUN INDEX: " + nounIndex);
+      $(".rotate-nouns").text(nouns[nounIndex]);
+      switch(nounIndex) {
+        case 0:
+        case 1:
+        case 2: 
+          verbIndex = 0;
+          break;
+        case 3: 
+          verbIndex = 1;
+          break;
+        case 4:
+          verbIndex = 2;
+          break;
+        default: 
+      }
+      $(".rotate-verbs").text(verbs[verbIndex]);
+    }, 2000);
+  });
   </script>
-  <script src='/js/text-rotate.js'  type='text/javascript'></script>
 </div>
