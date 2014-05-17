@@ -22,7 +22,24 @@
     img {
       border: 2px solid $gray;
     }
+    .img-wrapper {
+      position: relative;
+    }
+    .overlay {
+      display: none;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      @include transition(all 0.3s ease-in-out);
+    }
+    a:hover {
+      .overlay {
+        display: block;
+        @include transition(all 0.3s ease-in-out);
+      }
+    }
     margin-bottom: rem-calc(15);
+
   }
 
   

@@ -36,7 +36,7 @@ a:hover {
       padding-top: 20px;
     }
     div {
-     @include transition(all 0.2s ease-in-out);
+     @include transition(all 0.3s ease-in-out);
    }
    a, a:hover {
     border: none;
