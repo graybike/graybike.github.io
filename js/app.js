@@ -14,8 +14,9 @@ Foundation.utils.image_loaded($('.project-img img'), function(){
 
 function resizeImageOverlay() {
   $(".project-img").each(function() {
-    $(this).wrapInner("<div class='image'></div>")
-    $(this).children('.image').prepend("<div class='caption'><span>VIEW FULL SIZE</span></div>");
+    var img_src = $(this).attr("src");
+    $(this).wrap("<a href=" + img_src + " target='_blank' class='text-center'><div class='image'></div></a>")
+    $(this).closest('.image').prepend("<div class='caption'><span>VIEW FULL SIZE</span></div>");
   });
   $(".caption span").each(function() {
     var this_height = $(this).height();
