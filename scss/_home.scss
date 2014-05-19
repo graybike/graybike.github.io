@@ -26,7 +26,7 @@
       position: relative;
     }
     .overlay {
-      display: none;
+      opacity: 0;
       height: 100%;
       position: absolute;
       width: 100%;
@@ -34,7 +34,7 @@
     }
     a:hover {
       .overlay {
-        display: block;
+        opacity: 1;
         @include transition(all 0.3s ease-in-out);
       }
     }
