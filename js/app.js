@@ -8,12 +8,12 @@ $(document).ready(function() {
   }
 });
 
-Foundation.utils.image_loaded($('.project-img img'), function(){
+Foundation.utils.image_loaded($('.work img'), function(){
   resizeImageOverlay();
 });
 
 function resizeImageOverlay() {
-  $(".project-img").each(function() {
+  $(".work img").each(function() {
     var img_src = $(this).attr("src");
     $(this).wrap("<a href=" + img_src + " target='_blank' class='text-center'><div class='image'></div></a>")
     $(this).closest('.image').prepend("<div class='caption'><span>VIEW FULL SIZE</span></div>");
