@@ -15,12 +15,8 @@
 
   {% include footer.html %}
   <script src='/js/jquery-2.1.1.min.js'  type='text/javascript'></script>
-  <script>
-    $(document).ready(function() {
-    if ($(document).width() > 735) { //Ensure navigation links are at the right height if the screen is large enough.
-      $(".nav-link").css("top", $(".nav-link").parent().height()/4);  
-    }
-  });
-</script>
+  <script src='/js/foundation/js/foundation.js'  type='text/javascript'></script>
+  <!-- <script src='/js/foundation/js/foundation/foundation.clearing.js'  type='text/javascript'></script> -->
+  <script src='/js/app.js'  type='text/javascript'></script>
 </body>
 </html>
