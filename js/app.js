@@ -11,8 +11,8 @@ $(document).ready(function() {
     evt.preventDefault();
 
     if (!($("#form-name").val().length > 0 && $("#form-email").val().length > 0 && $("#form-project").val().length > 0)) {
-      $("#contact-form .sent").hide();
-      $("#contact-form .error").fadeIn();
+      $("#sent").hide();
+      $("#error").fadeIn();
       return;
     }
 
@@ -28,8 +28,11 @@ $(document).ready(function() {
     }).done(function() {
       //callback which can be used to show a thank you message
       //and reset the form
-      $("#contact-form .error").hide();
-      $("#contact-form .sent").fadeIn();
+      $("#error").hide();
+      $("#contact-form").fadeOut(400, function() {
+        $("#sent").fadeIn();
+      })
+      
 
     });
   });
