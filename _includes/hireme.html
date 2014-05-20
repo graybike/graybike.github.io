@@ -6,25 +6,25 @@
     <p><em>If possible, let me know your timeline, your current website or app, and any other info I may need to understand your project.</em></p>
 </div>
 <div class="small-12 medium-8 columns">
-    <form>
+    <form id="contact-form">
         <div class="row">
             <div class="large-12 columns">
                 <label>What's your name/company?
-                    <input type="text" placeholder="Name/Company" />
+                    <input type="text" id="form-name" placeholder="Name/Company" />
                 </label>
             </div>
         </div>
         <div class="row">
             <div class="large-12 columns">
                 <label>What's your email?
-                    <input type="text" placeholder="Email" />
+                    <input type="text" id="form-email" placeholder="Email" />
                 </label>
             </div>
         </div>
         <div class="row">
             <div class="large-12 columns">
                 <label>What's your budget?
-                    <select>
+                    <select id="form-budget">
                         <option value="5to10">$5,000 - $10,000</option>
                         <option value="10to20">$10,000 - $20,000</option>
                         <option value="20to50">$20,000 - $50,000</option>
@@ -36,13 +36,19 @@
         <div class="row">
             <div class="large-12 columns">
                 <label>Tell me about your project! The more detail you provide, the better I can help you!
-                    <textarea placeholder="Project description"></textarea>
+                    <textarea id="form-project" placeholder="Project description"></textarea>
                 </label>
             </div>
         </div>
         <div class="row">
             <div class="large-12 columns">
                 <button type="submit">Submit</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-12 columns">
+                <h5 class="sent section-subheader">Thanks for sending your message! I'll be in touch soon.</h5>
+                <h5 class="error section-subheader">Please fill out all the fields before sending your message.</h5>
             </div>
         </div>
     </form>
