@@ -3,7 +3,7 @@
 // $(document).foundation();
 
 $(document).ready(function() {
-  if ($(document).width() > 735) { //Ensure navigation links are at the right height if the screen is large enough.
+  if ($(window).width() > 735) { //Ensure navigation links are at the right height if the screen is large enough.
     $(".nav-link").css("top", $(".nav-link").parent().height()/4);  
   }
 
