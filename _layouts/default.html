@@ -26,6 +26,14 @@
     ga('create', 'UA-51168710-1', 'graybike.co');
     ga('send', 'pageview');
 
+    $('#hire-button').on('click', function() {
+      ga('send', 'event', 'button', 'click', 'hire-me');
+    });
+
+    $('#hire-submit-button').on('click', function() {
+      ga('send', 'event', 'button', 'click', 'hire-me-form-submit');
+    });
+
   </script>
 </body>
 </html>
