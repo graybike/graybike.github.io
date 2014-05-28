@@ -5,7 +5,7 @@
 $(document).ready(function() {
   if ($(window).width() > 735) { //Ensure navigation links are at the right height if the screen is large enough.
     $(".nav-link").css("top", $(".nav-link").parent().height()/4);  
-  }
+  } 
 
   $("#contact-form button[type='submit']").on("click", function(evt) {
     evt.preventDefault();
@@ -36,6 +36,14 @@ $(document).ready(function() {
 
     });
   });
+});
+
+$(window).resize(function() {
+  if ($(window).width() > 735) { //Ensure navigation links are at the right height if the screen is large enough.
+    $(".nav-link").css("top", $(".nav-link").parent().height()/4);  
+  } else {
+    $(".nav-link").css("top", 0);  
+  }
 });
 
 Foundation.utils.image_loaded($('.work img'), function(){
