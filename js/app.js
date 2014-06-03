@@ -1,11 +1,27 @@
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
-// $(document).foundation();
+$(document).foundation();
+$(function() { // Smooth Scrolling
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 750);
+        return false;
+      }
+    }
+  });
+});
 
 $(document).ready(function() {
   if ($(window).width() > 735) { //Ensure navigation links are at the right height if the screen is large enough.
     $(".nav-link").css("top", $(".nav-link").parent().height()/4);  
-  } 
+  }
+
+
 
   $("#contact-form button[type='submit']").on("click", function(evt) {
     evt.preventDefault();
