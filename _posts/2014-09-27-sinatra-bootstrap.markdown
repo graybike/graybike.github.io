@@ -102,7 +102,7 @@ This is probably the point where you want to initialize the git repository & sta
 
 Let's go over the file structure we're going to set up for this project. Here's what the full file structure looks like:
 
-<pre>
+{% highlight text %}
 app/
   assets/
     javascripts/
@@ -127,7 +127,7 @@ Gruntfile.js
 package.json
 Procfile
 Rakefile
-</pre>
+{% endhighlight %}
 
 Don't worry too much if you don't have all the files here. We'll add them piece by piece as we go along.
 
@@ -141,7 +141,7 @@ Before we can add a route, we have to make sure that the current directory is in
 
 {% highlight ruby %}
 $: << File.expand_path('../', __FILE__)
-{% endhighlight ruby %}
+{% endhighlight %}
 
 Once you've done this, we can create our first route. I can't really put it better than Alex did, so I'm going to quote him directly here: 
 
@@ -261,70 +261,7 @@ Create a file called `package.json` in your root directory:
 From here, run `npm install`. This will install the needed modules for the tools above as needed. Please note you'll need Sass installed on your system -- run `gem install sass` if you haven't already gotten it set up.
 
 
-From here, you'll need a Gruntfile. create a file called `Gruntfile.js` in your root directory as well:
-
-{% highlight javascript %}
-module.exports = function(grunt) {
-
-    // 1. All configuration goes here 
-    grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-
-        concat: {
-            dist: {
-                src: [
-                    'app/assets/javasrcipts/libs/*.js', // All JS in the libs folder
-                    'app/assets/javascripts/*.js'  // This specific file
-                ],
-                dest: 'public/javascripts/app.js',
-            }
-        },
-        uglify: {
-            build: {
-                src: 'public/javascripts/app.js',
-                dest: 'public/javascripts/app.min.js'
-            }
-        },
-        watch: {
-            scripts: {
-                files: ['app/assets/javascripts/*.js'],
-                tasks: ['concat', 'uglify'],
-                options: {
-                    spawn: false,
-                },
-            },
-            css: {
-                files: ['app/assets/stylesheets/*.scss'],
-                tasks: ['sass'],
-                options: {
-                    spawn: false,
-                }
-            }
-        },
-        sass: {
-            dist: {
-                options: {
-                    loadPath: require('node-bourbon').includePaths,
-                    style: 'compressed'
-                },
-                files: {
-                    'public/stylesheets/application.css': 'app/assets/stylesheets/application.scss'
-                }
-            }
-        }
-    });
-
-    // 3. Where we tell Grunt we plan to use this plug-in.
-    grunt.loadNpmTasks('grunt-contrib-concat');  // Concatenate JS
-    grunt.loadNpmTasks('grunt-contrib-uglify');  // Uglify that JS
-    grunt.loadNpmTasks('grunt-contrib-watch');   // Watch those files and update accordingly
-    grunt.loadNpmTasks('grunt-contrib-sass');    // Preprocess that CSS
-
-    // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'uglify', 'sass']);
-
-};
-{% endhighlight %}
+From here, you'll need a Gruntfile. create a file called `Gruntfile.js` in your root directory as well. You can [use the one I've put up on Github gists](https://gist.github.com/ptrikutam/f0b91bfa505740aadf4b).
 
 If you follow Chris's tutorial, much of this should look familiar. The only thing that might look unfamiliar is the line that reads `loadPath: require('node-bourbon').includePaths,`. I added that in based on the advice in this [blog post](http://syropia.net/journal/how-to-use-bourbon-with-gruntjs). Basically, it's a quick & dirty way to add in Bourbon to your project.
 
@@ -363,7 +300,7 @@ What this does is any other view you render using Haml will use this file as the
 
 Since we made this change, we should change the `app/views/index.haml` file to be: 
 
-{% highlight ruby %}
+{% highlight haml %}
 %h1 Welcome to Sinatra Bootstrap.
 %h3 A more structured approach to Sinatra Applications.
 {% endhighlight %}
