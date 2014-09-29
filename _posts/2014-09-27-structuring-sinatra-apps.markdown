@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Sinatra Bootstrap"
+title:  "Structuring Sinatra apps"
 description: "A simple, structured Sinatra App Template (and tutorial)"
 date:   2014-09-27 13:00:00
-categories: sinatra bootstrap simple tutorial ruby
+tags: sinatra bootstrap simple tutorial ruby
 ---
 
 For some time now I've been using [Sinatra](http://sinatrarb.com) to build little Ruby apps as I've taught myself the language and implemented simple websites / apps for clients. I love it's simpllicity and it's very powerful if you're up for a little digging and coding. Highly configurable, without the bloat of Rails. It's also a great way to learn about all sorts of ruby / web development tools so that eventually learning Rails is made easier.
@@ -143,9 +143,13 @@ Before we can add a route, we have to make sure that the current directory is in
 $: << File.expand_path('../', __FILE__)
 {% endhighlight %}
 
+## TODO
+
 Once you've done this, we can create our first route. I can't really put it better than Alex did, so I'm going to quote him directly here: 
 
 > So our application has one main route: `App`. If we want to go about creating another route, we just need to mount it on `App`. Essentially, each route is its own separate application. For example, we could have a `Posts` route under `app/routes/posts.rb` (routes are always plural).
+
+## End TODO
 
 #### Routes module
 
@@ -164,7 +168,6 @@ This is the module that will manage the autoloading the routes as you need them.
 {% highlight ruby %}
 require 'app/routes'
 {% endhighlight %}
-
 
 #### Our first route
 
@@ -267,7 +270,7 @@ If you follow Chris's tutorial, much of this should look familiar. The only thin
 
 #### Sass & JS
 
-Go ahead and create a Sass file: `app/assets/stylesheets/application.scss`. The filename & location is important here since Grunt is specifically looking for a file with that name. At the outset, this is all I included in my application.scss:
+Go ahead and create a Sass file in `app/assets/stylesheets/` called `application.scss`. The filename & location is important here since Grunt is specifically looking for a file with that name. At the outset, this is all I included in my application.scss:
 
 {% highlight css %}
 @import "bourbon";
