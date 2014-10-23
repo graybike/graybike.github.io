@@ -1,123 +1,104 @@
 .home {
-  
-
-  .tagline-container {
-    max-width: 100%;
-    background: $blue url('/images/comp-notebook-background-dark.jpg') !important;
-    background-attachment: fixed !important;
-    background-position: center center !important;
-    background-size: cover !important;
-  }
-  
-  .taglines {
-    margin: rem-calc(120) 0;
-  }
-
-
-  //Index Styles
-* {
-  -webkit-backface-visibility: hidden;
-}
-
-  //Work Styles
-  .project {
-    position: relative;
-    background: $blue_b1;
-    
-
-    img {
-      position: relative;
-      display: block;
-      opacity: 0.6;
-      @include transition(opacity 0.35s);
+    .tagline-container {
+        max-width: 100%;
+        background: $blue url("/images/comp-notebook-background-dark.jpg") !important;
+        background-attachment: fixed !important;
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+    .taglines {
+        margin: rem-calc(120) 0;
     }
 
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.5;
-      background: $blue_b1;
-      @include transition(opacity 0.35s);
-
+    .slick-prev:before, .slick-next:before {
+      color: $blue;
+      @include transition(all 0.3s);
     }
-    
-    .caption {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      *, *:hover {
-        color: #fff;
-      }
-
-      h4{
-        padding-top: 30%;
-        text-transform: uppercase;
-        @include transition-property(transform);
-        @include transition-duration(0.35s);
-        @include transform(translate3d(0,-20px,0));
-        span {
-          font-weight: 700;
+    //Index Styles
+    // * {
+    //   -webkit-backface-visibility: hidden;
+    // }
+    //Work Styles
+    .project {
+        position: relative;
+        background: $blue_b1;
+        img {
+            position: relative;
+            display: block;
+            opacity: 0.6;
+            @include transition(opacity 0.35s);
         }
-      }
-
-      p {
-          margin: 1em;
-          padding: 1em;
-          border: 1px solid #fff;
-          font-size: 12px;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-          opacity: 0;
-          @include transition(opacity 0.35s);
-          @include transition(transform 0.35s);
-          @include transform(translate3d(0,20px,0));   
-      }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            background: $blue_b1;
+            @include transition(opacity 0.35s);
+        }
+        .caption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            *, *:hover {
+                color: #fff;
+            }
+            h4 {
+                padding-top: 30%;
+                text-transform: uppercase;
+                @include transition-property(transform);
+                @include transition-duration(0.35s);
+                @include transform(translate3d(0, -20px, 0));
+                span {
+                    font-weight: 700;
+                }
+            }
+            p {
+                margin: 1em;
+                padding: 1em;
+                border: 1px solid #fff;
+                font-size: 12px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                opacity: 0;
+                @include transition(opacity 0.35s);
+                @include transition(transform 0.35s);
+                @include transform(translate3d(0, 20px, 0));
+            }
+        }
+        &:hover {
+            h4 {
+                @include transform(translate3d(0, 0, 0));
+            }
+            p {
+                opacity: 1;
+                @include transform(translate3d(0, 0, 0) scale(1));
+            }
+            .overlay {
+                opacity: 0.8;
+            }
+        }
     }
-
-
-
-    &:hover {
-      h4 {
-        @include transform(translate3d(0,0,0));
-      }
-      p {
-        opacity: 1;
-        @include transform(translate3d(0,0,0) scale(1));
-      }
-      .overlay {
-        opacity: 0.8;
-      }
+    #hire {
+        button {
+            border: 2px solid #fff;
+            background-color: $blue;
+            color: #fff;
+            &:hover {
+                background: #fff;
+                color: $blue;
+            }
+        }
+        .section-subheader {
+            color: #fff;
+            display: none;
+        }
+        #error {
+            color: #ff0000;
+        }
     }
-
-  }
-
-  
-
-
-  #hire {
-    button {
-      border: 2px solid #fff;
-      background-color: $blue;  
-      color: #fff;
-      &:hover {
-        background: #fff;
-        color: $blue;  
-      }
-
-    }
-    .section-subheader {
-      color: #fff;
-      display: none;
-     }
-     #error {
-      color: #ff0000;
-     }
-  }
-
 }
