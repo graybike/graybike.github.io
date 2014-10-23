@@ -65,8 +65,7 @@
                 letter-spacing: 1px;
                 text-transform: uppercase;
                 opacity: 0;
-                @include transition(opacity 0.35s);
-                @include transition(transform 0.35s);
+                @include transition(opacity 0.35s, transform 0.35s);
                 @include transform(translate3d(0, 20px, 0));
             }
         }
@@ -76,7 +75,7 @@
             }
             p {
                 opacity: 1;
-                @include transform(translate3d(0, 0, 0) scale(1));
+                @include transform(translate3d(0, 0, 0));
             }
             .overlay {
                 opacity: 0.8;
