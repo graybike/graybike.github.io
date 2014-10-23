@@ -4,9 +4,22 @@ title: BLOG
 ---
 
 <div class="blog">
-<div class="row section blue">
-<div class="small-12 columns text-center">
-  <h3>Blog coming soon...</h3>
-</div>
-</div>
+  <div class="row section blue">
+    <div class="small-12 columns text-center">
+      <h3>Blog coming soon...</h3>
+    </div>
+  </div>
+  <div class="posts">
+    <ul class="post-list">
+      {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>

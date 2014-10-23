@@ -49,6 +49,7 @@ ruby '2.0.0'
 
 gem 'sinatra', require: 'sinatra/base'
 gem 'haml'
+gem 'shotgun'
 {% endhighlight %}  
 
 Install the gems by running `bundle install`. Now that you've got a nice little environment set up, set up your actual Sinatra app file. Create a file named `app.rb` in the same directory.
@@ -312,7 +313,9 @@ Now whenever you create a new view all you need to worry about is the content of
 
 ## Part 5: Models & Database
 
-Alright. We've got our front end assets taken care of, a nice folder structure, and a route set up, it's time to add a database to our app. In this tutorial we're going to use a Postgres database (since that's what Heroku uses) and we'll use Sequel to manage this. 
+Alright. We've got our front end assets taken care of, a nice folder structure, and a route set up, it's time to add a database to our app. In this tutorial we're going to use a Postgres database (since that's what Heroku uses) and we'll use Sequel as our ORM. 
+
+#### Gems
 
 First, let's add a few things to our `Gemfile`:
 
@@ -322,4 +325,34 @@ gem 'sinatra-sequel'
 gem 'pg'
 {% endhighlight %}
 
+#### User Model
+
+Now let's create a User Model. First, create a file in the `/app/models` folder called `user.rb`. 
+
+{% highlight ruby %}
+module SinatraBootstrap
+  module Models
+    class User < Sequel::Model
+    end
+  end
+emd
+{% endhighlight %}
+
+We're creating a simple `User` model that will inherit from `Sequel::Model`. This is how we'll interact with the databse. Now that we've got model defined, we need to actually import it into our main app. In the `/app` directory, create a file called `models.rb`. 
+
+{% highlight ruby %}
+module SinatraBootstrap
+  module Models
+    autoload :User, 'app/models/user'
+  end
+end
+{% endhighlight %}
+
+This is where you'll place the `autoload` command so `SinatraBootstrap` knows where to find the various models we're searching for.
+
+
+
+
 #### Rakefile
+
+## Part 6: Authentication
