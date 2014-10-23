@@ -100,4 +100,12 @@
             color: #ff0000;
         }
     }
+    // .client-logo {
+    //     @include filter(grayscale(100%));
+    //     @include transition(all 0.3s);
+    //     &:hover {
+    //         @include filter(grayscale(0%));
+    //         @include transition(all 0.3s);
+    //     }
+    // }
 }
