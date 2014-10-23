@@ -21,8 +21,6 @@
 
   //Work Styles
   .project {
-    max-width: 300px;
-    max-height: 300px;
     position: relative;
     background: $blue;
     
@@ -47,7 +45,6 @@
     }
     
     .caption {
-      // background-color: $blue;
       position: absolute;
       top: 0;
       left: 0;
@@ -76,10 +73,9 @@
           letter-spacing: 1px;
           text-transform: uppercase;
           opacity: 0;
-          -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-          transition: opacity 0.35s, transform 0.35s;
-          -webkit-transform: translate3d(0,20px,0);
-          transform: translate3d(0,20px,0);
+          @include transition(opacity 0.35s);
+          @include transition(transform 0.35s);
+          @include transform(translate3d(0,20px,0));   
       }
     }
 
