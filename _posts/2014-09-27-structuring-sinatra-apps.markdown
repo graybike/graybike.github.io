@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Structuring Sinatra apps"
-description: "A simple, structured Sinatra App Template (and tutorial)"
+title:  "Structuring Sinatra Apps, Part 1"
+description: "A tutorial to set up a simple, structured Sinatra app template"
 date:   2014-09-27 13:00:00
 tags: sinatra bootstrap simple tutorial ruby
 ---
