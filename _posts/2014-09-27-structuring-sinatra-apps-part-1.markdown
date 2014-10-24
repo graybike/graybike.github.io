@@ -1,16 +1,18 @@
 ---
 layout: post
 title:  "Structuring Sinatra Apps, Part 1"
-description: "A tutorial to set up a simple, structured Sinatra app template"
+description: "Part 1 of a tutorial to set up a simple, structured Sinatra app"
 date:   2014-09-27 13:00:00
 tags: sinatra bootstrap simple tutorial ruby
 ---
 
-For some time now I've been using [Sinatra](http://sinatrarb.com) to build little Ruby apps as I've taught myself the language and implemented simple websites / apps for clients. I love it's simpllicity and it's very powerful if you're up for a little digging and coding. Highly configurable, without the bloat of Rails. It's also a great way to learn about all sorts of ruby / web development tools so that eventually learning Rails is made easier.
+For some time now I've been using [Sinatra](http://sinatrarb.com) to build Ruby apps as I've taught myself the language and implemented simple websites / apps for clients. I love it's simpllicity and it's very powerful if you're up for a little digging and coding. Highly configurable, without the bloat of Rails. It's also a great way to learn about all sorts of ruby / web development tools, which makes eventually learning Rails much easier.
 
 This blog post & app was inpsired by (and built upon) two things: Alex Mccaw's [excellent post on Structuring Sinatra Applications](http://blog.sourcing.io/structuring-sinatra), and Adam Stacoviak's [Sinatra Bootstrap](https://github.com/adamstac/sinatra-bootstrap). At one point, I [made a few modifications](https://github.com/ptrikutam/sinatra-bootstrap) to Adam's project, but never really expanded on it that much.
 
 Since there was a lot of code in both Alex's and Adam's project I didn't completely understand, I've attempted to build out a new one with stuff I need in my projects. I'm going to go through my process here for creating this bootstrap, and will attempt to explain as much of the configuration & code as possible to make it easy for newcomers.
+
+*In Part 1 of this tutorial, we're going to set up our base project & file structure. Then we'll add some routes & views.  Finally, we'll set up the developer tools (Grunt, Sass, etc) to speed up development.*
 
 ## The Project
 
@@ -18,7 +20,7 @@ You can find the final, fully coded up Sinatra Bootstrap project here: [Sinatra 
 
 #### Ingredients
 
-There were a number of things I wanted to include in this project. I've listed them below, but if you're not interested in any of this and just want to get to the tutorial, just jump to Part 1: Setting up the project.
+There were a number of things I wanted to include in this project. I've listed them below, but if you're not interested in any of this and just want to get to the tutorial, just jump to [Setting up the project](#setting-up-the-base-project).
 
 * Has a simple, modular, and manageable file structure for routes, models, etc.
 * Uses [Haml](http://haml.info/) for view templating.
@@ -311,48 +313,3 @@ Since we made this change, we should change the `app/views/index.haml` file to b
 
 Now whenever you create a new view all you need to worry about is the content of the view itself, and not having to re-setup all the metadata / includes / etc that you have in your `head` element.
 
-## Part 5: Models & Database
-
-Alright. We've got our front end assets taken care of, a nice folder structure, and a route set up, it's time to add a database to our app. In this tutorial we're going to use a Postgres database (since that's what Heroku uses) and we'll use Sequel as our ORM. 
-
-#### Gems
-
-First, let's add a few things to our `Gemfile`:
-
-{% highlight ruby %}
-gem 'sequel'
-gem 'sinatra-sequel'
-gem 'pg'
-{% endhighlight %}
-
-#### User Model
-
-Now let's create a User Model. First, create a file in the `/app/models` folder called `user.rb`. 
-
-{% highlight ruby %}
-module SinatraBootstrap
-  module Models
-    class User < Sequel::Model
-    end
-  end
-emd
-{% endhighlight %}
-
-We're creating a simple `User` model that will inherit from `Sequel::Model`. This is how we'll interact with the databse. Now that we've got model defined, we need to actually import it into our main app. In the `/app` directory, create a file called `models.rb`. 
-
-{% highlight ruby %}
-module SinatraBootstrap
-  module Models
-    autoload :User, 'app/models/user'
-  end
-end
-{% endhighlight %}
-
-This is where you'll place the `autoload` command so `SinatraBootstrap` knows where to find the various models we're searching for.
-
-
-
-
-#### Rakefile
-
-## Part 6: Authentication
