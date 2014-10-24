@@ -21,7 +21,13 @@ $(document).ready(function() {
     $(".nav-link").css("top", $(".nav-link").parent().height()/4);  
   }
 
-
+  //Setup the quotes slider
+  $('.quotes-slider').slick({
+    // arrows: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  });
 
   $("#contact-form button[type='submit']").on("click", function(evt) {
     evt.preventDefault();
