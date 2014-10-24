@@ -1,0 +1,39 @@
+.blog {
+      .tagline-container {
+        max-width: 100%;
+        background: $blue url("/images/hero/typewriter-2-blue.jpg") !important;
+        background-attachment: fixed !important;
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+    .taglines {
+        margin: rem-calc(120) 0;
+    }
+    .blog-row {
+      margin: rem-calc(30) 0;
+    }
+    .blog-title {
+      margin-bottom: 0;
+    }
+}
+
+.post {
+  p {
+    margin-top: $paragraph-margin-bottom;   
+  }
+
+  blockquote p {
+    margin-top: 0;
+  }
+
+  h1, h2, h3 {
+    font-family: "Roboto Slab", serif;
+  }
+
+  h4, h5, h6 {
+    font-family: "Open Sans", sans-serif;
+    // text-align: center;
+    font-weight: 400;
+    color: $gray_b1;
+  }
+}

@@ -1,12 +1,17 @@
 .work {
   .hero-container {
     max-width: 100%;
-    background: $blue url('/images/work-bag-blue.jpg') !important;
+    background: $blue url('/images/hero/work_tools-blue.jpg');
     // background: $blue url('/images/comp-notebook-background-dark.jpg') !important;
     background-attachment: fixed !important;
     background-position: center center !important;
     background-size: cover !important;
+    // .bag {
+      // background: $blue url('/images/hero/work_tools-blue.jpg') !important;
+    // }
   }
+
+
   .hero .label {
     text-transform: uppercase;
     margin-bottom: rem-calc(5);
