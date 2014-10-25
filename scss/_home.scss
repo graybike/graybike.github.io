@@ -15,9 +15,9 @@
       @include transition(all 0.3s);
     }
     //Index Styles
-    // * {
-    //   -webkit-backface-visibility: hidden;
-    // }
+    h1, h2, h3, h4, h5, h6, p, span {
+      -webkit-backface-visibility: hidden;
+    }
     //Work Styles
     .project {
         position: relative;
