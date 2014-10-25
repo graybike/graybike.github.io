@@ -1,11 +1,12 @@
 .blog {
       .tagline-container {
         max-width: 100%;
-        background: $blue url("/images/hero/typewriter-2-blue.jpg") !important;
+        background: $blue url("/images/hero/notebook-blue.jpg") !important;
         background-attachment: fixed !important;
         background-position: center center !important;
         background-size: cover !important;
     }
+    
     .taglines {
         margin: rem-calc(120) 0;
     }
