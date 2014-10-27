@@ -21,6 +21,13 @@
     border: 1px solid #767676;
   }
 
+  .small {
+    img {
+      max-width: 75%;
+      margin: auto;
+    }
+  }
+
 
   a .image {
     position: relative;
@@ -57,6 +64,20 @@
   
   .no-borders img {
     border: none;
+  }
+
+  .page-note {
+    margin-bottom: 15px;
+    padding: 10px;
+    p {
+      font-size: 0.8em;
+      margin: 0;
+      margin-bottom: 5px;
+    }
+  }
+
+  .stack {
+    margin-bottom: 20px;
   }
   
 }
