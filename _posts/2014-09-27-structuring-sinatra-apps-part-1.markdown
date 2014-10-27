@@ -313,3 +313,5 @@ Now whenever you create a new view all you need to worry about is the content of
 ### Conclusion
 
 That's it for now! In this tutorial, we created a structured Sinatra app that will be the basis for a more complex project. We've also added in Grunt to optimize our front end workflow. In the next part of this tutorial, we'll add a database and models. After that tutorial, we'll add authentication using the warden gem. Stay tuned!
+
+Got any comments or feedback about this tutorial? Email me at pavan at graybike dot co.
