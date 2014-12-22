@@ -26,7 +26,7 @@ $(document).ready(function() {
     // arrows: true,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 6000,
   });
 
   $("#contact-form button[type='submit']").on("click", function(evt) {
