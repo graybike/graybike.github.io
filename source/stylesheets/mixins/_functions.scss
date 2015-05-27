@@ -1,0 +1,3 @@
+@function spc($spc){
+  @return map-get($spacing, $spc);
+}
