@@ -8,11 +8,11 @@
     %meta{name:"keywords",content:"software development, software engineering, engineering, design, consultancy, software consultancy, freelance, software developers, rails, d3"}
     %meta{name:"viewport", content:"width=device-width, initial-scale=1.0" }
     %meta{name:"google-site-verification", content:"mGFqkZIpRsu-KTICkZB_Lk453ig5zwNKhB2WrqWtqTg"}
+
     / Use title if it's in the page YAML frontmatter
     %title= current_page.data.title || "GRAY BIKE"
     %link{href:'http://fonts.googleapis.com/css?family=Roboto+Slab:300,200&Open+Sans:300', rel:'stylesheet', type:'text/css'}
-    = stylesheet_link_tag "normalize", "all"
-
+    = stylesheet_link_tag "all"
     = javascript_include_tag  "all"
   %body{:class => page_classes}
     = yield
