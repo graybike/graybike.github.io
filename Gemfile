@@ -3,14 +3,15 @@
 source 'https://rubygems.org'
 
 gem "middleman", "~>3.3.12"
+gem "middleman-blog", "~> 3.5.3"
+
+# For feed.xml.builder
+gem "builder", "~> 3.0"
+
 
 # Live-reloading plugin
-group :development do
-  gem 'middleman-livereload'
-end
+gem 'middleman-livereload'
 
-# Blog
-gem "middleman-blog"
 
 
 # CSS & Views
