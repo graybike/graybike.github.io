@@ -7,13 +7,11 @@
     height: calc(100%);
   }
 
-  .tagline {
-    
+  section {
+    @include vertical-align();
   }
 
   .intro {
-    padding-top: padding-blocks(3);
-    // @include vertical-align();
     text-align: center;
     img {
       max-width: em(200);
