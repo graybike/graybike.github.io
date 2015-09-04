@@ -6,6 +6,10 @@ html, body {
   background-color: $light-blue;
 }
 
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
 section {
   @include outer-container;
   padding-left: padding-blocks(1);
