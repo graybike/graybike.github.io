@@ -9,6 +9,8 @@ group :development do
   gem 'middleman-livereload'
 end
 
+# Blog
+gem "middleman-blog"
 
 
 # CSS & Views
