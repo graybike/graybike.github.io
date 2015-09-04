@@ -8,6 +8,24 @@ title: Gray Bike | Software & Design Consulting
       .intro
         = image_tag 'logo.svg', alt:'Gray Bike'
         %h1 Gray Bike is a small software and user experience consultancy in San Francisco, California.
+        .cta
+          .half
+            %a{href: "#"}
+              %h2 GET IN TOUCH
+          .half
+            %a{href: "#learnmore"}
+              %h2 FIND OUT MORE
+  %section#learnmore.main
+    .description
+      %h3 Here's some more stuff.
+%script{ src: "//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js" }
 
-    .fixed--bottom
-      %h2 FIND OUT MORE
+:javascript
+    // Bind to the click of all links with a #hash in the href
+  $('a[href^="#"]').click(function(e) {
+    // Prevent the jump and the #hash from appearing on the address bar
+    e.preventDefault();
+    // Scroll the window, stop any previous animation, stop on user manual scroll
+    // Check https://github.com/flesler/jquery.scrollTo for more customizability
+    $(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:true});
+  });

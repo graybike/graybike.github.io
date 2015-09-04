@@ -1,14 +1,14 @@
 article.type-system-slab.landing {
   height: 100%;
+
   .hero {
     width: 100%;
     background-color: $medium-blue;
     color: $white;
     height: calc(100%);
-  }
-
-  section {
-    @include vertical-align();
+    section {
+      @include vertical-align();
+    }
   }
 
   .intro {
@@ -16,15 +16,50 @@ article.type-system-slab.landing {
     img {
       max-width: em(200);
       margin: auto;
+
+      @include media($mobile) {
+        max-width: em(100);
+      }
     } 
     h1 {
+      font-weight: 200;
       margin-top: padding-blocks(1);  
       text-align: left;
+    }
+
+    .cta {
+      
+      margin-top: padding-blocks(4);
+      @include span-columns(8);
+      @include shift(2);
+
+      @include media($tablet) {
+        @include fill-parent();
+        @include shift(0);
+      }
+
+    }
+
+    .half {
+      @include span-columns(4 of 8);
+      &:last-child {
+        @include omega();
+      }
+
+      @include media($mobile) {
+        @include fill-parent();
+        margin-bottom: padding-blocks(1);
+      }
     }
   }
 
   h2 {
+    color: #fff;
     font-weight: 700;
     letter-spacing: em(1.5);
+  }
+
+  .main {
+
   }
 }
