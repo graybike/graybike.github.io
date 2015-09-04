@@ -1,0 +1,17 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: $light-blue;
+}
+
+section {
+  @include outer-container;
+  padding-left: padding-blocks(1);
+  padding-right: padding-blocks(1);
+}
+
+.center-vertical {
+  @include vertical-align();
+}

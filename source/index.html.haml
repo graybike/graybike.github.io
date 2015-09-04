@@ -2,18 +2,9 @@
 title: Gray Bike | Software & Design Consulting
 ---
 
-.container.mt-xl.mb-xl
-  .row
-    .col-xs-12.text-center
-      = image_tag 'logo.svg', width: '200', alt:'Gray Bike'
-      
-  .row.mt-lg
-    .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
-      %h2 Gray Bike is a small software engineering & design consultancy in San Francisco, California.
-  .row.mt-sm
-    .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
-      %h3 
-        We're at the shop getting a tune-up, but we'd still love to hear from you.
-      %p.mt-lg
-        =precede "(415) 326 3397 // " do
-          %a{href:"mailto:hello@graybike.co"} hello@graybike.co
+%article.landing.type-system-slab
+  .hero
+    %section
+      .intro
+        = image_tag 'logo.svg', alt:'Gray Bike'
+        %h1 Gray Bike is a small software and user experience consultancy in San Francisco, California.
