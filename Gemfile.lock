@@ -7,12 +7,13 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    autoprefixer-rails (5.1.11)
-      execjs
-      json
-    bootstrap-sass (3.3.4.1)
-      autoprefixer-rails (>= 5.0.0.1)
-      sass (>= 3.2.19)
+    bitters (1.1.0)
+      bourbon (>= 4.2)
+      sass (>= 3.4)
+      thor
+    bourbon (4.2.4)
+      sass (~> 3.4)
+      thor (~> 0.19)
     celluloid (0.16.0)
       timers (~> 4.0.0)
     chunky_png (1.3.4)
@@ -92,6 +93,9 @@ GEM
       sprockets-sass (~> 1.3.0)
     minitest (5.6.1)
     multi_json (1.11.0)
+    neat (1.7.2)
+      bourbon (>= 4.0)
+      sass (>= 3.3)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
@@ -137,10 +141,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass
+  bitters
+  bourbon
   haml
   middleman (~> 3.3.12)
   middleman-deploy (~> 1.0)
-  middleman-livereload (~> 3.1.0)
-  tzinfo-data
-  wdm (~> 0.1.0)
+  middleman-livereload
+  neat
+
+BUNDLED WITH
+   1.10.6

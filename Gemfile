@@ -5,16 +5,19 @@ source 'https://rubygems.org'
 gem "middleman", "~>3.3.12"
 
 # Live-reloading plugin
-gem "middleman-livereload", "~> 3.1.0"
+group :development do
+  gem 'middleman-livereload'
+end
 
-# For faster file watcher updates on Windows:
-gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 
-# Windows does not come with time zone data
-gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 
+# CSS & Views
 gem "haml"
-gem "bootstrap-sass", :require => false
+gem 'bitters'
+gem 'bourbon'
+gem 'neat'
 
 
+# Deploy
 gem 'middleman-deploy', '~> 1.0'
+
