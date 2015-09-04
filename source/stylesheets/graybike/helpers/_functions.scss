@@ -1,0 +1,3 @@
+@function padding-blocks($multiplier, $base: $base-padding-block){
+  @return $multiplier * $base;
+}

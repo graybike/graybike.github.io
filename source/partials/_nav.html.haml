@@ -1,0 +1,18 @@
+%header{class: ("alt" if defined?(alt) )}
+  %div
+    %h2
+      %a{href:"/"}
+        / = image_tag 'logo.svg', alt:'Gray Bike'
+        = succeed "BIKE" do
+          %span.dg GRAY
+  %nav
+
+    %a{href:"#services"}
+      %span About
+    / %a{href:"#work"}
+    /   %span Work
+    - if data.features.blog
+      %a{href:"/words"}
+        %span Words
+    %a.contact{href:'mailto:hello@graybike.co'}
+      %span Contact

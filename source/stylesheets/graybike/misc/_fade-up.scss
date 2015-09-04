@@ -1,0 +1,39 @@
+$margin-top: 50px;
+$duration: 1.5s;
+
+.fade-up {
+  @include animation(fadeup $duration ease forwards);
+}
+
+
+.fade-in {
+  @include animation(fadein $duration ease forwards);
+  @include backface-visibility(hidden);
+}
+
+.fade-up-delay {
+  @include animation-delay($duration);
+}
+
+@include keyframes(fadeup) {
+  from {
+    opacity: 0;
+    @include transform(translateY($margin-top));
+  }
+
+  to {
+    opacity: 1;
+    @include transform(translateY(0));
+  }
+}
+
+
+@include keyframes(fadein) {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
