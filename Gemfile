@@ -2,19 +2,27 @@
 # the following line to use "http://" instead
 source 'https://rubygems.org'
 
-gem "middleman", "~>3.3.12"
+gem "middleman", "~> 3.3.12"
+
+
+# For feed.xml.builder / blog stuf
+gem "nokogiri"
+gem "middleman-blog", "~> 3.5.3"
+gem "builder", "~> 3.0"
+
 
 # Live-reloading plugin
-gem "middleman-livereload", "~> 3.1.0"
+gem 'middleman-livereload'
 
-# For faster file watcher updates on Windows:
-gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 
-# Windows does not come with time zone data
-gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 
+# CSS & Views
 gem "haml"
-gem "bootstrap-sass", :require => false
+gem 'bitters'
+gem 'bourbon'
+gem 'neat'
 
 
+# Deploy
 gem 'middleman-deploy', '~> 1.0'
+

@@ -1,0 +1,8 @@
+.blog {
+  .articles, article.post {
+    @include text-width();
+  }
+  .articles article {
+    margin-bottom: padding-blocks(5);
+  }
+}

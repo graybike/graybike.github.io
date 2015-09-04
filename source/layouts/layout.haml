@@ -4,19 +4,35 @@
     %meta{:charset => "utf-8"}/
     / Always force latest IE rendering engine or request Chrome Frame
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
-    %meta{name:"description",content:"Gray Bike is a small software & design consultancy in San Francsico, CA."}
-    %meta{name:"keywords",content:"software development, software engineering, engineering, design, consultancy, software consultancy, freelance, software developers, rails, d3"}
+    %meta{name:"description",content:data.site_info.description}
+    %meta{name:"keywords",content:"software development, software engineering, engineering, design, consultancy, software consultancy, freelance, software developers, rails, d3, data visualization, data viz"}
     %meta{name:"viewport", content:"width=device-width, initial-scale=1.0" }
     %meta{name:"google-site-verification", content:"mGFqkZIpRsu-KTICkZB_Lk453ig5zwNKhB2WrqWtqTg"}
 
     / Use title if it's in the page YAML frontmatter
-    %title= current_page.data.title || "GRAY BIKE"
-    %link{href:'http://fonts.googleapis.com/css?family=Roboto+Slab:300,200&Open+Sans:300', rel:'stylesheet', type:'text/css'}
+    %title= current_page.data.title || "#{current_page.data.title ? current_page.data.title + "| " : ''}GRAY BIKE - Creative Technology"
+    %link{href:'http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700|Source+Sans+Pro:200,300,400,600', rel:'stylesheet', type:'text/css'}
     = stylesheet_link_tag "all"
     = javascript_include_tag  "all"
   %body{:class => page_classes}
     = yield
+    = partial "partials/footer"
 
+    %script{ src: "https://code.jquery.com/jquery-1.11.3.min.js" }
+    %script{ src: "//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js" }
+    :javascript
+      $(document).ready(function() {
+        // Bind to the click of all links with a #hash in the href
+        $('a[href^="#"]').click(function(e) {
+          // Prevent the jump and the #hash from appearing on the address bar
+          e.preventDefault();
+          // Scroll the window, stop any previous animation, stop on user manual scroll
+          // Check https://github.com/flesler/jquery.scrollTo for more customizability
+          $(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:true, margin: true});
+        });
+      });
+
+    / Google Analytics
     :javascript
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

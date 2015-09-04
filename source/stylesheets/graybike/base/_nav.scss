@@ -1,0 +1,152 @@
+// http://tympanus.net/codrops/2013/07/14/justified-and-vertically-centered-header-elements/
+header {
+  text-align: justify;
+  letter-spacing: 1px;
+  height: $navbar-height;
+  padding: 1em 2.5%;
+
+  // http://code.jelmerdemaat.nl/2012/perfectly-justified-css-grid-technique-using-inline-block/
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+  
+  > div,
+  div h2, nav {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  > div {
+    width: 50%;
+    height: 100%;
+    text-align: left;
+     &::before {
+      content: '';
+      display: inline-block;  
+      vertical-align: middle;
+      height: 100%;
+    }
+  }
+  
+  h2 {
+    margin: 0;
+  }
+  h2 a {
+    height: 100%;
+    font-size: 1.5em;
+    font-family: $sans-serif;
+    color: $blue-d2;
+    font-weight: 600;
+    &:hover {
+      color: $blue-b2;
+      cursor: pointer;
+    }
+    // &::before {
+    //   // content: '';
+    //   display: inline-block;
+    //   vertical-align: middle;  
+    //   height: 100%;
+    // }
+    span.dg {
+      color: $blue;
+    }
+  }
+
+  nav a {
+    padding: 0 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    white-space: nowrap;
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &.contact {
+      font-weight: 600;
+    }
+  }
+
+
+  hr {
+    @include span-columns(12);
+    @include omega();
+    width: 100% !important;
+  }
+
+
+  // Just center everything for mobile.
+  @include media($tablet) {
+    height: auto;
+    > div h2 {
+      margin-bottom: 1em;
+    }
+
+    nav a:first-child {
+      padding-left: 0;
+    }
+
+    > div,
+    > div h2,
+    nav {
+        height: auto;
+        width: auto;
+        display: block;
+        text-align: center;
+    }
+  }
+
+}
+
+// Nav link styling
+nav a {
+  color: $action-color;
+  &:active,
+  &:focus,
+  &:hover {
+    color: $action-color;
+    cursor: pointer;
+  }
+}
+nav a span {
+  padding: 8px 0;
+  position: relative;
+}
+nav a span:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: $action-color;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  transform: translateY(10px);
+
+}
+
+nav a span:hover::after,
+nav a span:focus::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+header.alt {
+  h2 a {
+    color: $blue-b2;
+  }
+  nav a, nav a:hover {
+    color: $blue-b2;
+  }
+  nav a span:after {
+    background: $blue-b2;
+  }
+}

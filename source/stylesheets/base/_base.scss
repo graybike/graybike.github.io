@@ -1,33 +1,11 @@
-@charset "utf-8";
+// Bitters 1.1.0
+// http://bitters.bourbon.io
+// Copyright 2013-2015 thoughtbot, inc.
+// MIT License
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  color: $gray;
-}
+@import "variables";
 
-h1, h2 {
-  font-family: "Roboto Slab", serif;
-  font-weight: 300;
-}
+// Neat Settings -- uncomment if using Neat -- must be imported before Neat
+@import "grid-settings";
 
-h3 {
-  font-weight: 200;
-}
-// h1 {
-  
-//   font-size: 52px;
-// }
-
-p {
-  font-size: 17px;
-}
-
-a {
-  color: $gray_b1;
-  border-bottom: 1px dotted;
-}
-
-a:hover {
-  border-bottom: none;
-}
+@import "typography";

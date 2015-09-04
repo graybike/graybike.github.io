@@ -1,7 +1,29 @@
-@import 'bootstrap';
+@charset "utf-8";
 
-@import "mixins/mixins";
-@import "mixins/functions";
-@import "base/variables";
-@import "base/base";
-@import "base/utilities";
+@import "bourbon";
+@import "base/base";   /* Bitters needs to be imported before Neat */
+@import "neat";
+
+
+/* Gray Bike Styles */
+
+
+// Helpers
+@import "graybike/helpers/mixins";
+@import "graybike/helpers/functions";
+
+// Base
+@import "graybike/base/typography";
+@import "graybike/base/base";
+@import "graybike/base/utilities";
+@import "graybike/base/nav";
+@import "graybike/base/footer";
+
+// Components
+@import "graybike/components/buttons";
+@import "graybike/components/cta";
+@import "graybike/misc/fade-up";
+
+// Pages
+@import "graybike/pages/landing";
+@import "graybike/pages/blog";
