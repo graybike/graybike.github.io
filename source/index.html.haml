@@ -4,16 +4,12 @@ title: Gray Bike | Software & Design Consulting
 
 %article.landing.type-system-slab
   .hero
-    %section.intro
-      %h1 Gray Bike is a small software and user experience consultancy based in San Francisco, California.
+    = partial "partials/nav"
+    %section.logo.text-center
       = image_tag 'logo.svg', alt:'Gray Bike'
-      .cta
-        .half
-          %a{href: "#"}
-            %h2 GET IN TOUCH
-        .half
-          %a{href: "#learnmore"}
-            %h2 FIND OUT MORE
+    %section.description
+      %h1
+        %span Gray Bike is a small software consultancy based in San Francisco, California.
   %section#learnmore.main
     .description
       %h2.text-center I work with startups and small businesses.

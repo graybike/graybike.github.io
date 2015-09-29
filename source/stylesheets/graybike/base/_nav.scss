@@ -1,0 +1,79 @@
+// http://tympanus.net/codrops/2013/07/14/justified-and-vertically-centered-header-elements/
+header {
+  @include outer-container;
+
+  text-align: justify;
+  letter-spacing: 1px;
+  height: 8em;
+  padding: 2em 0;
+
+  // http://code.jelmerdemaat.nl/2012/perfectly-justified-css-grid-technique-using-inline-block/
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+  
+  > div,
+  div h2, nav {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  > div {
+    width: 50%;
+    height: 100%;
+    text-align: left;
+     &::before {
+      content: '';
+      display: inline-block;  
+      vertical-align: middle;
+      height: 100%;
+    }
+  }
+
+  h2 {
+    height: 100%;
+    font-size: 2.5em !important;
+    font-weight: 600 !important;
+    &::before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;  
+      height: 100%;
+    }
+  }
+
+  nav a {
+    padding: 0 0.6em;
+    white-space: nowrap;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+
+  hr {
+    @include span-columns(12);
+    @include omega();
+    width: 100% !important;
+  }
+
+
+  // Just center everything for mobile.
+  @include media($mobile) {
+    // height: auto;
+    h2 {
+      font-size: 1.5em !important;
+    }
+    > div,
+    > div h2,
+    nav {
+        height: auto;
+        width: auto;
+        display: block;
+        text-align: center;
+    }
+  }
+
+}

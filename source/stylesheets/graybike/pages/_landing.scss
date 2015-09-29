@@ -1,77 +1,51 @@
 article.type-system-slab.landing {
   height: 100%;
+  
 
   .hero {
     width: 100%;
-    background-color: $medium-blue;
+    // background-color: $blue-d2;
+    background-color: #313E42;
     color: $white;
     height: calc(100%);
 
-    .intro {
-      @include vertical-align();
-      text-align: center;
-      
+    padding-left: 5%;
+    padding-right: 5%;
+
+    .logo {
+      margin: 5% auto;
       img {
+        height: 250px;
 
-        @include fill-parent();
-        max-width: em(200);
-        
-        margin: auto;
-        margin-top: padding-blocks(1);  
-
-        @include media($mobile) {
-          max-width: em(100);
-        }
       }
-
-      h1 {
-        font-weight: 300;
-        text-align: left;
-        @include span-columns(10);
-        @include shift(1);
-      }
-
-      .cta {
-        
-        margin-top: padding-blocks(5);
-        @include span-columns(8);
-        @include shift(2);
 
         @include media($tablet) {
-          margin-top: padding-blocks(3);
-          @include fill-parent();
-          @include shift(0);
+          img {
+            height: 200px;
+          }
         }
 
         @include media($mobile) {
-          margin-top: padding-blocks(1);
+          img { 
+            height: 150px;
+          }
         }
-
-      }
-
-      .half {
-        @include span-columns(4 of 8);
-        &:last-child {
-          @include omega();
-        }
-
-        @include media($mobile) {
-          @include fill-parent();
-          // margin-bottom: padding-blocks(1);
-        }
+      
+    }
+    
+    h1 {
+      span {
+        position: relative;
+        line-height: 1.6em;
+        background: $blue-b2;
+        left: 10px;
+        background-clip: content-box;
+        font-family: $sans-serif;
+        color: $blue-d2;
+        -webkit-box-shadow: -10px 0px 0px $blue-b2, 10px 0px 0px $blue-b2;
+        box-shadow: -10px 0px 0px $blue-b2, 10px 0px 0px $blue-b2;
+        box-decoration-break: clone;
       }
     }
-
-    h2 {
-      color: #fff;
-      font-weight: 700;
-      letter-spacing: em(1.5);
-    }
-  }
-  .description {
-    padding-top: padding-blocks(3);
-    padding-bottom: padding-blocks(3);
-    @include span-columns(10);
-    @include shift(1);
   }
 }
