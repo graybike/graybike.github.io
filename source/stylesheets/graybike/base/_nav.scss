@@ -34,13 +34,17 @@ header {
 
   h2 {
     height: 100%;
-    font-size: 2.5em !important;
-    font-weight: 600 !important;
+    font-size: 2.5em;
+    font-family: $sans-serif;
+    font-weight: 600;
     &::before {
       content: '';
       display: inline-block;
       vertical-align: middle;  
       height: 100%;
+    }
+    span.dg {
+      color: $blue;
     }
   }
 
