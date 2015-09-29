@@ -4,8 +4,8 @@ article.type-system-slab.landing {
 
   .hero {
     width: 100%;
-    // background-color: $blue-d2;
-    background-color: #313E42;
+    background-color: darken($blue-d2,10%);
+    // background-color: #313E42;
     color: $white;
     height: calc(100%);
 
@@ -32,20 +32,29 @@ article.type-system-slab.landing {
         }
       
     }
-    
+
     h1 {
       span {
         position: relative;
         line-height: 1.6em;
         background: $blue-b2;
         left: 10px;
-        background-clip: content-box;
         font-family: $sans-serif;
         color: $blue-d2;
         -webkit-box-shadow: -10px 0px 0px $blue-b2, 10px 0px 0px $blue-b2;
         box-shadow: -10px 0px 0px $blue-b2, 10px 0px 0px $blue-b2;
         box-decoration-break: clone;
       }
+    }
+  }
+
+  .description h1 {
+    margin: padding-blocks(3) auto;
+    @include media($tablet) {
+      margin: padding-blocks(2) auto;
+    }
+    @include media($mobile) {
+      margin: padding-blocks(1) auto;
     }
   }
 }

@@ -15,7 +15,7 @@
 
 ### Landing Page
 * Landing Page Text / Hover Effects
-  * http://tympanus.net/Development/TextStylesHoverEffects/)
+  * http://tympanus.net/Development/TextStylesHoverEffects/
     * Cool Simple block text / styles
   * http://tympanus.net/Development/AnimatedHeaderBackgrounds/index3.html
     * Cool border effect on text
