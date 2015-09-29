@@ -72,9 +72,10 @@ header {
   // Just center everything for mobile.
   @include media($mobile) {
     // height: auto;
-    h2 {
-      font-size: 1.5em !important;
+    h2 a {
+      font-size: 1.5em;
     }
+
     > div,
     > div h2,
     nav {
@@ -85,4 +86,45 @@ header {
     }
   }
 
+}
+
+// Nav link styling
+nav a {
+  color: $blue-b2;
+  font-size: 1.2em;
+  &:active,
+  &:focus,
+  &:hover {
+    color: $blue-b2;
+    cursor: pointer;
+  }
+}
+nav a span {
+  // padding: 8px 0;
+  position: relative;
+}
+nav a span:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: $blue-d2;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  transform: translateY(10px);
+
+}
+
+nav a span:hover::after,
+nav a span:focus::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
 }
