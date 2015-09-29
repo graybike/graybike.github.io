@@ -36,6 +36,8 @@
   * http://tympanus.net/codrops/2013/07/03/interactive-particles-slideshow/
     * Could be good to represent a particle bike
 
+* Better header alignment
+  * http://tympanus.net/codrops/2013/07/14/justified-and-vertically-centered-header-elements/
 
 ## TODO
 
