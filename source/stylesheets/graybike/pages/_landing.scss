@@ -4,7 +4,8 @@ article.landing {
 
   .hero {
     width: 100%;
-    background-color: $blue-d2;
+    // background-color: $blue-d2;
+    @include retina-image('/images/landing-bg', 397px 322px);
     // background-color: #313E42;
     color: $white;
     height: calc(100%);
