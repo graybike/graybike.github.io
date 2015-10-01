@@ -21,6 +21,7 @@ article.landing {
     margin: 2em auto;
     position: relative;
     clear: both;
+    opacity: 0;
     img {
       position: absolute;
       top: 0;
@@ -31,7 +32,7 @@ article.landing {
       &.filled {
         opacity: 0;
       }
-      @include transition(all 0.2s ease-in-out);
+      @include transition(all 0.3s ease-in-out);
     }
     a:hover {
       img.outline {

@@ -2,10 +2,19 @@ $margin-top: 50px;
 $duration: 1.5s;
 
 .fade-up {
-  @include animation(fadeup $duration ease);
+  @include animation(fadeup $duration ease forwards);
 }
 
-@keyframes fadeup {
+
+.fade-in {
+  @include animation(fadeupquick $duration ease forwards);
+}
+
+.fade-up-delay {
+  @include animation-delay($duration);
+}
+
+@include keyframes(fadeup) {
   from {
     opacity: 0;
     @include transform(translateY($margin-top));
@@ -17,38 +26,13 @@ $duration: 1.5s;
   }
 }
 
-/* Firefox < 16 */
-@-moz-keyframes fadeup {
+
+@include keyframes(fadeupquick) {
   from {
     opacity: 0;
-    @include transform(translateY($margin-top));
-  }
-
-  to {
-    opacity: 1;
     @include transform(translateY(0));
   }
-}
 
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadeup {
-  from {
-    opacity: 0;
-    @include transform(translateY($margin-top));
-  }
-
-  to {
-    opacity: 1;
-    @include transform(translateY(0));
-  }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadeup {
-  from {
-    opacity: 0;
-    @include transform(translateY($margin-top));
-  }
   to {
     opacity: 1;
     @include transform(translateY(0));
