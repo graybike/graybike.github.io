@@ -11,7 +11,7 @@
 
     / Use title if it's in the page YAML frontmatter
     %title= current_page.data.title || "GRAY BIKE"
-    %link{href:'http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700&Source+Sans+Pro:400,300,600', rel:'stylesheet', type:'text/css'}
+    %link{href:'http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700|Source+Sans+Pro:200,300,400,600', rel:'stylesheet', type:'text/css'}
     = stylesheet_link_tag "all"
     = javascript_include_tag  "all"
   %body{:class => page_classes}
@@ -27,7 +27,7 @@
           e.preventDefault();
           // Scroll the window, stop any previous animation, stop on user manual scroll
           // Check https://github.com/flesler/jquery.scrollTo for more customizability
-          $(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:true});
+          $(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:true, margin: true});
         });
       });
 

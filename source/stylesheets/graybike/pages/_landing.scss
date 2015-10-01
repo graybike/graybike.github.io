@@ -1,54 +1,52 @@
 article.landing {
   height: 100%;
-  
-
   .hero {
     width: 100%;
-    // background-color: $blue-d2;
-    @include retina-image('/images/landing-bg', 397px 322px);
-    // background-color: #313E42;
-    color: $white;
+    @include retina-image('/images/landing-bg', 397px 322px);
+    // color: $white;
     height: calc(100%);
 
-    padding-left: 5%;
-    padding-right: 5%;
-
-    .logo {
-      margin: 5% auto;
-      img {
-        height: 250px;
-
-      }
-
-        @include media($tablet) {
-          img {
-            height: 200px;
-          }
-        }
-
-        @include media($mobile) {
-          img { 
-            height: 150px;
-          }
-        }
-      
-    }
-
     h1 {
-      span {
         position: relative;
         line-height: 1.6em;
-        background: $blue-b2;
         left: 10px;
         font-family: $sans-serif;
-        color: $blue-d2;
-        -webkit-box-shadow: -10px 0px 0px $blue-b2, 10px 0px 0px $blue-b2;
-        box-shadow: -10px 0px 0px $blue-b2, 10px 0px 0px $blue-b2;
-        box-decoration-break: clone;
-      }
+        color: $blue-b2;
     }
   }
 
+  .find-out-more {
+    margin: 2em auto;
+    position: relative;
+    clear: both;
+    img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -20px;
+      width: 40px;
+      width: 40px;
+      &.filled {
+        opacity: 0;
+      }
+      @include transition(all 0.2s ease-in-out);
+    }
+    a:hover {
+      img.outline {
+        opacity: 0;
+      }
+      img.filled {
+        opacity: 1;
+      }
+    }
+
+  }
+  section.hero-text {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: -$navbar-height;
+  }
   .description h1 {
     margin: padding-blocks(3) auto;
     @include media($tablet) {

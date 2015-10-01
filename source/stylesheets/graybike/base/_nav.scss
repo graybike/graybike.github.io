@@ -1,11 +1,9 @@
 // http://tympanus.net/codrops/2013/07/14/justified-and-vertically-centered-header-elements/
 header {
-  @include outer-container;
-
   text-align: justify;
   letter-spacing: 1px;
-  height: 8em;
-  padding: 2em 0;
+  height: $navbar-height;
+  padding: 1em 2.5%;
 
   // http://code.jelmerdemaat.nl/2012/perfectly-justified-css-grid-technique-using-inline-block/
   &::after {
@@ -37,7 +35,7 @@ header {
   }
   h2 a {
     height: 100%;
-    font-size: 2.5em;
+    font-size: 1.5em;
     font-family: $sans-serif;
     color: $blue-b2;
     font-weight: 600;
@@ -45,22 +43,28 @@ header {
       color: $blue-b2;
       cursor: pointer;
     }
-    &::before {
-      content: '';
-      display: inline-block;
-      vertical-align: middle;  
-      height: 100%;
-    }
+    // &::before {
+    //   // content: '';
+    //   display: inline-block;
+    //   vertical-align: middle;  
+    //   height: 100%;
+    // }
     span.dg {
       color: $blue;
     }
   }
 
   nav a {
-    padding: 0 0.6em;
+    padding: 0 1em;
+    font-weight: 300;
+    text-transform: uppercase;
     white-space: nowrap;
     &:last-child {
       padding-right: 0;
+    }
+
+    &.hire {
+      font-weight: 600;
     }
   }
 
@@ -75,8 +79,12 @@ header {
   // Just center everything for mobile.
   @include media($mobile) {
     // height: auto;
-    h2 a {
-      font-size: 1.5em;
+    > div h2 {
+      margin-bottom: 1em;
+    }
+
+    nav a:first-child {
+      padding-left: 0;
     }
 
     > div,
@@ -94,7 +102,6 @@ header {
 // Nav link styling
 nav a {
   color: $blue-b2;
-  font-size: 1.2em;
   &:active,
   &:focus,
   &:hover {
