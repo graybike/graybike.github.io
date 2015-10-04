@@ -2,7 +2,6 @@
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $action-color: #477DCA !default;
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
@@ -28,11 +27,6 @@
   p {
     color: $base-font-color;
     line-height: $base-line-height;
-  }
-
-  a {
-    color: $action-color;
-    text-decoration: none;
   }
 
   .type {

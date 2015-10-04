@@ -12,7 +12,7 @@ article.landing {
         left: 10px;
         font-family: $sans-serif;
         color: $blue-b2;
-        font-weight: 600;
+        font-weight: 300;
         text-align: center;
     }
   }
@@ -50,13 +50,77 @@ article.landing {
     @include transform(translateY(-50%));
     margin-top: -$navbar-height;
   }
-  .description h1 {
-    margin: padding-blocks(3) auto;
+  .description h2,
+  .services h2,
+  .work h2 {
+    margin: padding-blocks(4) auto;
     @include media($tablet) {
-      margin: padding-blocks(2) auto;
+      margin: padding-blocks(3) auto;
     }
+  }
+  .work h2 {
+    margin-bottom: 0;
+  }
+
+  // Services section
+  .services {
+ 
+    div {
+      @include span-columns(4);
+      padding: em(10);
+      @include media($tablet) {
+        @include span-columns(12);
+      }
+
+      h3 {
+        text-align: center;
+      }
+    }
+
+    .plan {
+      background-color: $pastel-brown;
+      box-shadow: inset 0px 0px 1px 1px darken($pastel-brown, 20%);
+    }
+  }
+
+  
+  .company-example {
+    margin: padding-blocks(6) auto;
     @include media($mobile) {
-      margin: padding-blocks(1) auto;
+      margin: padding-blocks(4) auto;
+    }
+
+
+    > div {
+      display: none;
+      @include span-columns(6);
+      @include media($mobile) {
+        @include span-columns(12);
+      }
+    }
+
+    h3 {
+      text-transform: none;
+    }
+
+    &:nth-child(odd) {
+      h3, .company-example__service-used {
+        text-align: right;
+      }
+    }
+
+    span.emphasize {
+      font-family: $serif;
+      font-weight: 600;
+      text-transform: none;
+      font-size: $base-font-size;
+    }
+
+    .company-example__image {
+      text-align: center;
+      img {
+        width: 100%;
+      }
     }
   }
 }
