@@ -101,7 +101,7 @@ article.landing {
     @include media($mobile) {
       margin: padding-blocks(4) auto;
     }
-
+    @include outer-container;
     > div {
       display: none;
       @include span-columns(6);
@@ -132,6 +132,10 @@ article.landing {
       img {
         width: 100%;
       }
+    }
+    .company-example__testimony {
+      @include reset-display;
+      @include span-columns(12);
     }
   }
 }

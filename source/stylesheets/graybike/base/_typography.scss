@@ -128,4 +128,27 @@
   p.author {
     font-family: $serif;
   }
+
+
+  blockquote {
+    border-left: $blue-d2 4px solid;
+    padding-left: padding-blocks(2);
+    
+    margin-top: padding-blocks(2);
+    margin-bottom: padding-blocks(2);
+    p {
+      font-weight: 400;
+      color: lighten($base-font-color,20%);
+      line-height: 1.6;
+    }
+    
+    cite {
+      margin-top: padding-blocks(1);
+      display: block;
+      font-size: em(14);
+      &:before {
+      content: "\2014 \0020";
+      }
+    }
+  }
 }
