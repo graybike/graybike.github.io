@@ -63,7 +63,7 @@ header {
       padding-right: 0;
     }
 
-    &.hire {
+    &.contact {
       font-weight: 600;
     }
   }
@@ -77,7 +77,7 @@ header {
 
 
   // Just center everything for mobile.
-  @include media($mobile) {
+  @include media($tablet) {
     // height: auto;
     > div h2 {
       margin-bottom: 1em;

@@ -64,22 +64,29 @@ article.landing {
 
   // Services section
   .services {
- 
-    div {
+     @mixin service-box($color: $blue-d2) {
       @include span-columns(4);
-      padding: em(10);
-      @include media($tablet) {
+      padding: em(20) em(10);
+      @include media($mobile) {
         @include span-columns(12);
       }
 
       h3 {
         text-align: center;
       }
+      background-color: $color;
+      box-shadow: inset 0px 0px 1px 1px darken($color,20%);
+      margin-bottom: padding-blocks(2);
+    }
+    .plan {
+      @include service-box($pastel-brown);
     }
 
-    .plan {
-      background-color: $pastel-brown;
-      box-shadow: inset 0px 0px 1px 1px darken($pastel-brown, 20%);
+    .build {
+      @include service-box($blue);
+    }
+    .visualize {
+      @include service-box(#979EA0); 
     }
   }
 
@@ -90,11 +97,10 @@ article.landing {
       margin: padding-blocks(4) auto;
     }
 
-
     > div {
       display: none;
       @include span-columns(6);
-      @include media($mobile) {
+      @include media($tablet) {
         @include span-columns(12);
       }
     }
