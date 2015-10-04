@@ -1,0 +1,10 @@
+%section.cta
+  %p.text-center Interested in working together?
+  .cta__contact.text-center
+    %a{href:'mailto:hello@graybike.co'}
+      = image_tag "http://placehold.it/350x50", alt: "Contact"
+  .cta__availability.text-center
+    %p.type
+      [ AVAILABLE FROM
+      = data.availability
+      ]
