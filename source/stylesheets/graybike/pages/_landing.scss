@@ -97,9 +97,9 @@ article.landing {
 
   
   .company-example {
-    margin: padding-blocks(6) auto;
+    margin: padding-blocks(4) auto;
     @include media($mobile) {
-      margin: padding-blocks(4) auto;
+      margin: padding-blocks(3) auto;
     }
     @include outer-container;
     > div {
@@ -114,11 +114,7 @@ article.landing {
       text-transform: none;
     }
 
-    &:nth-child(odd) {
-      h3, .company-example__service-used {
-        text-align: right;
-      }
-    }
+    
 
     span.emphasize {
       font-family: $serif;
@@ -128,14 +124,45 @@ article.landing {
     }
 
     .company-example__image {
+      @include omega();
       text-align: center;
       img {
-        width: 100%;
+        width: 75%;
+      }
+      @include media($tablet) {
+        img { width: 75% }
+        
+      }
+      @include media($mobile) {
+        img { width: 100%; }
       }
     }
     .company-example__testimony {
-      @include reset-display;
       @include span-columns(12);
     }
   }
+
+  // // Hack to re-order the company examples that are aligned right
+  // section:nth-child(even) {
+  //   .company-example{
+  //     // @include outer-container;
+  //     // @include span-columns(12);
+  //     h3, .company-example__service-used {
+  //       text-align: right;
+  //     }
+  //     @include media($greaterthan-tablet) {
+  //       .company-example__description {
+  //         // @include span-columns(6);
+  //         @include shift(6);
+  //         @include omega;
+  //         float: right;
+  //       }
+  //       .company-example__image {
+  //         // @include span-columns(6);
+  //         float: left
+  //       }
+  //     }
+  //   }
+
+  // }
 }

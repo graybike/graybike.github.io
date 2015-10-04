@@ -144,6 +144,7 @@
     
     cite {
       margin-top: padding-blocks(1);
+      color: lighten($base-font-color,30%);
       display: block;
       font-size: em(14);
       &:before {
