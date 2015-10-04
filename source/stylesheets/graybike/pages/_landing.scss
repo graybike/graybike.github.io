@@ -77,6 +77,7 @@ article.landing {
       background-color: $color;
       box-shadow: inset 0px 0px 1px 1px darken($color,20%);
       margin-bottom: padding-blocks(2);
+
     }
     .plan {
       @include service-box($pastel-brown);
