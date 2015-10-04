@@ -64,7 +64,7 @@ article.landing {
 
   // Services section
   .services {
-     @mixin service-box($color: $blue-d2) {
+    @mixin service-box($color: $blue-d2) {
       @include span-columns(4);
       padding: em(20) em(10);
       @include media($mobile) {
@@ -88,6 +88,11 @@ article.landing {
     .visualize {
       @include service-box(#979EA0); 
     }
+  }
+
+  .cta .cta__availability p.type {
+    text-align: center;
+    border-bottom: none;
   }
 
   

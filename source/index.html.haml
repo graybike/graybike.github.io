@@ -1,7 +1,3 @@
----
-title: Gray Bike | Software & Design Consulting
----
-
 %article.landing
   .hero
     = partial "partials/nav"
@@ -36,8 +32,11 @@ title: Gray Bike | Software & Design Consulting
 
     %section.cta
       %p.text-center Interested in working together?
-      .contact.text-center
-        = image_tag "http://placehold.it/350x50", alt: "Soma Water Website"
+      .cta__contact.text-center
+        %a{href:'mailto:hello@graybike.co'}
+          = image_tag "http://placehold.it/350x50", alt: "Contact"
+      .cta__availability.text-center
+        %p.type [ AVAILABLE FROM JANUARY 2016 ]
 
     %section.work
       %h2.text-center#work Here is some of my work.
