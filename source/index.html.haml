@@ -4,7 +4,7 @@
 
     %section.type-system-slab.hero-text
 
-      %h1.fade-up Gray Bike is a small software consultancy based in San Francisco, California. I use technology to help small businesses, nonprofits, and startups grow.
+      %h1.fade-up Gray Bike is a solo software consultancy based in San Francisco, California. I use technology to help small businesses, nonprofits, and startups grow.
     
 
       .find-out-more.text-center.fade-in.fade-up-delay
@@ -13,24 +13,27 @@
           = image_tag 'icons/down-arrow-circle-filled.svg', alt: 'Find out more', class: 'filled'
 
   .main-content.type-system-slab
-    %section.description
-      %h2.text-center#services Here are some things I can do for you.
+    - if data.features.services
+      %section.description
+        %h2.text-center#services Here are some things I can do for you.
 
-    %section.services
-      .plan
-        %h3 Plan
-        %p
-          Tell me all about your project and for a fixed fee I'll tell you exactly what it will take to build your project.
-      .build
-        %h3 Build
-        %p
-          I'll work with you to develop your existing product, refine your tech strategy, or build a new one entirely from scratch.
-      .visualize
-        %h3 Visualize
-        %p
-          I use design, research and engineering to analyze data and tell stories.
-    
-    = partial "partials/cta"
+      / http://zurb.com/building-blocks/header-card-panel
+      / ^ Might be good for styles for listing these blocks
+      %section.services
+        .plan
+          %h3 Plan
+          %p
+            Tell me all about your project and for a fixed fee I'll tell you exactly what it will take to build your project.
+        .build
+          %h3 Build
+          %p
+            I'll work with you to develop your existing product, refine your tech strategy, or build a new one entirely from scratch.
+        .visualize
+          %h3 Visualize
+          %p
+            I use design, research and engineering to analyze data and tell stories.
+      
+      = partial "partials/cta"
 
     %section.work
       %h2.text-center#work Here is some of my work.
