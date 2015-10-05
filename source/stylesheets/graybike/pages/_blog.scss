@@ -1,0 +1,8 @@
+.blog {
+  // margin-top: $navbar-height;
+
+  .articles {
+    @include span-columns(8);
+    @include shift(2);
+  }
+}

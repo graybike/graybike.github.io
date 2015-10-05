@@ -1,16 +1,16 @@
-%header
+%header{class: ("alt" if defined?(alt) )}
   %div
     %h2
-      %a
+      %a{href:"/"}
         / = image_tag 'logo.svg', alt:'Gray Bike'
         = succeed "BIKE" do
           %span.dg GRAY
   %nav
-    %a{href:"#services"}
+    %a{href:"/#services"}
       %span About
     %a{href:"#work"}
       %span Work
-    %a
+    %a{href:"/words"}
       %span Words
     %a.contact{href:'mailto:hello@graybike.co'}
       %span Contact
