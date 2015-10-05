@@ -39,6 +39,10 @@
 * Better header alignment
   * http://tympanus.net/codrops/2013/07/14/justified-and-vertically-centered-header-elements/
 
+* Header Card Panel 
+  * http://zurb.com/building-blocks/header-card-panel
+  * Good effect for styling the services that I offer.
+
 ## TODO
 
 [ ] Add old browswer notification
