@@ -3,7 +3,20 @@ article.landing {
   .hero {
     width: 100%;
     @include retina-image('/images/landing-bg', 397px 322px);
-    // color: $white;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      @include linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0) 30%, darken($blue-d2,10%));
+      opacity: 0.5; 
+    }
+    // @include background(image-url("landing-bg.png"), linear-gradient(red, green), center no-repeat orange scroll);
+    // @include hidpi {
+    //   @include background(image-url("/images/landing-bg_2x.png"), linear-gradient(red, green), center no-repeat orange scroll);
+    // }
     height: calc(100%);
 
     h1 {

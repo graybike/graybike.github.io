@@ -68,7 +68,7 @@
     background: #F7F7F7;
     border-radius: $base-border-radius * 1.5;
     border: 1px solid #E0E0E0;
-    font-size: 0.8em;
+    // font-size: 0.8em;
     font-style: normal;
     padding: 0.1em 0.4em;
     white-space: nowrap;
@@ -90,7 +90,7 @@
     margin-bottom: 0.5em;
   }
 
-  p {
+  p, ul {
     font-family: $serif;
     font-weight: 300;
     letter-spacing: 1;

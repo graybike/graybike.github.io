@@ -3,9 +3,11 @@
 source 'https://rubygems.org'
 
 gem "middleman", "~> 3.3.12"
-gem "middleman-blog", "~> 3.5.3"
 
-# For feed.xml.builder
+
+# For feed.xml.builder / blog stuf
+gem "nokogiri"
+gem "middleman-blog", "~> 3.5.3"
 gem "builder", "~> 3.0"
 
 

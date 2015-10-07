@@ -43,7 +43,7 @@ $light-gray: #ddd;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$action-color: $blue;
+$action-color: darken($blue,10%);
 
 // Border
 $base-border-color: $light-gray;

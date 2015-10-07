@@ -12,7 +12,8 @@
 ###
 
 # Per-page layout changes:
-#
+
+# page "words/*", :layout => :article_layout
 # With no layout
 # page "/path/to/file.html", :layout => false
 #
@@ -34,6 +35,9 @@
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
+
+# Allow pretty URLs
+activate :directory_indexes
 
 # Reload the browser automatically whenever files change
 configure :development do
@@ -78,11 +82,11 @@ activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   blog.prefix = "words"
 
-  blog.permalink = "{title}"
+  blog.permalink = "{year}-{month}-{day}-{title}"
   # Matcher for blog source files
   blog.sources = "articles/{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
-  # blog.layout = "layout"
+  blog.layout = "article_layout"
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
   # blog.year_link = "{year}.html"
