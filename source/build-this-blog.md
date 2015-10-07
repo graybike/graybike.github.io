@@ -45,13 +45,22 @@
 
 ## TODO
 
+
+## BEFORE LAUNCH
 [ ] Add image for soma water
 [ ] Add image for captains of industry
 [ ] Add image for hummings
 
-[ ] Fix logo hover behavior
+[ ] Increase H2 size on homepage -- make the sections more prominent
 
-[ ] Review
+[ ] Fix logo hover behavior (and colors) 
+
+[ ] Fix blockquote spacing on mobile (and tablet?)
+
+
+## AFTER LAUNCH
+
+[ ] Add back in services section
 [ ] Landing Page for Build
 [ ] Landing Page for Plan
 [ ] Landing Page for Visualize
@@ -59,7 +68,9 @@
 [ ] Add old browswer notification
 [ ] Better down arrow shape
 
-
+## BLOG
+[ ] Review sinatra posts, move code snippets to Gist
+  [ ] Break things down into commits?
 
 ## Copy from old about section
 
