@@ -1,0 +1,12 @@
+footer {
+  background: darken($blue-d2,20%);
+  color: white;
+  padding: padding-blocks(2) padding-blocks(1);
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+      margin: auto 1em;
+    }
+  }
+}
