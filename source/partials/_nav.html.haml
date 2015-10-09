@@ -6,11 +6,13 @@
         = succeed "BIKE" do
           %span.dg GRAY
   %nav
-    %a{href:"/#services"}
-      %span About
+    - if data.features.services
+      %a{href:"#services"}
+        %span About
     %a{href:"#work"}
       %span Work
-    %a{href:"/words"}
-      %span Words
+    - if data.features.blog
+      %a{href:"/words"}
+        %span Words
     %a.contact{href:'mailto:hello@graybike.co'}
       %span Contact

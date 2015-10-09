@@ -1,1 +1,2 @@
-services: true
+services: false
+blog: false

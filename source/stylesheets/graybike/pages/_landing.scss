@@ -121,13 +121,32 @@ article.landing {
       margin: padding-blocks(3) auto;
     }
     @include outer-container;
-    > div {
-      display: none;
+    .company-example__description {
+  
+      h3 {
+        font-size: 1.25em;
+      }
+
+      @include span-columns(6);
+      @include media($tablet) {
+        @include span-columns(12);
+      }
+
+    }
+
+    .company-example__image {
       @include span-columns(6);
       @include media($tablet) {
         @include span-columns(12);
       }
     }
+
+    // > div {
+    //   @include span-columns(6);
+    //   @include media($tablet) {
+    //     @include span-columns(12);
+    //   }
+    // }
 
     h3 {
       text-transform: none;
@@ -146,7 +165,8 @@ article.landing {
       @include omega();
       text-align: center;
       img {
-        width: 75%;
+        width: 100%;
+        max-width: 800px;
       }
       @include media($tablet) {
         img { width: 75% }

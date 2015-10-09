@@ -4,13 +4,20 @@
 
     %section.type-system-slab.hero-text
 
-      %h1.fade-up Gray Bike is a solo software consultancy based in San Francisco, California. I use technology to help small businesses, nonprofits, and startups grow.
+      %h1.fade-up Gray Bike is a solo software consultancy based in San Francisco. I use technology to help small businesses, nonprofits, and startups grow.
     
 
       .find-out-more.text-center.fade-in.fade-up-delay
-        %a{href: "#services"}
-          = image_tag 'icons/down-arrow-circle-outline.svg', alt: 'Find out more', class: 'outline'
-          = image_tag 'icons/down-arrow-circle-filled.svg', alt: 'Find out more', class: 'filled'
+        - if data.features.services
+          %a{href: "#services"}
+            = image_tag 'icons/down-arrow-circle-outline.svg', alt: 'Find out more', class: 'outline'
+            = image_tag 'icons/down-arrow-circle-filled.svg', alt: 'Find out more', class: 'filled'
+        - else
+          %a{href: "#work"}
+            = image_tag 'icons/down-arrow-circle-outline.svg', alt: 'Find out more', class: 'outline'
+            = image_tag 'icons/down-arrow-circle-filled.svg', alt: 'Find out more', class: 'filled'
+
+      
 
   .main-content.type-system-slab
     - if data.features.services
@@ -48,10 +55,11 @@
             in the first 3 months after launch.
             / %a.read-more{href:"#"} Read More &rsaquo;
           %p
-            %a.read-more{href:"https://www.drinksoma.com/"} VISIT SITE
+            %a.read-more{href:"https://www.drinksoma.com/", target: "_blank"} VISIT SITE
             
         .company-example__image.omega
-          = image_tag "http://placehold.it/350x150", alt: "Soma Water Website"
+          %a{href:"https://www.drinksoma.com/", target: "_blank"}
+            = image_tag "work/soma-pitcher.png", alt: "Soma Water Website"
         .company-example__testimony
           %blockquote
             %p Pavan has been our go-to guy to help with our engineering efforts at drinksoma.com. We came to him for help with a huge redesign of our e-commerce website. He was able to put a new face on our website and vastly improve the capabilities of our platform -- leading to many more sales and happier customers! He has a great ability to take our business problems and solve them with his engineering expertise. We look forward to continuing to work with him!
@@ -66,10 +74,11 @@
             Hummings is a mobile-first personal finance companion app. They came to me with early stage wireframes, and I guided them through UX revisions and product development. Once designs were finalized, I put together a small engineering team to build out the entire app.
             / %a.read-more{href:"#"} Read More &rsaquo;
           %p
-            %a.read-more{href:"https://www.hellohummings.com/"} VISIT SITE
+            %a.read-more{href:"https://www.hellohummings.com/", target: "_blank"} VISIT SITE
             
         .company-example__image.omega
-          = image_tag "http://placehold.it/350x150", alt: "Visualizing Protein Pathways"
+          %a{href:"https://www.hellohummings.com/", target: "_blank"}
+            = image_tag "work/hummings.png", alt: "Hummings"
         .company-example__testimony
           %blockquote
             %p We started working with Pavan at Gray Bike for our MVP app (www.hellohummings.com) at the wireframe stage. Pavan quickly grasped the vision of our product and provided a great deal of insights to shape our UX, product architecture, and the engineering milestones. He also came up with really smart solutions to leverage existing tools & frameworks to optimize the custom coding work.
@@ -86,10 +95,11 @@
             Cell Signal Technology wanted to build a visualization that provided information on their product catalog, as well as inform the viewer about protein pathways available in the cell. They hired Captains of Industry, who brought me on to build the data viz. I worked closely with design througout and built the entire visualization.
             / %a.read-more{href:"#"} Read More &rsaquo;
             %p
-              %a.read-more{href:"http://learn.cellsignal.com/interactive-signaling-pathway-demo"} VISIT SITE
+              %a.read-more{href:"http://learn.cellsignal.com/interactive-signaling-pathway-demo", target: "_blank"} VISIT SITE
             
         .company-example__image.omega
-          = image_tag "http://placehold.it/350x150", alt: "Visualizing Protein Pathways"
+          %a{href:"http://learn.cellsignal.com/interactive-signaling-pathway-demo", target: "_blank"}
+            = image_tag "work/ipv-pathways.png", alt: "Visualizing Protein Pathways"
         
         .company-example__testimony
           %blockquote
