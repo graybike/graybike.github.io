@@ -47,11 +47,13 @@
 
 
 ## BEFORE LAUNCH
-[ ] Add image for soma water
-[ ] Add image for captains of industry
-[ ] Add image for hummings
+[X] Add image for soma water
+[X] Add image for captains of industry
+[X] Add image for hummings
 
 [ ] Increase H2 size on homepage -- make the sections more prominent
+
+[ ] Add footer
 
 [ ] Fix logo hover behavior (and colors) 
 
@@ -59,6 +61,7 @@
 
 
 ## AFTER LAUNCH
+[ ] Make the images for each "work" example a carousel?
 
 [ ] Add back in services section
 [ ] Landing Page for Build

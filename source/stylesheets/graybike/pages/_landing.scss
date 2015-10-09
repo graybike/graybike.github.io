@@ -66,6 +66,7 @@ article.landing {
   .description h2,
   .services h2,
   .work h2 {
+    font-size: 1.5em;
     margin: padding-blocks(4) auto;
     @include media($tablet) {
       margin: padding-blocks(3) auto;
@@ -109,6 +110,18 @@ article.landing {
     }
   }
 
+  // About
+  .about p {
+    
+    @include text-width();
+
+    span {
+      font-family: $serif;
+      text-transform: none;
+      font-size: $base-font-size;
+    }
+  }
+
   .cta .cta__availability p.type {
     text-align: center;
     border-bottom: none;
@@ -116,9 +129,9 @@ article.landing {
 
   
   .company-example {
-    margin: padding-blocks(4) auto;
+    margin: padding-blocks(6) auto;
     @include media($mobile) {
-      margin: padding-blocks(3) auto;
+      margin: padding-blocks(4) auto;
     }
     @include outer-container;
     .company-example__description {
