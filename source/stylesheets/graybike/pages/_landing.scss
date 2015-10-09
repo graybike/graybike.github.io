@@ -1,5 +1,7 @@
-article.landing {
+.landing {
   height: 100%;
+  overflow: auto;
+  position: relative;
   .hero {
     width: 100%;
     @include retina-image('/images/landing-bg', 397px 322px);
