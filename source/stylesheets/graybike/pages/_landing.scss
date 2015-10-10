@@ -20,7 +20,7 @@
       left: 10px;
       font-family: $sans-serif;
       color: $blue-b2;
-      font-weight: 300;
+      font-weight: 400;
       text-align: center;
   }
 }
@@ -63,6 +63,7 @@ section.hero-text {
 .services h2,
 .work h2 {
   font-size: 1.5em;
+  font-weight: 600;
   margin: padding-blocks(4) auto;
   @include media($tablet) {
     margin: padding-blocks(3) auto;
