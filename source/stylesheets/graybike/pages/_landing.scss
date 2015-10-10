@@ -1,222 +1,191 @@
-.landing {
-  height: 100%;
-  overflow: auto;
+
+.hero {
+  width: 100%;
+  @include retina-image('/images/landing-bg', 397px 322px);
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0) 30%, darken($blue-d2,10%));
+    opacity: 0.5; 
+  }
+  height: calc(100%);
+
+  h1 {
+      position: relative;
+      line-height: 1.6em;
+      left: 10px;
+      font-family: $sans-serif;
+      color: $blue-b2;
+      font-weight: 300;
+      text-align: center;
+  }
+}
+
+.find-out-more {
+  margin: 2em auto;
   position: relative;
-  .hero {
-    width: 100%;
-    @include retina-image('/images/landing-bg', 397px 322px);
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      @include linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0) 30%, darken($blue-d2,10%));
-      opacity: 0.5; 
+  clear: both;
+  opacity: 0;
+  img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -20px;
+    height: 40px;
+    width: 40px;
+    &.filled {
+      opacity: 0;
     }
-    // @include background(image-url("landing-bg.png"), linear-gradient(red, green), center no-repeat orange scroll);
-    // @include hidpi {
-    //   @include background(image-url("/images/landing-bg_2x.png"), linear-gradient(red, green), center no-repeat orange scroll);
-    // }
-    height: calc(100%);
-
-    h1 {
-        position: relative;
-        line-height: 1.6em;
-        left: 10px;
-        font-family: $sans-serif;
-        color: $blue-b2;
-        font-weight: 300;
-        text-align: center;
+    @include transition(all 0.3s ease-in-out);
+  }
+  a:hover {
+    img.outline {
+      opacity: 0;
+    }
+    img.filled {
+      opacity: 1;
     }
   }
 
-  .find-out-more {
-    margin: 2em auto;
-    position: relative;
-    clear: both;
-    opacity: 0;
-    img {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      margin-left: -20px;
-      height: 40px;
-      width: 40px;
-      &.filled {
-        opacity: 0;
-      }
-      @include transition(all 0.3s ease-in-out);
-    }
-    a:hover {
-      img.outline {
-        opacity: 0;
-      }
-      img.filled {
-        opacity: 1;
-      }
-    }
+}
+section.hero-text {
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
+  margin-top: -$navbar-height;
+}
 
+.description h2,
+.services h2,
+.work h2 {
+  font-size: 1.5em;
+  margin: padding-blocks(4) auto;
+  @include media($tablet) {
+    margin: padding-blocks(3) auto;
   }
-  section.hero-text {
-    position: relative;
-    top: 50%;
-    @include transform(translateY(-50%));
-    margin-top: -$navbar-height;
-  }
-  .description h2,
-  .services h2,
-  .work h2 {
-    font-size: 1.5em;
-    margin: padding-blocks(4) auto;
-    @include media($tablet) {
-      margin: padding-blocks(3) auto;
-    }
-  }
-  .work h2 {
-    margin-bottom: 0;
-  }
+}
+.work h2 {
+  margin-bottom: 0;
+}
 
-  // Services section
-  .services {
-    @mixin service-box($color: $blue-d2) {
-      @include span-columns(4);
-      padding: em(20) em(10);
-      @include media($mobile) {
-        @include span-columns(12);
-      }
-
-      h3 {
-        text-align: center;
-      }
-      background-color: $color;
-      box-shadow: inset 0px 0px 1px 2px darken($color,20%);
-      margin-bottom: padding-blocks(2);
-      
-      @include transition(all 0.3s ease-in-out);
-      &:hover {
-        cursor: pointer;
-        opacity: 0.8;
-      }
-    }
-    .plan {
-      @include service-box($pastel-brown);
-    }
-
-    .build {
-      @include service-box($blue);
-    }
-    .visualize {
-      @include service-box(#979EA0); 
-    }
-  }
-
-  // About
-  .about p {
-    
-    @include text-width();
-
-    span {
-      font-family: $serif;
-      text-transform: none;
-      font-size: $base-font-size;
-    }
-  }
-
-  .cta .cta__availability p.type {
-    text-align: center;
-    border-bottom: none;
-  }
-
-  
-  .company-example {
-    margin: padding-blocks(6) auto;
+// Services section
+.services {
+  @mixin service-box($color: $blue-d2) {
+    @include span-columns(4);
+    padding: em(20) em(10);
     @include media($mobile) {
-      margin: padding-blocks(4) auto;
+      @include span-columns(12);
     }
-    @include outer-container;
-    .company-example__description {
-  
-      h3 {
-        font-size: 1.25em;
-      }
-
-      @include span-columns(6);
-      @include media($tablet) {
-        @include span-columns(12);
-      }
-
-    }
-
-    .company-example__image {
-      @include span-columns(6);
-      @include media($tablet) {
-        @include span-columns(12);
-      }
-    }
-
-    // > div {
-    //   @include span-columns(6);
-    //   @include media($tablet) {
-    //     @include span-columns(12);
-    //   }
-    // }
 
     h3 {
-      text-transform: none;
-    }
-
-    
-
-    span.emphasize {
-      font-family: $serif;
-      font-weight: 600;
-      text-transform: none;
-      font-size: $base-font-size;
-    }
-
-    .company-example__image {
-      @include omega();
       text-align: center;
-      img {
-        width: 100%;
-        max-width: 800px;
-      }
-      @include media($tablet) {
-        img { width: 75% }
-        
-      }
-      @include media($mobile) {
-        img { width: 100%; }
-      }
     }
-    .company-example__testimony {
+    background-color: $color;
+    box-shadow: inset 0px 0px 1px 2px darken($color,20%);
+    margin-bottom: padding-blocks(2);
+    
+    @include transition(all 0.3s ease-in-out);
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+  .plan {
+    @include service-box($pastel-brown);
+  }
+
+  .build {
+    @include service-box($blue);
+  }
+  .visualize {
+    @include service-box(#979EA0); 
+  }
+}
+
+// About
+.about p {
+  
+  @include text-width();
+
+  span {
+    font-family: $serif;
+    text-transform: none;
+    font-size: $base-font-size;
+  }
+}
+
+.cta .cta__availability p.type {
+  text-align: center;
+  border-bottom: none;
+}
+
+
+.company-example {
+  margin: padding-blocks(6) auto;
+  @include media($mobile) {
+    margin: padding-blocks(4) auto;
+  }
+  @include outer-container;
+  .company-example__description {
+
+    h3 {
+      font-size: 1.25em;
+    }
+
+    @include span-columns(6);
+    @include media($tablet) {
+      @include span-columns(12);
+    }
+
+  }
+
+  .company-example__image {
+    @include span-columns(6);
+    @include media($tablet) {
       @include span-columns(12);
     }
   }
 
-  // // Hack to re-order the company examples that are aligned right
-  // section:nth-child(even) {
-  //   .company-example{
-  //     // @include outer-container;
-  //     // @include span-columns(12);
-  //     h3, .company-example__service-used {
-  //       text-align: right;
-  //     }
-  //     @include media($greaterthan-tablet) {
-  //       .company-example__description {
-  //         // @include span-columns(6);
-  //         @include shift(6);
-  //         @include omega;
-  //         float: right;
-  //       }
-  //       .company-example__image {
-  //         // @include span-columns(6);
-  //         float: left
-  //       }
-  //     }
+  // > div {
+  //   @include span-columns(6);
+  //   @include media($tablet) {
+  //     @include span-columns(12);
   //   }
-
   // }
+
+  h3 {
+    text-transform: none;
+  }
+
+  
+
+  span.emphasize {
+    font-family: $serif;
+    font-weight: 600;
+    text-transform: none;
+    font-size: $base-font-size;
+  }
+
+  .company-example__image {
+    @include omega();
+    text-align: center;
+    img {
+      width: 100%;
+      max-width: 800px;
+    }
+    @include media($tablet) {
+      img { width: 75% }
+      
+    }
+    @include media($mobile) {
+      img { width: 100%; }
+    }
+  }
+  .company-example__testimony {
+    @include span-columns(12);
+  }
 }

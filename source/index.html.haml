@@ -1,115 +1,115 @@
-.landing
-  .hero
-    = partial "partials/nav", locals: { alt: true }
 
-    %section.type-system-slab.hero-text
+.hero
+  = partial "partials/nav", locals: { alt: true }
 
-      %h1.fade-up Gray Bike is a solo software consultancy based in San Francisco, California. I use technology to solve problems for businesses and non-profits.
+  %section.type-system-slab.hero-text
+
+    %h1.fade-up Gray Bike is a solo software consultancy based in San Francisco, California. I use technology to solve problems for businesses and non-profits.
+  
+
+    .find-out-more.text-center.fade-in.fade-up-delay
+      - if data.features.services
+        %a{href: "#services"}
+          = image_tag 'icons/down-arrow-circle-outline.svg', alt: 'Find out more', class: 'outline'
+          = image_tag 'icons/down-arrow-circle-filled.svg', alt: 'Find out more', class: 'filled'
+      - else
+        %a{href: "#work"}
+          = image_tag 'icons/down-arrow-circle-outline.svg', alt: 'Find out more', class: 'outline'
+          = image_tag 'icons/down-arrow-circle-filled.svg', alt: 'Find out more', class: 'filled'
+
     
 
-      .find-out-more.text-center.fade-in.fade-up-delay
-        - if data.features.services
-          %a{href: "#services"}
-            = image_tag 'icons/down-arrow-circle-outline.svg', alt: 'Find out more', class: 'outline'
-            = image_tag 'icons/down-arrow-circle-filled.svg', alt: 'Find out more', class: 'filled'
-        - else
-          %a{href: "#work"}
-            = image_tag 'icons/down-arrow-circle-outline.svg', alt: 'Find out more', class: 'outline'
-            = image_tag 'icons/down-arrow-circle-filled.svg', alt: 'Find out more', class: 'filled'
+.main-content.type-system-slab
+  - if data.features.services
+    %section.description
+      %h2.text-center#services Here's what I can do for you
 
-      
-
-  .main-content.type-system-slab
-    - if data.features.services
-      %section.description
-        %h2.text-center#services Here's what I can do for you
-
-      / http://zurb.com/building-blocks/header-card-panel
-      / ^ Might be good for styles for listing these blocks
-      %section.services
-        .plan
-          %h3 Plan
-          %p
-            Tell me all about your project and for a fixed fee I'll tell you exactly what it will take to build your project.
-        .build
-          %h3 Build
-          %p
-            I'll work with you to develop your existing product, refine your tech strategy, or build a new one entirely from scratch.
-        .visualize
-          %h3 Visualize
-          %p
-            I use design, research and engineering to analyze data and tell stories.
-      
-      %section.about
+    / http://zurb.com/building-blocks/header-card-panel
+    / ^ Might be good for styles for listing these blocks
+    %section.services
+      .plan
+        %h3 Plan
         %p
-          I believe
-          %span communication and collaboration
-          are paramount to the success of any project we work on. I work best with clients that value these same principles, and trust me to provide valuable critique throughout the process. Click on one of my services above to find out more.
+          Tell me all about your project and for a fixed fee I'll tell you exactly what it will take to build your project.
+      .build
+        %h3 Build
+        %p
+          I'll work with you to develop your existing product, refine your tech strategy, or build a new one entirely from scratch.
+      .visualize
+        %h3 Visualize
+        %p
+          I use design, research and engineering to analyze data and tell stories.
+    
+    %section.about
+      %p
+        I believe
+        %span communication and collaboration
+        are paramount to the success of any project we work on. I work best with clients that value these same principles, and trust me to provide valuable critique throughout the process. Click on one of my services above to find out more.
 
-      = partial "partials/cta"
+    = partial "partials/cta"
 
-    %section.work
-      %h2.text-center#work Here is some of my work.
-    %section
-      .company-example
-        .company-example__description
-          %h3 Soma Water Website Redesign
-          %p.date.company-example__service-used BUILD: ENGINEERING
-          %p 
-            I led the engineering efforts for a massive redesign for Soma's e-commerce website. Working closely with design and marketing,
-            %span.emphasize we were able to increase sales by 40%
-            in the first 3 months after launch.
-            / %a.read-more{href:"#"} Read More &rsaquo;
-          %p
-            %a.read-more{href:"https://www.drinksoma.com/", target: "_blank"} VISIT SITE
-            
-        .company-example__image.omega
-          %a{href:"https://www.drinksoma.com/", target: "_blank"}
-            = image_tag "work/soma-pitcher.png", alt: "Soma Water Website"
-        .company-example__testimony
-          %blockquote
-            %p Pavan has been our go-to guy to help with our engineering efforts at drinksoma.com. We came to him for help with a huge redesign of our e-commerce website. He was able to put a new face on our website and vastly improve the capabilities of our platform -- leading to many more sales and happier customers! He has a great ability to take our business problems and solve them with his engineering expertise. We look forward to continuing to work with him!
-            %cite Michael Del Ponte, Founder & CEO at Soma Water
+  %section.work
+    %h2.text-center#work Here is some of my work.
+  %section
+    .company-example
+      .company-example__description
+        %h3 Soma Water Website Redesign
+        %p.date.company-example__service-used BUILD: ENGINEERING
+        %p 
+          I led the engineering efforts for a massive redesign for Soma's e-commerce website. Working closely with design and marketing,
+          %span.emphasize we were able to increase sales by 40%
+          in the first 3 months after launch.
+          / %a.read-more{href:"#"} Read More &rsaquo;
+        %p
+          %a.read-more{href:"https://www.drinksoma.com/", target: "_blank"} VISIT SITE
+          
+      .company-example__image.omega
+        %a{href:"https://www.drinksoma.com/", target: "_blank"}
+          = image_tag "work/soma-pitcher.png", alt: "Soma Water Website"
+      .company-example__testimony
+        %blockquote
+          %p Pavan has been our go-to guy to help with our engineering efforts at drinksoma.com. We came to him for help with a huge redesign of our e-commerce website. He was able to put a new face on our website and vastly improve the capabilities of our platform -- leading to many more sales and happier customers! He has a great ability to take our business problems and solve them with his engineering expertise. We look forward to continuing to work with him!
+          %cite Michael Del Ponte, Founder & CEO at Soma Water
 
-    %section
-      .company-example
-        .company-example__description
-          %h3 Hummings
-          %p.date.company-example__service-used BUILD: STRATEGY, DESIGN, ENGINEERING
-          %p
-            Hummings is a mobile-first personal finance companion app. They came to me with early stage wireframes, and I guided them through UX revisions and product development. Once designs were finalized, I put together a small engineering team to build out the entire app.
-            / %a.read-more{href:"#"} Read More &rsaquo;
-          %p
-            %a.read-more{href:"https://www.hellohummings.com/", target: "_blank"} VISIT SITE
-            
-        .company-example__image.omega
-          %a{href:"https://www.hellohummings.com/", target: "_blank"}
-            = image_tag "work/hummings.png", alt: "Hummings"
-        .company-example__testimony
-          %blockquote
-            %p We started working with Pavan at Gray Bike for our MVP app (www.hellohummings.com) at the wireframe stage. Pavan quickly grasped the vision of our product and provided a great deal of insights to shape our UX, product architecture, and the engineering milestones. He also came up with really smart solutions to leverage existing tools & frameworks to optimize the custom coding work.
-            %p Throughout the project, Pavan was professional, prompt, reliable, and communicated very well. He is very methodical, tested rigorously, and was very smart about figuring out the bugs. He also worked hard to make sure the project delivered on time - we were actually a week early. This was the most enjoyable and "glitch-free" software development experience I've had to-date.
-            %p Our ultimate product was clean, beautiful, and stable. Pavan was more than an engineer. He was an integral part of our product team. We really enjoyed working with him and would happily recommend him to anyone looking for a technical partner for their next project.
-            %cite Katherine Chen, Founder at Hummings
+  %section
+    .company-example
+      .company-example__description
+        %h3 Hummings
+        %p.date.company-example__service-used BUILD: STRATEGY, DESIGN, ENGINEERING
+        %p
+          Hummings is a mobile-first personal finance companion app. They came to me with early stage wireframes, and I guided them through UX revisions and product development. Once designs were finalized, I put together a small engineering team to build out the entire app.
+          / %a.read-more{href:"#"} Read More &rsaquo;
+        %p
+          %a.read-more{href:"https://www.hellohummings.com/", target: "_blank"} VISIT SITE
+          
+      .company-example__image.omega
+        %a{href:"https://www.hellohummings.com/", target: "_blank"}
+          = image_tag "work/hummings.png", alt: "Hummings"
+      .company-example__testimony
+        %blockquote
+          %p We started working with Pavan at Gray Bike for our MVP app (www.hellohummings.com) at the wireframe stage. Pavan quickly grasped the vision of our product and provided a great deal of insights to shape our UX, product architecture, and the engineering milestones. He also came up with really smart solutions to leverage existing tools & frameworks to optimize the custom coding work.
+          %p Throughout the project, Pavan was professional, prompt, reliable, and communicated very well. He is very methodical, tested rigorously, and was very smart about figuring out the bugs. He also worked hard to make sure the project delivered on time - we were actually a week early. This was the most enjoyable and "glitch-free" software development experience I've had to-date.
+          %p Our ultimate product was clean, beautiful, and stable. Pavan was more than an engineer. He was an integral part of our product team. We really enjoyed working with him and would happily recommend him to anyone looking for a technical partner for their next project.
+          %cite Katherine Chen, Founder at Hummings
 
-    %section
-      .company-example
-        .company-example__description
-          %h3 Interactive Protein Pathways
-          %p.date.company-example__service-used VISUALIZE: STRATEGY, ENGINEERING
+  %section
+    .company-example
+      .company-example__description
+        %h3 Interactive Protein Pathways
+        %p.date.company-example__service-used VISUALIZE: STRATEGY, ENGINEERING
+        %p
+          Cell Signal Technology wanted to build a visualization that provided information on their product catalog, as well as inform the viewer about protein pathways available in the cell. They hired Captains of Industry, who brought me on to build the data viz. I worked closely with design througout and built the entire visualization.
+          / %a.read-more{href:"#"} Read More &rsaquo;
           %p
-            Cell Signal Technology wanted to build a visualization that provided information on their product catalog, as well as inform the viewer about protein pathways available in the cell. They hired Captains of Industry, who brought me on to build the data viz. I worked closely with design througout and built the entire visualization.
-            / %a.read-more{href:"#"} Read More &rsaquo;
-            %p
-              %a.read-more{href:"http://learn.cellsignal.com/interactive-signaling-pathway-demo", target: "_blank"} VISIT SITE
-            
-        .company-example__image.omega
-          %a{href:"http://learn.cellsignal.com/interactive-signaling-pathway-demo", target: "_blank"}
-            = image_tag "work/ipv-pathways.png", alt: "Visualizing Protein Pathways"
-        
-        .company-example__testimony
-          %blockquote
-            %p We came to Pavan with an complex, abstract problem: we needed a team member to help us develop an interactive data visualization to represent complex biology concepts while highlighting our client's product offering. Pavan's versatile knowledge surrounding data visualization was invaluable in creating a scientifically accurate visualization that was easy to understand and looked great. The visualization gave excellent exposure to our client's product line. Pavan is a great engineer, thinker, and communicator -- we'd hire him again in a heartbeat!
-            %cite Ted Dillon, Managing Producer at Captains of Industry
-    %section
-      = partial "partials/cta"
+            %a.read-more{href:"http://learn.cellsignal.com/interactive-signaling-pathway-demo", target: "_blank"} VISIT SITE
+          
+      .company-example__image.omega
+        %a{href:"http://learn.cellsignal.com/interactive-signaling-pathway-demo", target: "_blank"}
+          = image_tag "work/ipv-pathways.png", alt: "Visualizing Protein Pathways"
+      
+      .company-example__testimony
+        %blockquote
+          %p We came to Pavan with an complex, abstract problem: we needed a team member to help us develop an interactive data visualization to represent complex biology concepts while highlighting our client's product offering. Pavan's versatile knowledge surrounding data visualization was invaluable in creating a scientifically accurate visualization that was easy to understand and looked great. The visualization gave excellent exposure to our client's product line. Pavan is a great engineer, thinker, and communicator -- we'd hire him again in a heartbeat!
+          %cite Ted Dillon, Managing Producer at Captains of Industry
+  %section
+    = partial "partials/cta"
