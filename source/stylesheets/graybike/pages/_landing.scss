@@ -76,7 +76,7 @@ section.hero-text {
 .services {
   @mixin service-box($color: $blue-d2) {
     @include span-columns(4);
-    padding: em(20) em(10);
+    padding: em(20) em(20);
     @include media($mobile) {
       @include span-columns(12);
     }
@@ -88,11 +88,11 @@ section.hero-text {
     box-shadow: inset 0px 0px 1px 2px darken($color,20%);
     margin-bottom: padding-blocks(2);
     
-    @include transition(all 0.3s ease-in-out);
-    &:hover {
-      cursor: pointer;
-      opacity: 0.8;
-    }
+    // @include transition(all 0.3s ease-in-out);
+    // &:hover {
+    //   cursor: pointer;
+    //   opacity: 0.8;
+    // }
   }
   .plan {
     @include service-box($pastel-brown);

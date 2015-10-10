@@ -1,3 +1,3 @@
-services: false
+services: true
 blog: false
 colophon: false
