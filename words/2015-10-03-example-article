@@ -4,8 +4,8 @@
     <meta charset='utf-8'>
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-    <meta content='Gray Bike is a small software and user experience consultancy in San Francisco, California.' name='description'>
-    <meta content='software development, software engineering, engineering, design, consultancy, software consultancy, freelance, software developers, rails, d3' name='keywords'>
+    <meta content='Gray Bike is a creative technology company specializing in data visualization.' name='description'>
+    <meta content='software development, software engineering, engineering, design, consultancy, software consultancy, freelance, software developers, rails, d3, data visualization, data viz' name='keywords'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <meta content='mGFqkZIpRsu-KTICkZB_Lk453ig5zwNKhB2WrqWtqTg' name='google-site-verification'>
     <!-- Use title if it's in the page YAML frontmatter -->
@@ -25,9 +25,11 @@
         </h2>
       </div>
       <nav>
-        <a href='#work'>
-          <span>Work</span>
+        <a href='#services'>
+          <span>About</span>
         </a>
+        <!-- %a{href:"#work"} -->
+        <!-- %span Work -->
         <a class='contact' href='mailto:hello@graybike.co'>
           <span>Contact</span>
         </a>
@@ -57,7 +59,7 @@
       <ul class='text-center'>
         <li>
           <p>
-            <a href='mailto:hello@graybike.co'>hello@graybike.co</a>
+            hello@graybike.co
           </p>
         </li>
         <li class='divider'>
