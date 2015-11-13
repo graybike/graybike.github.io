@@ -1,4 +1,3 @@
-
 .hero
   = partial "partials/nav", locals: { alt: true }
 
@@ -12,11 +11,11 @@
         = image_tag 'icons/down-arrow-circle-outline.svg', alt: 'Find out more', class: 'outline'
         = image_tag 'icons/down-arrow-circle-filled.svg', alt: 'Find out more', class: 'filled'
     
-
+#about
 .main-content.type-system-slab
   
   %section
-    .about#about
+    .about
       .bio
         %p.tagline My name is Pavan Trikutam. I'm a designer & developer living in San Francisco. Gray Bike is the name I use for my consulting business because it's a heck of a lot easier for people to spell than my name.
 
@@ -49,76 +48,7 @@
             %li Hummings
             %li Command Line Interactive
 
-  %section.work
-    %h2.text-center#work Here is some of my work.
-
-  %section
-    .company-example
-      .company-example__description
-        %h4 Soma Water Website Redesign
-        %p.date.company-example__service-used ENGINEERING
-        %p 
-          I led the engineering efforts for a massive redesign for Soma's e-commerce website. Working closely with design and marketing,
-          %span.emphasize we were able to increase sales by 40%
-          in the first 3 months after launch. I worked closely with 
-          %a{href:"http://lian.gs/", target: "_blank"} Liang Shi
-          at Soma and
-          %a{href:"http://pbj.me/", target: "_blank"} Patrick Johnson
-          to bring this project to life.
-          / %a.read-more{href:"#"} Read More &rsaquo;
-        %p
-          %a.read-more{href:"https://www.drinksoma.com/", target: "_blank"} VISIT SITE &rsaquo;
-          
-      .company-example__image.omega
-        %a{href:"https://www.drinksoma.com/", target: "_blank"}
-          = image_tag "work/soma-pitcher.png", alt: "Soma Water Website"
-      .company-example__testimony
-        %blockquote
-          %p Pavan has been our go-to guy to help with our engineering efforts at drinksoma.com. We came to him for help with a huge redesign of our e-commerce website. He was able to put a new face on our website and vastly improve the capabilities of our platform -- leading to many more sales and happier customers! He has a great ability to take our business problems and solve them with his engineering expertise. We look forward to continuing to work with him!
-          %cite Michael Del Ponte, Founder & CEO at Soma Water
-
-
-  %section
-    .company-example
-      .company-example__description
-        %h4 Interactive Protein Pathways
-        %p.date.company-example__service-used DESIGN & DATA VISUALIZATION
-        %p
-          Cell Signal Technology wanted to build a visualization that provided information on their product catalog, as well as inform the viewer about protein pathways available in the cell. They hired Captains of Industry, who brought me on to build the data viz. I worked closely with design througout and built the entire visualization.
-          / %a.read-more{href:"#"} Read More &rsaquo;
-          %p
-            %a.read-more{href:"http://learn.cellsignal.com/interactive-signaling-pathway-demo", target: "_blank"} VISIT SITE &rsaquo;
-          
-      .company-example__image.omega
-        %a{href:"http://learn.cellsignal.com/interactive-signaling-pathway-demo", target: "_blank"}
-          = image_tag "work/ipv-pathways.png", alt: "Visualizing Protein Pathways"
-      
-      .company-example__testimony
-        %blockquote.no-margin-bottom
-          %p We came to Pavan with an complex, abstract problem: we needed a team member to help us develop an interactive data visualization to represent complex biology concepts while highlighting our client's product offering. Pavan's versatile knowledge surrounding data visualization was invaluable in creating a scientifically accurate visualization that was easy to understand and looked great. The visualization gave excellent exposure to our client's product line. Pavan is a great engineer, thinker, and communicator -- we'd hire him again in a heartbeat!
-          %cite Ted Dillon, Managing Producer at Captains of Industry
-
-
-  %section
-    .company-example.no-margin-bottom
-      .company-example__description
-        %h4 Hummings
-        %p.date.company-example__service-used DESIGN, ENGINEERING
-        %p
-          Hummings is a mobile-first personal finance companion app. They came to me with early stage wireframes, and I guided them through UX revisions and product development. Once designs were finalized, I put together a small engineering team to build out the entire app.
-          / %a.read-more{href:"#"} Read More &rsaquo;
-        %p
-          %a.read-more{href:"https://www.hellohummings.com/", target: "_blank"} VISIT SITE &rsaquo;
-          
-      .company-example__image.omega
-        %a{href:"https://www.hellohummings.com/", target: "_blank"}
-          = image_tag "work/hummings.png", alt: "Hummings"
-      .company-example__testimony
-        %blockquote
-          %p We started working with Pavan at Gray Bike for our MVP app (www.hellohummings.com) at the wireframe stage. Pavan quickly grasped the vision of our product and provided a great deal of insights to shape our UX, product architecture, and the engineering milestones. He also came up with really smart solutions to leverage existing tools & frameworks to optimize the custom coding work.
-          %p Throughout the project, Pavan was professional, prompt, reliable, and communicated very well. He is very methodical, tested rigorously, and was very smart about figuring out the bugs. He also worked hard to make sure the project delivered on time - we were actually a week early. This was the most enjoyable and "glitch-free" software development experience I've had to-date.
-          %p Our ultimate product was clean, beautiful, and stable. Pavan was more than an engineer. He was an integral part of our product team. We really enjoyed working with him and would happily recommend him to anyone looking for a technical partner for their next project.
-          %cite Katherine Chen, Founder at Hummings
-
-  %section
-    = partial "partials/cta"
+  %section.cta
+    .cta__contact.text-center
+      %a.cta__button{href:'/work', alt: "Work"}
+        .cta__cta-text CHECK OUT MY WORK
