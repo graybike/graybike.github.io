@@ -103,6 +103,10 @@ In the end, project estimation should be a collaborative process. Both the peopl
 Obviously, doing this takes time (are you sick of hearing me say this yet?), but it's well worth it to spend it up front. Giving project estimation the importance and space it needs will ultimately result in a more accurate estimate, a better project, and a happier working relationship.
 
 
+<hr>
+
+I work with a lot of companies to help them plan their projects and build products. If you'd like some help estimating your next project, [I'd love to hear from you](mailto:hello@graybike.co).
+
 [93_million]: http://uk.reuters.com/article/2013/10/17/uk-usa-healthcare-technology-insight-idUKBRE99G06120131017
 [2_billion]: http://www.bloomberg.com/news/articles/2014-09-24/obamacare-website-costs-exceed-2-billion-study-finds
 [planning_poker]: https://en.wikipedia.org/wiki/Planning_poker

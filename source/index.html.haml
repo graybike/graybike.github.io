@@ -8,34 +8,55 @@
   
 
     .find-out-more.text-center.fade-in.fade-up-delay
-      %a{href: "#services"}
+      %a{href: "#about"}
         = image_tag 'icons/down-arrow-circle-outline.svg', alt: 'Find out more', class: 'outline'
         = image_tag 'icons/down-arrow-circle-filled.svg', alt: 'Find out more', class: 'filled'
     
 
 .main-content.type-system-slab
   
-  %section.services
-    %h3#services
-      I use data, design, and technology to solve problems for businesses and non-profits. If you'd like to chat, feel free to
-      %a{href: 'mailto:hello@graybike.co'} send me an email
-      or call me directly at
-      %a{href: 'tel:4153263397'} 415-326-3397.
   %section
-    %hr
+    .about#about
+      .bio
+        %p.tagline My name is Pavan Trikutam. I'm a designer & developer living in San Francisco, CA. Gray Bike is the name I use for my consulting business because it's a heck of a lot easier for people to spell than my name.
+
+        %p Since 2009, I've worked as a technical partner for organizations of all sizes. Usually this involves a combination of design, code, and lots of collaboration. I love being involved in a project from the design phase, but I'm happy to jump in at any stage.
+
+        %p I'm comfortable working alone or with your existing team. If you want me to put together a team for a project, I can help there too.
+
+        %p
+          If you'd like to find out more or work with me,
+          %a{href: 'mailto:hello@graybike.co'} send me an email
+          or call me directly at
+          %a{href: 'tel:4153263397'} 415-326-3397.
+
+      .services-clients
+        .services
+          %p.subheading What I can do for you
+          %ul 
+            %li Estimate/plan your next project
+            %li Design & build a product
+            %li Create a data visualization
+        .clients
+          %p.subheading SOME FOLKS I'VE WORKED WITH
+          %ul
+            %li Soma Water
+            %li Wootric
+            %li Macy's & Bloomingdale's
+            %li The Minerva Project
+            %li Cell Signal Technology
+            %li Captains of Industry
+            %li Hummings
+            %li Command Line Interactive
 
   %section.work
     %h2.text-center#work Here is some of my work.
-
-  / %section.additional-work
-  /   %h3.text-center Sometimes I do engineering consulting, too.
-
 
   %section
     .company-example
       .company-example__description
         %h4 Soma Water Website Redesign
-        %p.date.company-example__service-used STRATEGY & ENGINEERING
+        %p.date.company-example__service-used ENGINEERING
         %p 
           I led the engineering efforts for a massive redesign for Soma's e-commerce website. Working closely with design and marketing,
           %span.emphasize we were able to increase sales by 40%
@@ -57,7 +78,7 @@
     .company-example
       .company-example__description
         %h4 Interactive Protein Pathways
-        %p.date.company-example__service-used STRATEGY & DATA VISUALIZATION
+        %p.date.company-example__service-used DESIGN & DATA VISUALIZATION
         %p
           Cell Signal Technology wanted to build a visualization that provided information on their product catalog, as well as inform the viewer about protein pathways available in the cell. They hired Captains of Industry, who brought me on to build the data viz. I worked closely with design througout and built the entire visualization.
           / %a.read-more{href:"#"} Read More &rsaquo;
@@ -78,7 +99,7 @@
     .company-example.no-margin-bottom
       .company-example__description
         %h4 Hummings
-        %p.date.company-example__service-used STRATEGY, DESIGN, ENGINEERING
+        %p.date.company-example__service-used DESIGN, ENGINEERING
         %p
           Hummings is a mobile-first personal finance companion app. They came to me with early stage wireframes, and I guided them through UX revisions and product development. Once designs were finalized, I put together a small engineering team to build out the entire app.
           / %a.read-more{href:"#"} Read More &rsaquo;

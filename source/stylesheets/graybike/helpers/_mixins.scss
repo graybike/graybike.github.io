@@ -4,10 +4,10 @@
   @include transform(translateY(-50%));
 }
 
-@mixin text-width() {
+@mixin text-width($large: 8) {
 
-  @include span-columns(8);
-  @include shift(2);
+  @include span-columns($large);
+  @include shift((12 - $large) / 2);
 
   @include media($tablet) {
     @include span-columns(10);

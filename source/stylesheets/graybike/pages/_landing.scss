@@ -53,7 +53,7 @@
 
 }
 section.hero-text {
-  @include text-width();
+  @include text-width(6);
 
   position: relative;
   top: 50%;
@@ -65,83 +65,65 @@ section.hero-text {
   }
 }
 
-.services h3,
-.work h2,
-.additional-work h3 {
-  font-family: $sans-serif;
-  text-transform: none;
-  font-size: 1.5em;
-  font-weight: 600;
-  
+.about,
+.work h2 {
   margin: padding-blocks(6) auto;
   @include media($tablet) {
     margin: padding-blocks(4) auto;
   }
-  @include text-width();
-
 }
 
 .main-content section hr {
   width: 12em;
   margin: auto;
 }
-
-.services h3 {
-  line-height: $base-line-height;
-  // margin-bottom: 0;
-}
-.services h3,
-.additional-work h3 {
-  font-size: 1.25em;
-  font-weight: 400;
-}
-
-// Services section
-.services {
-  @mixin service-box($color: $blue-d2) {
-    @include span-columns(4);
-    padding: em(20) em(20);
-    @include media($mobile) {
-      @include span-columns(12);
-    }
-
-    h3 {
-      text-align: center;
-    }
-    background-color: $color;
-    box-shadow: inset 0px 0px 1px 2px darken($color,20%);
-    margin-bottom: padding-blocks(2);
-    
-    // @include transition(all 0.3s ease-in-out);
-    // &:hover {
-    //   cursor: pointer;
-    //   opacity: 0.8;
-    // }
-  }
-  .plan {
-    @include service-box(lighten($pastel-brown,10%));
-  }
-
-  .build {
-    @include service-box(lighten($blue,10%));
-  }
-  .visualize {
-    @include service-box(lighten(#979EA0,10%)); 
-  }
-}
-
 // About
-.about p {
-  
-  @include text-width();
+.about .bio {  
+  @include span-columns(8);  
+  font-weight: 300;  
+  font-size: 1.25em;
 
-  span {
-    font-family: $serif;
-    text-transform: none;
-    font-size: $base-font-size;
+  @include media($tablet) {
+    @include span-columns(12);
+    @include omega();
   }
+
 }
 
+.services-clients {
+  @include span-columns(4);
+  @include omega();
+  @include media($tablet) {
+    @include span-columns(12);
+  }
+  p, ul {
+    font-family: $sans-serif;
+    text-transform: uppercase;
+  }
+
+  p.subheading {
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    li {
+      font-weight: 400;
+      line-height: $base-line-height;
+      color: lighten($base-font-color, 30%);
+    }
+  }
+
+}
+
+.work h2 {
+  font-family: $serif;
+  text-transform: none;
+  font-size: 1.25em;
+}
 
 .company-example {
   margin: 0 auto padding-blocks(6);
@@ -158,8 +140,10 @@ section.hero-text {
   .company-example__description {
 
     h4 {
-      font-size: 1em;
+      font-family: $sans-serif;
+      font-size: 1.1em;
       font-weight: 600;
+      text-transform: uppercase;
     }
 
     @include span-columns(6);
