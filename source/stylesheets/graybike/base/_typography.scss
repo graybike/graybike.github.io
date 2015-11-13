@@ -9,7 +9,7 @@
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $base-font-weight: 300;
+  
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
@@ -142,12 +142,14 @@
   p.author {
     font-family: $serif;
   }
+}
 
 
-  blockquote {
+blockquote {
+    font-family: $base-font-family;
     border-left: $blue-d2 4px solid;
     padding-left: padding-blocks(2);
-    
+      
     margin: padding-blocks(2) padding-blocks(1);
 
     @include media($mobile) {
@@ -170,4 +172,3 @@
       }
     }
   }
-}

@@ -1,0 +1,88 @@
+.work {
+  .work-title {
+    font-family: $sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+    margin: padding-blocks(2) auto padding-blocks(4) auto;
+    @include media($tablet) {
+      margin: padding-blocks(1) auto padding-blocks(3) auto;
+    }
+  }
+
+  p.date {
+    color: transparentize($base-font-color, 0.6);
+    font-family: $serif;
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+  }
+  .company-example {
+    margin: 0 auto padding-blocks(6);
+    @include media($mobile) {
+      margin: 0 auto padding-blocks(4);
+    }
+    @include outer-container;
+
+
+    &.no-margin-bottom {
+      margin-bottom: 0;
+    }
+
+    .company-example__description {
+
+      h4 {
+        font-family: $sans-serif;
+        font-size: 1.1em;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      @include span-columns(5);
+      @include media($tablet) {
+        @include span-columns(12);
+      }
+
+    }
+
+    .company-example__image {
+      @include span-columns(6);
+      @include shift(1);
+      @include media($tablet) {
+        @include span-columns(12);
+      }
+    }
+
+    h3 {
+      text-transform: none;
+    }
+
+    
+
+    span.emphasize {
+      font-family: $serif;
+      font-weight: 600;
+      text-transform: none;
+      font-size: $base-font-size;
+    }
+
+    .company-example__image {
+      @include omega();
+      text-align: center;
+      img {
+        width: 100%;
+        max-width: 800px;
+      }
+      @include media($tablet) {
+        img { width: 75% }
+        
+      }
+      @include media($mobile) {
+        img { width: 100%; }
+      }
+    }
+    .company-example__testimony {
+      @include span-columns(12);
+    }
+  }
+}
+
+  
