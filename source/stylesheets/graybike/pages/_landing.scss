@@ -79,7 +79,7 @@ section.hero-text {
 }
 // About
 .about .bio {  
-  @include span-columns(8);  
+  @include span-columns(7);  
   font-weight: 300;  
   font-size: 1.25em;
 
@@ -92,9 +92,11 @@ section.hero-text {
 
 .services-clients {
   @include span-columns(4);
+  @include shift(1);
   @include omega();
   @include media($tablet) {
     @include span-columns(12);
+    @include shift(0);
   }
   p, ul {
     font-family: $sans-serif;
@@ -146,7 +148,7 @@ section.hero-text {
       text-transform: uppercase;
     }
 
-    @include span-columns(6);
+    @include span-columns(5);
     @include media($tablet) {
       @include span-columns(12);
     }
@@ -155,6 +157,7 @@ section.hero-text {
 
   .company-example__image {
     @include span-columns(6);
+    @include shift(1);
     @include media($tablet) {
       @include span-columns(12);
     }
