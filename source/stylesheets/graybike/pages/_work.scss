@@ -27,6 +27,16 @@
       margin-bottom: 0;
     }
 
+    &.odd {
+      .company-example__description {
+        @include shift(3);
+        text-align: right;
+        @include media($tablet) {
+          @include shift(0);
+        }
+      }
+    }
+
     .company-example__description {
 
       h4 {
@@ -36,18 +46,11 @@
         text-transform: uppercase;
       }
 
-      @include span-columns(5);
-      @include media($tablet) {
-        @include span-columns(12);
-      }
-
-    }
-
-    .company-example__image {
-      @include span-columns(6);
+      @include span-columns(8);
       @include shift(1);
       @include media($tablet) {
         @include span-columns(12);
+        @include shift(0);
       }
     }
 
@@ -80,9 +83,13 @@
       }
     }
     .company-example__testimony {
-      @include span-columns(12);
+      @include span-columns(10);
+      @include shift(1);
+
+      @include media($tablet) {
+        @include span-columns(12);
+        @include shift(0);
+      }
     }
   }
 }
-
-  
