@@ -83,13 +83,11 @@ I can't stress this enough. Diligently tracking your time helps you understand e
 
 ### Adjust scope, not schedule
 
-<!-- Sometimes an inaccurrate estimate can come from simply wanting to land the job. Sometimes it comes from pressure from your boss, or another stakeholder in the project. Sometimes it's intentional, sometimes it's not.
- -->
-You'll get a client that says "we really need this project done a month earlier", and you think to yourself, "maybe I can just work nights & weekends and pull this off". This is bad news.
+You'll get a client that says "we really need this project done a month earlier", and you think to yourself, "maybe I can just work nights & weekends and pull this off".
 
-Even if you manage to work day and night to pull off a project, the quality of your work will suffer drastically due to you almost burning yourself out. More likely, a few days before launch you'll realize that you've got way too much work left, and the project will need to be delayed.
+Even if you manage to work day and night to pull off a project, the quality of your work will suffer drastically because you'll burn yourself out. More often, work will compound and you'll realize you have more work left to do, and you'll have to delay the project.
 
-Committing to a schedule you know is unreasonable is disingenuous, and it's damaging to you, your client, and the project. The art of project estimation sometimes involves staying firm and saying no. It's your job as the expert to convey the true cost of building things.
+Committing to an unreasonable schedule is disingenuous. It's damaging to you, your client, and the project. The art of project estimation sometimes involves saying no. It's your job as the expert to convey the true cost of building things.
 
 It's better to be realistic early on in a project and cut out the fat rather than realize you're going to miss your launch after you've announced it to the whole world.
 
