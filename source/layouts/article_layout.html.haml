@@ -1,8 +1,8 @@
 = wrap_layout :layout do
   %section.blog
     %article.post.type-system-slab
-      - if current_article.data.type
-        %p.type= current_article.data.type
+      / - if current_article.data.type
+      /   %p.type= current_article.data.type
       %h1
         = link_to current_article.title, current_article
       %h2
