@@ -93,7 +93,7 @@ It's better to be realistic early on in a project and cut out the fat rather tha
 
 ### Estimation is collaboration
 
-Project estimation should be a collaborative process. Both the you and the client should be heavily involved in the estimation phase. It gives opportunity to learn about the project and discover nuances that would normally get overlooked when the process is one-sided. It allows for client input and feedback, and gives both parties a view into what it will be like to work together.
+Project estimation should be a collaborative process. Both you and the client should be heavily involved in the estimation phase. It gives opportunity to learn about the project and discover nuances that would normally get overlooked when the process is one-sided. It allows for client input and feedback, and gives both parties a view into what it will be like to work together.
 
 Obviously, doing this takes time (are you sick of hearing me say this yet?). Giving project estimation the importance and space it needs will result in a more accurate estimate, a better project, and a happier working relationship.
 
