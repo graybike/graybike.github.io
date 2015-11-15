@@ -1,68 +1,16 @@
 .index {
-  .hero {
-    width: 100%;
-    @include retina-image('/images/landing-bg', 397px 322px);
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      @include linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0) 30%, darken($blue-d2,10%));
-      opacity: 0.5; 
-    }
-    height: calc(100%);
 
-    h1 {
-        position: relative;
-        line-height: $base-line-height;
-        left: 10px;
-        font-family: $sans-serif;
-        color: $blue-b2;
-        font-weight: 400;
-        text-align: center;
-    }
-  }
-
-  .find-out-more {
-    margin: 2em auto;
+  h1 {
+    @include text-width(7);
+    margin-top: padding-blocks(1);
     position: relative;
-    clear: both;
-    opacity: 0;
-    img {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      margin-left: -20px;
-      height: 40px;
-      width: 40px;
-      &.filled {
-        opacity: 0;
-      }
-      @include transition(all 0.3s ease-in-out);
-    }
-    a:hover {
-      img.outline {
-        opacity: 0;
-      }
-      img.filled {
-        opacity: 1;
-      }
-    }
-
-  }
-  section.hero-text {
-    @include text-width(6);
-
-    position: relative;
-    top: 50%;
-    @include transform(translateY(-50%));
-    margin-top: -$navbar-height;
-
-    @include media($tablet) {
-      margin-top: -$navbar-height * 1.5;    
-    }
+    line-height: $base-line-height;
+    // left: 10px;
+    font-family: $sans-serif;
+    // color: $blue-b2;
+    font-weight: 400;
+    text-align: center;
+    font-size: 2em;
   }
 
   .about {
@@ -118,6 +66,10 @@
       }
     }
 
+  }
+
+  .work-link {
+    margin: padding-blocks(6) auto;
   }
   
 }
