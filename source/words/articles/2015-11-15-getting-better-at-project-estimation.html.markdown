@@ -1,7 +1,7 @@
 ---
 title: Getting better at project estimation
 description: "No matter what kind of project you've ever worked on, there's always one thing everyone wants to know before it starts: How long will this take?"
-date: 2015-11-10
+date: 2015-11-15
 type: CONSULTING
 tags: freelancing project estimation psychology consulting
 author: Pavan Trikutam
