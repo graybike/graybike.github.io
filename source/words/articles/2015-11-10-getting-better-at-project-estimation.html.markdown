@@ -5,7 +5,7 @@ date: 2015-11-10
 type: CONSULTING
 tags: freelancing project estimation psychology consulting
 author: Pavan Trikutam
-published: false
+published: true
 ---
 
 How many times have you started a project with some kind of assumption on the project duration, and how many times have you found that to be off? Pretty much everyone gets it wrong. What we can do to be better about it?
