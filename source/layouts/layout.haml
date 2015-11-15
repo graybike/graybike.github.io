@@ -20,6 +20,7 @@
       try{Typekit.load({ async: true });}catch(e){}
 
   %body{:class => page_classes}
+    = partial "partials/nav"
     = yield
     = partial "partials/footer"
 

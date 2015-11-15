@@ -6,13 +6,8 @@
         = succeed "BIKE" do
           %span.dg GRAY
   %nav
-
-    - if defined?(alt)
-      %a{href:"#about"}
-        %span About
-    - else 
-      %a{href:"/#about"}
-        %span About
+    %a{href:"/"}
+      %span About
     %a{href:"/work"}
       %span Work
     - if data.features.blog

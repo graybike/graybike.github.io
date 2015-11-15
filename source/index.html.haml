@@ -1,15 +1,5 @@
-.hero
-  = partial "partials/nav", locals: { alt: true }
-
-  %section.type-system-slab.hero-text
-
-    %h1.fade-up= data.site_info.description
-  
-
-    .find-out-more.text-center.fade-in.fade-up-delay
-      %a{href: "#about"}
-        = image_tag 'icons/down-arrow-circle-outline.svg', alt: 'Find out more', class: 'outline'
-        = image_tag 'icons/down-arrow-circle-filled.svg', alt: 'Find out more', class: 'filled'
+%section.text-center.hero-text
+  %h1.fade-up= data.site_info.description
     
 #about
 .main-content.type-system-slab
@@ -49,6 +39,6 @@
             %li Command Line Interactive
 
   %section
-    .text-center
+    .text-center.work-link
       %a.cta__button{href:'/work', alt: "Work"}
         .cta__cta-text CHECK OUT MY WORK
