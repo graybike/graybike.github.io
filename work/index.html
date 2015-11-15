@@ -23,20 +23,20 @@
       <div>
         <h2>
           <a href='/'>
-            <!-- = image_tag 'logo.svg', alt:'Gray Bike' -->
             <span class='dg'>GRAY</span>BIKE
           </a>
         </h2>
       </div>
       <nav>
-        <a href='/#about'>
+        <a href='/'>
           <span>About</span>
         </a>
         <a href='/work'>
-          <span>Work</span>
+          <span class='active'>Work</span>
         </a>
-        <!-- %a.contact{href:'mailto:hello@graybike.co'} -->
-        <!-- %span Contact -->
+        <a href='/words'>
+          <span>Words</span>
+        </a>
       </nav>
     </header>
     <section>
@@ -45,7 +45,9 @@
     <section>
       <div class='company-example'>
         <div class='company-example__description'>
-          <h4>Soma Water Website Redesign</h4>
+          <h4>
+            <a href='https://www.drinksoma.com/' target='_blank'>Soma Water Website Redesign</a>
+          </h4>
           <p class='date company-example__service-used'>ENGINEERING</p>
           <p>
             I led the engineering efforts for a massive redesign for Soma's e-commerce website. Working closely with design and marketing,
@@ -58,13 +60,8 @@
             <!-- %a.read-more{href:"#"} Read More &rsaquo; -->
           </p>
           <p>
-            <a class='read-more' href='https://www.drinksoma.com/' target='_blank'>VISIT SITE &rsaquo;</a>
+            <a class='read-more' href='https://www.drinksoma.com/' target='_blank'>VISIT SITE &rsaquo;&rsaquo;</a>
           </p>
-        </div>
-        <div class='company-example__image omega'>
-          <a href='https://www.drinksoma.com/' target='_blank'>
-            <img alt="Soma Water Website" src="../images/work/soma-pitcher.png" />
-          </a>
         </div>
         <div class='company-example__testimony'>
           <blockquote>
@@ -75,22 +72,18 @@
       </div>
     </section>
     <section>
-      <div class='company-example'>
+      <div class='company-example odd'>
         <div class='company-example__description'>
-          <h4>Interactive Protein Pathways</h4>
+          <h4>
+            <a href='http://learn.cellsignal.com/interactive-signaling-pathway-demo' target='_blank'>Interactive Protein Pathways</a>
+          </h4>
           <p class='date company-example__service-used'>DESIGN & DATA VISUALIZATION</p>
           <p>
             Cell Signal Technology wanted to build a visualization that provided information on their product catalog, as well as inform the viewer about protein pathways available in the cell. They hired Captains of Industry, who brought me on to build the data viz. I worked closely with design througout and built the entire visualization.
-            <!-- %a.read-more{href:"#"} Read More &rsaquo; -->
             <p>
-              <a class='read-more' href='http://learn.cellsignal.com/interactive-signaling-pathway-demo' target='_blank'>VISIT SITE &rsaquo;</a>
+              <a class='read-more' href='http://learn.cellsignal.com/interactive-signaling-pathway-demo' target='_blank'>VISIT SITE &rsaquo;&rsaquo;</a>
             </p>
           </p>
-        </div>
-        <div class='company-example__image omega'>
-          <a href='http://learn.cellsignal.com/interactive-signaling-pathway-demo' target='_blank'>
-            <img alt="Visualizing Protein Pathways" src="../images/work/ipv-pathways.png" />
-          </a>
         </div>
         <div class='company-example__testimony'>
           <blockquote class='no-margin-bottom'>
@@ -103,20 +96,16 @@
     <section>
       <div class='company-example no-margin-bottom'>
         <div class='company-example__description'>
-          <h4>Hummings</h4>
+          <h4>
+            <a href='https://www.hellohummings.com/' target='_blank'>Hummings</a>
+          </h4>
           <p class='date company-example__service-used'>DESIGN, ENGINEERING</p>
           <p>
             Hummings is a mobile-first personal finance companion app. They came to me with early stage wireframes, and I guided them through UX revisions and product development. Once designs were finalized, I put together a small engineering team to build out the entire app.
-            <!-- %a.read-more{href:"#"} Read More &rsaquo; -->
           </p>
           <p>
-            <a class='read-more' href='https://www.hellohummings.com/' target='_blank'>VISIT SITE &rsaquo;</a>
+            <a class='read-more' href='https://www.hellohummings.com/' target='_blank'>VISIT SITE &rsaquo;&rsaquo;</a>
           </p>
-        </div>
-        <div class='company-example__image omega'>
-          <a href='https://www.hellohummings.com/' target='_blank'>
-            <img alt="Hummings" src="../images/work/hummings.png" />
-          </a>
         </div>
         <div class='company-example__testimony'>
           <blockquote>
@@ -138,7 +127,7 @@
         </div>
       </section>
     </section>
-    <footer>
+    <footer id='footer'>
       <ul class='text-center'>
         <li>
           <p>
@@ -159,19 +148,8 @@
         </li>
       </ul>
     </footer>
-    <script src='https://code.jquery.com/jquery-1.11.3.min.js'></script>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js'></script>
     <script>
-      $(document).ready(function() {
-        // Bind to the click of all links with a #hash in the href
-        $('a[href^="#"]').click(function(e) {
-          // Prevent the jump and the #hash from appearing on the address bar
-          e.preventDefault();
-          // Scroll the window, stop any previous animation, stop on user manual scroll
-          // Check https://github.com/flesler/jquery.scrollTo for more customizability
-          $(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:true, margin: true});
-        });
-      });
+      !function(){var e=document.body,t=(document.documentElement,Math.max(e.offsetHeight,0)),n=Math.max(document.documentElement.clientHeight,window.innerHeight||0),o=document.getElementById("footer");n>t&&(o.style.position="absolute")}();
     </script>
     <!-- Google Analytics -->
     <script>

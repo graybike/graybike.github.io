@@ -23,25 +23,41 @@
       <div>
         <h2>
           <a href='/'>
-            <!-- = image_tag 'logo.svg', alt:'Gray Bike' -->
             <span class='dg'>GRAY</span>BIKE
           </a>
         </h2>
       </div>
       <nav>
-        <a href='/#about'>
+        <a href='/'>
           <span>About</span>
         </a>
         <a href='/work'>
           <span>Work</span>
         </a>
-        <!-- %a.contact{href:'mailto:hello@graybike.co'} -->
-        <!-- %span Contact -->
+        <a href='/words'>
+          <span class='active'>Words</span>
+        </a>
       </nav>
     </header>
     <section class='blog'>
+      <section class='articles'>
+        <article class='type-system-slab'>
+          <!-- - if article.data.type -->
+          <!-- %p.type= article.data.type -->
+          <h1>
+            <a href="/words/2015-11-10-getting-better-at-project-estimation">Getting better at project estimation</a>
+          </h1>
+          <p class='date'>
+            Nov 10, 2015
+          </p>
+          <p>
+            No matter what kind of project you've ever worked on, there's always one thing everyone wants to know before it starts: How long will this take?
+            <a class="read-more" href="/words/2015-11-10-getting-better-at-project-estimation">Read More &rsaquo;</a>
+          </p>
+        </article>
+      </section>
     </section>
-    <footer>
+    <footer id='footer'>
       <ul class='text-center'>
         <li>
           <p>
@@ -62,19 +78,8 @@
         </li>
       </ul>
     </footer>
-    <script src='https://code.jquery.com/jquery-1.11.3.min.js'></script>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js'></script>
     <script>
-      $(document).ready(function() {
-        // Bind to the click of all links with a #hash in the href
-        $('a[href^="#"]').click(function(e) {
-          // Prevent the jump and the #hash from appearing on the address bar
-          e.preventDefault();
-          // Scroll the window, stop any previous animation, stop on user manual scroll
-          // Check https://github.com/flesler/jquery.scrollTo for more customizability
-          $(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:true, margin: true});
-        });
-      });
+      !function(){var e=document.body,t=(document.documentElement,Math.max(e.offsetHeight,0)),n=Math.max(document.documentElement.clientHeight,window.innerHeight||0),o=document.getElementById("footer");n>t&&(o.style.position="absolute")}();
     </script>
     <!-- Google Analytics -->
     <script>

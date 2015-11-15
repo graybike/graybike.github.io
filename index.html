@@ -19,38 +19,29 @@
     </script>
   </head>
   <body class='index'>
-    <div class='hero'>
-      <header class='alt'>
-        <div>
-          <h2>
-            <a href='/'>
-              <!-- = image_tag 'logo.svg', alt:'Gray Bike' -->
-              <span class='dg'>GRAY</span>BIKE
-            </a>
-          </h2>
-        </div>
-        <nav>
-          <a href='#about'>
-            <span>About</span>
+    <header>
+      <div>
+        <h2>
+          <a href='/'>
+            <span class='dg'>GRAY</span>BIKE
           </a>
-          <a href='/work'>
-            <span>Work</span>
-          </a>
-          <!-- %a.contact{href:'mailto:hello@graybike.co'} -->
-          <!-- %span Contact -->
-        </nav>
-      </header>
-      <section class='type-system-slab hero-text'>
-        <h1 class='fade-up'>Gray Bike is a small software consultancy based in San Francisco, California.</h1>
-        <div class='find-out-more text-center fade-in fade-up-delay'>
-          <a href='#about'>
-            <img alt="Find out more" class="outline" src="images/icons/down-arrow-circle-outline.svg" />
-            <img alt="Find out more" class="filled" src="images/icons/down-arrow-circle-filled.svg" />
-          </a>
-        </div>
-      </section>
-    </div>
-    <div id='about'></div>
+        </h2>
+      </div>
+      <nav>
+        <a href='/'>
+          <span class='active'>About</span>
+        </a>
+        <a href='/work'>
+          <span>Work</span>
+        </a>
+        <a href='/words'>
+          <span>Words</span>
+        </a>
+      </nav>
+    </header>
+    <section class='text-center hero-text'>
+      <h1 class='fade-up'>Gray Bike is a small software consultancy based in San Francisco, California.</h1>
+    </section>
     <div class='main-content type-system-slab'>
       <section>
         <div class='about'>
@@ -91,14 +82,14 @@
         </div>
       </section>
       <section>
-        <div class='text-center'>
+        <div class='text-center work-link'>
           <a alt='Work' class='cta__button' href='/work'>
             <div class='cta__cta-text'>CHECK OUT MY WORK</div>
           </a>
         </div>
       </section>
     </div>
-    <footer>
+    <footer id='footer'>
       <ul class='text-center'>
         <li>
           <p>
@@ -119,19 +110,8 @@
         </li>
       </ul>
     </footer>
-    <script src='https://code.jquery.com/jquery-1.11.3.min.js'></script>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js'></script>
     <script>
-      $(document).ready(function() {
-        // Bind to the click of all links with a #hash in the href
-        $('a[href^="#"]').click(function(e) {
-          // Prevent the jump and the #hash from appearing on the address bar
-          e.preventDefault();
-          // Scroll the window, stop any previous animation, stop on user manual scroll
-          // Check https://github.com/flesler/jquery.scrollTo for more customizability
-          $(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:true, margin: true});
-        });
-      });
+      !function(){var e=document.body,t=(document.documentElement,Math.max(e.offsetHeight,0)),n=Math.max(document.documentElement.clientHeight,window.innerHeight||0),o=document.getElementById("footer");n>t&&(o.style.position="absolute")}();
     </script>
     <!-- Google Analytics -->
     <script>
