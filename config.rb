@@ -36,8 +36,7 @@
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
-# Allow pretty URLs
-activate :directory_indexes
+
 
 # Reload the browser automatically whenever files change
 configure :development do
@@ -75,6 +74,7 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
+
 # Blog settings
 ###
 # Time.zone = "UTC"
@@ -102,6 +102,10 @@ activate :blog do |blog|
   blog.per_page = 10
   blog.page_link = "page/{num}"
 end
+
+# Allow pretty URLs
+activate :directory_indexes
+
 
 page "/feed.xml", layout: false
 
