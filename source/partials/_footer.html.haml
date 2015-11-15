@@ -1,4 +1,4 @@
-%footer
+%footer#footer
   %ul.text-center
     %li
       %p
@@ -14,3 +14,5 @@
   - if data.features.colophon
     .colophon.text-center
       %a{href:"/colophon"} about this site
+:javascript
+  !function(){var e=document.body,t=(document.documentElement,Math.max(e.offsetHeight,0)),n=Math.max(document.documentElement.clientHeight,window.innerHeight||0),o=document.getElementById("footer");n>t&&(o.style.position="absolute")}();
