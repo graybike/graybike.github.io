@@ -10,35 +10,34 @@ published: false
 
 How many times have you started a project with some kind of assumption on the project duration, and how many times have you found that to be off? Pretty much everyone gets it wrong. What we can do to be better about it?
 
-One particularly notorious example of this in the US was the development of the [healthcare.gov](https://www.healthcare.gov/) website. Originally estimated to cost [about $93.7 million][93_million], the final cost [exceeded $2 billion dollars][2_billion]. I'm not here to debate who was at fault or what went wrong. A quick google search will bring you plenty of that. My only point here is: whether a project is small or large, estimating cost is hard. Really hard. And almost everyone is likely to get at least part of it wrong.
+One notorious example of this in the US was the development of the [healthcare.gov](https://www.healthcare.gov/) website. Originally, the project was estimated to cost [about $93.7 million][93_million], but the final cost [exceeded $2 billion dollars][2_billion]. It doesn't really matter who is to blame for that drastic underestimation. My only point here is: whether a project is small or large, estimating cost is hard. Really hard. And almost everyone is likely to get at least part of it wrong.
 
-I'm going to explore some of the things that go wrong when planning & estimating projects, through the lens of my experience with software development. Much of what I'm going to cover are things that I've learned from people much smarter than me. I've just tried to distill it into a few points as I've understood it. Not everything thing here may apply to you, but hopefully you'll find it at least some of it useful.
-
-Above all, I hope to provide two things:
-
-1. A perspective for developers, designers, or project managers on where they could potentially go wrong when making estimates.
-2. A perspective for people hiring one of the above on why project estimation is so difficult.
-3. Some ways to avoid these delays, and have a more successful project.
+I'm going to explore a few things that go wrong when estimating projects. Not everything thing here may apply to you, but hopefully you'll find it at least some of it useful. Above all, I hope to provide a perspective for makers on where they could potentially go wrong when making estimates.
 
 ### How does it work?
 
-Typically, when an developer or designer needs to estimate a project, she asks a few questions about the project and tries to learn a bit more. She may potentially try to break the overall project down into smaller pieces. She may also confer with a few other folks and play ["planning poker"][planning_poker]. She might think about times where she's built something similar before and try to remember how long it took.
+Typically, when an developer or designer estimates a project, she might do a few things:
 
-Ultimately, though, the estimate is usually needed in a short amount of time, and she will be taking a shot in the dark to put some numbers together. She probably figures that any inaccuracies can be made up by burning the midnight oil and catching up. The strange part is she's likely pretty confident about being able to deliver the project in that time frame, despite the fact that she doesn't have much concrete evidence to prove the estimate will be accurate.
+* Ask a few questions about the project and try to learn a bit more.
+* Try to break the overall project down into smaller pieces.
+* Confer with a few other folks and play ["planning poker"][planning_poker].
+* Think about times where she's built something similar before and try to remember how long it took.
 
-This confidence typically comes from being overly optimistic, a type of [congitive bias][cognitive_bias]. But I'll get more into that later. First, a story:
+Unfortunately, the estimate is usually needed in a short amount of time. She will have to take a shot in the dark to put some numbers together. She probably figures any inaccuracies can be made up by burning the midnight oil. The strange part is she's likely pretty confident about being able to deliver the project on time, even though she doesn't have much concrete evidence to prove the estimate will be accurate.
+
+This confidence comes from being overly optimistic, a type of [congitive bias][cognitive_bias]. But I'll get more into that later. First, a story:
 
 In Daniel Kahneman's excellent book, *[Thinking, Fast and Slow][thinking_fast_slow]*, he talks a lot about the psychology behind congitive biases. He describes an example where he and a small team were designing a curriculum to teach decision making to high school students. After working for one year (and making great progress), his team got together to estimate the remaining time to complete the project. They predicted that the project would take two years to complete. The project ended up taking eight years to finish.
 
 ### The outside view
 
-When estimating projects, people often fail to take into consideration is a baseline prediction to use as a comparison.
+When estimating projects, people often fail to take into consideration a baseline prediction to use as a comparison.
 
-Essentially, this concept is the fact that when estimating projects, we fail to consider what other similar projects (the "outside view") took to complete. To make the estimate, we draw solely upon the evidence right in front of us (the "inside view") to make a judgement. This is inherently flawed because we're ignoring actual evidence of a project's likelihood to succeed by drawing on a limited set of experiences.
+Essentially, this concept is the fact that when estimating projects, we fail to consider what other similar projects (the "outside view") took to complete. To make the estimate, we draw solely upon the evidence right in front of us (the "inside view") to make a judgement. This approach often fails due to a lack of actual evidence from similar projects.
 
-Obviously, for many projects, not everyone has a baseline to compare to when trying to estimate a project. That's why clients go to the experts (that's us) to figure things out. We've worked on many projects like this, and we've seen others do it many times. We have a wide range of examples to draw from to make an informed judgement.
+For many projects, not everyone has a baseline to compare to when trying to estimate a project. That's why clients go to the experts (that's us) to figure things out. The experts have worked on many projects like this and have a wide range of examples to draw from.
 
-This is where it gets interesting. Of Kahneman's team working on the curriculum, most of the members did not have prior experience working on a similar project, nor did they know of other projects they could compare to. However, one member of the project did know about other similar projects, and how long they took. Yet, even though he did have this larger data set to draw on, he ignored it and made his first prediction based on his experience in the projet thus far and intuition. **He consciously ignored evidence that would help him estimate his project better.**
+This is where it gets interesting. Of Kahneman's team working on the curriculum, most of the members did not have prior experience working on a similar project, nor did they know of other projects they could compare. However, one member of the project did know about other similar projects, and how long they took. Yet, even though he did have this larger data set to draw on, he ignored it and made his first prediction based on his experience in the projet thus far and intuition. **He consciously ignored evidence that would help him estimate his project better.**
 
 Only once he was asked a pointed question about how other projects of the type fared did he come up with an accurate estiamte.
 
@@ -56,11 +55,11 @@ More often than not, we simply ignore any chance of mishap or project delay, and
 
 ### Avoiding the planning fallacy
 
-The two pitfalls described above are part of what is known as ["The Planning Fallacy"][planning_fallacy]. In other words, it's a matter of being too optimistic about a timeline, and ignoring evidence available to us that may indicate otherwise.
+The two pitfalls described above are part of what is known as ["The Planning Fallacy"][planning_fallacy]. In other words, it's a matter of being too optimistic about a timeline, and ignoring evidence available to us indicating otherwise.
 
-To counter the "inside view", we need understand that our instinctive first guess may not always be completely accurate. That first guess isn't taking into account any of the unknowns, and we need to spend time researching what those could be. When we approach estimation with an analytical eye, looking for evidence to support our idea of how long something will take, we're more likely to land on an accurate estimate. Yes, this may take longer to come up with some accurate numbers -- but it's well worth it. It's better to invest the time up front and mitigate our risk for delays down the line.
+To counter the "inside view", we need to understand our instinctive first guess may not always be completely accurate. That first guess isn't taking into account any of the unknowns, and we need to spend time researching what those could be. When we approach estimation with an analytical eye, looking for evidence to support our idea of how long something will take, we're more likely to land on an accurate estimate. Yes, this may take longer to come up with some accurate numbers -- but it's well worth it. It's better to invest the time up front and mitigate our risk for delays down the line.
 
-We humans tend to think things will go better for us than they do for others. Unfortunately, statistically speaking, that's pretty unlikely. It's important to bake in room for error & delays. When putting together an estimate, I always add in about 20 percent time as room for error. If I'm able to finish before that extra time, it gives me room to add polish to make the project that much better. If nothing else, you can launch early! But, if something does delay the project, I've got a bit of padding in there to make sure it still gets out on time.
+We humans tend to think things will go better for us than they do for others. Unfortunately, it's pretty unlikely. It's important to bake in room for error & delays. When putting together an estimate, I always add in about 20 percent time as room for error. If I'm able to finish ahead of schedule, it gives me room to add polish to make the project that much better. If nothing else, I can launch early! But, if something does delay the project, I've got a bit of padding to make sure it still gets out on time.
 
 To drive this point home, consider this quote:
 
@@ -70,19 +69,19 @@ To drive this point home, consider this quote:
 
 ### Diving Deeper
 
-Project estimation is a matter of doing your due diligence. I think of project estimation as starting the design/discovery phase early. Depending on how far along the design process a potential client has come, you might even mock up some wireframes to try and understand behavior & design. Ask lots of questions about behavior, and try to get into specifics. Think of edge cases and all possible scenarios.
+Project estimation is a matter of doing your due diligence. I view project estimation as starting the design/discovery phase early. Before we can produce any concrete numbers, we need to do some work up front. Mock up some wireframes to understand the interaction better. Ask lots of questions about behavior, and try to get into specifics. Think of edge cases and all possible scenarios.
 
-A good project proposal & estimate has the added benefit of acting as a project plan.  When you've gone to such great lengths to understand a project before coming up with an estimate, you're much more likely to be accurate and be able to predict challenges. I often do a project estimate as the first phase of a project -- when it's done, there is a concrete deliverable of research and a more accurate view of timelines.
+A good project proposal & estimate has the added benefit of acting as a project plan.  When you've gone to such great lengths to understand a project before coming up with an estimate, you're much more accurate and likely to predict challenges. Project research & planning should be the first phase of a project. When it's done, there is a concrete deliverable of research and a more accurate view of timelines.
 
 ### Break down components, not time
 
-Try to break things down as small as you can when estimating -- it leaves less room for error, and it makes it much easier to find examples of other projects doing the same thing. It's very helpful to get as granular as possible whe planning how long something will take. Of course, this takes time. There's usually a lot of communication between designer & client to hash out the smaller details before an accurate estimate can be put forth.
+Try to break things down as small as you can when estimating. It leaves less room for error, and it makes it much easier to find examples of other projects doing the same thing. It's very helpful to get as granular as possible when planning. Of course, this takes time. There's usually a lot of communication between designer & client to hash out the smaller details before an accurate estimate can be put forth.
 
-However, one thing that is *not* useful is trying to estimate in small units of time (hours). It's much easier to come up with an accurate estimate when you're dealing with a matter of days (preferably weeks). As designer [Matt Griffin mentions][matt_griffin] describes, there's a huge difference between a productive hour vs. a wasted hour. That difference averages out when we think in days or weeks instead of hours.
+However, one thing that is *not* useful is trying to estimate in small units of time (hours). It's much easier to come up with an accurate estimate when you're dealing with a matter of days (preferably weeks). As designer [Matt Griffin mentions][matt_griffin] describes, there's a huge difference between a productive hour vs. a wasted hour. The difference averages out when we think in days or weeks instead of hours.
 
 ### Track your time meticulously
 
-I can't stress this enough. Being diligent about tracking your time helps you know exactly how long you took to finish it. It's a great way to look back on a project and know how close you were to your original estimate. It's also a great way to know how much time during a project you'll spend on meetings, writing code, designing, etc. It's also extremely helpful the next time a project comes up. Over time, you'll build your own little database of projects to use as a baseline for how long a project may take you.
+I can't stress this enough. Diligently tracking your time helps you understand exactly how long it takes to finish a task. It's a great way to look back and know how close you were to your original estimate. You'll know the breakdown of time between meetings, writing code, designing, etc. Over time, you'll build your own little database of projects to use as a baseline for how long a project may take you.
 
 ### Adjust scope, not schedule
 
@@ -98,14 +97,14 @@ It's better to be realistic early on in a project and cut out the fat rather tha
 
 ### Estimation is collaboration
 
-In the end, project estimation should be a collaborative process. Both the people creating the estimate as well as the people requesting it should be involved in the process. It gives opportunity for discussion, learning about the project, and provides room to discover nuances that would normally get overlooked when the process is one-sided. It gives clients the opportunity to provide input and feedback, and will give both parties a view into what it will be like to work together.
+Project estimation should be a collaborative process. Both the you and the client should be heavily involved in the estimation phase. It gives opportunity to learn and discover nuances that would normally get overlooked when the process is one-sided. It allows for client input and feedback, and gives both parties a view into what it will be like to work together.
 
-Obviously, doing this takes time (are you sick of hearing me say this yet?), but it's well worth it to spend it up front. Giving project estimation the importance and space it needs will ultimately result in a more accurate estimate, a better project, and a happier working relationship.
+Obviously, doing this takes time (are you sick of hearing me say this yet?). Giving project estimation the importance and space it needs will result in a more accurate estimate, a better project, and a happier working relationship.
 
 
 <hr>
 
-I work with a lot of companies to help them plan their projects and build products. If you'd like some help estimating your next project, [I'd love to hear from you](mailto:hello@graybike.co).
+I work with a lot of companies to help them plan their projects and build products. If you'd like some help planning your next project, [I'd love to hear from you](mailto:hello@graybike.co).
 
 [93_million]: http://uk.reuters.com/article/2013/10/17/uk-usa-healthcare-technology-insight-idUKBRE99G06120131017
 [2_billion]: http://www.bloomberg.com/news/articles/2014-09-24/obamacare-website-costs-exceed-2-billion-study-finds
