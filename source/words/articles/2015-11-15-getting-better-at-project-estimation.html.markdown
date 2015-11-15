@@ -59,13 +59,11 @@ The two pitfalls described above are part of what is known as ["The Planning Fal
 
 To counter the "inside view", we need to understand our instinctive first guess may not always be completely accurate. That first guess isn't taking into account any of the unknowns, and we need to spend time researching what those could be. When we approach estimation with an analytical eye, looking for evidence to support our idea of how long something will take, we're more likely to land on an accurate estimate. Yes, this may take longer to come up with some accurate numbers -- but it's well worth it. It's better to invest the time up front and mitigate our risk for delays down the line.
 
-We humans tend to think things will go better for us than they do for others. Unfortunately, it's pretty unlikely. It's important to bake in room for error & delays. When putting together an estimate, I always add in about 20 percent time as room for error. If I'm able to finish ahead of schedule, it gives me room to add polish to make the project that much better. If nothing else, I can launch early! But, if something does delay the project, I've got a bit of padding to make sure it still gets out on time.
-
-To drive this point home, consider this quote:
-
 > The first 90 percent of the code accounts for the first 90 percent of the development time. The remaining 10 percent of the code accounts for the other 90 percent of the development time.
 >
 > <cite>Tom Cargill, Bell Labs</cite>
+
+We humans tend to think things will go better for us than they do for others. Unfortunately, it's pretty unlikely. It's important to bake in room for error & delays. When putting together an estimate, I always add in about 20 percent time as room for delay. If I'm able to finish ahead of schedule, it gives me room to add polish to make the project that much better. If nothing else, I can launch early! But, if something does delay the project, I've got a bit of padding to make sure it still gets out on time.
 
 ### Diving Deeper
 
@@ -101,10 +99,11 @@ Project estimation should be a collaborative process. Both the you and the clien
 
 Obviously, doing this takes time (are you sick of hearing me say this yet?). Giving project estimation the importance and space it needs will result in a more accurate estimate, a better project, and a happier working relationship.
 
-
 <hr>
 
 I work with a lot of companies to help them plan their projects and build products. If you'd like some help planning your next project, [I'd love to hear from you](mailto:hello@graybike.co).
+
+P.S. Much thanks to [Patrick Johnson](http://pbj.me/) for editing this post. Go check out his work.
 
 [93_million]: http://uk.reuters.com/article/2013/10/17/uk-usa-healthcare-technology-insight-idUKBRE99G06120131017
 [2_billion]: http://www.bloomberg.com/news/articles/2014-09-24/obamacare-website-costs-exceed-2-billion-study-finds

@@ -1,5 +1,4 @@
 .blog {
-  margin-top: padding-blocks(3);
   .articles, article.post {
     @include text-width();
   }
