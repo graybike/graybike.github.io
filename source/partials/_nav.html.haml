@@ -1,17 +1,14 @@
-%header{class: ("alt" if defined?(alt) )}
+%header
   %div
     %h2
       %a{href:"/"}
-        / = image_tag 'logo.svg', alt:'Gray Bike'
         = succeed "BIKE" do
           %span.dg GRAY
   %nav
     %a{href:"/"}
-      %span About
+      %span{class: ("active" if current_page.url == "/")} About
     %a{href:"/work"}
-      %span Work
+      %span{class: ("active" if current_page.url.include? "/work")} Work
     - if data.features.blog
       %a{href:"/words"}
-        %span Words
-    / %a.contact{href:'mailto:hello@graybike.co'}
-    /   %span Contact
+        %span{class: ("active" if current_page.url.include? "/words")} Words

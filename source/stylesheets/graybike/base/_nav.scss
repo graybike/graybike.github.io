@@ -60,6 +60,10 @@ header {
     font-weight: 400;
     text-transform: uppercase;
     white-space: nowrap;
+
+    span.active {
+      font-weight: 700;
+    }
     &:last-child {
       padding-right: 0;
     }
