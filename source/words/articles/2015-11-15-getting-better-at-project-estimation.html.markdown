@@ -16,7 +16,7 @@ I'm going to explore a few things that go wrong when estimating projects. Not ev
 
 ### How does it work?
 
-Typically, when an developer or designer estimates a project, she might do a few things:
+Typically, when a developer or designer estimates a project, she might do a few things:
 
 * Ask a few questions about the project and try to learn a bit more.
 * Try to break the overall project down into smaller pieces.
