@@ -2,7 +2,7 @@
   %ul.text-center
     %li
       %p
-        hello@graybike.co
+        %a{href: 'mailto:hello@graybike.co'} hello@graybike.co
     %li.divider
       %p &#xb7;  
     %li
@@ -10,7 +10,8 @@
     %li.divider
       %p &#xb7;
     %li
-      %p San Francisco, CA
+      %p 
+        %a{href: 'https://twitter.com/ptrikutam'} @ptrikutam
   - if data.features.colophon
     .colophon.text-center
       %a{href:"/colophon"} about this site
