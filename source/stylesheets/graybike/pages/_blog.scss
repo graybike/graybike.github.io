@@ -2,7 +2,23 @@
   .articles, article.post {
     @include text-width();
   }
+
   .articles article {
     margin-bottom: padding-blocks(5);
+  }
+
+  article.post {
+    
+    // Need Moar Typographic Hierarchy
+    h4 {
+      color: $medium-gray;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    pre {
+      margin-top: 0;
+      margin-bottom: 1.5em;
+    }
   }
 }

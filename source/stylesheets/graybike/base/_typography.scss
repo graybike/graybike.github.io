@@ -78,7 +78,11 @@
     }
   }
 
-  code {
+  pre {
+    padding: 1em;
+  }
+
+  p code, ul code {
     background: #F7F7F7;
     border-radius: $base-border-radius * 1.5;
     border: 1px solid #E0E0E0;

@@ -22,6 +22,9 @@ gem 'bitters'
 gem 'bourbon'
 gem 'neat'
 
+# Syntax Highlighting
+gem 'middleman-syntax' 
+gem 'redcarpet'
 
 # Deploy
 gem 'middleman-deploy', '~> 1.0'
