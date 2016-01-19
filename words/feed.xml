@@ -55,7 +55,7 @@
         <link rel="alternate" href="http://blog.url.com/words/2016-01-11-git-workflow-for-small-teams/"/>
         <id>http://blog.url.com/words/2016-01-11-git-workflow-for-small-teams/</id>
         <published>2016-01-10T16:00:00-08:00</published>
-        <updated>2016-01-19T00:54:44-08:00</updated>
+        <updated>2016-01-19T00:59:11-08:00</updated>
         <author>
           <name>Article Author</name>
         </author>
@@ -68,7 +68,7 @@
     &lt;li&gt;Keep a history of discussions around&lt;/li&gt;
     &lt;/ul&gt;
     
-    &lt;p&gt;There&amp;rsquo;s already a [really popular article][git-workflow-article] that describes a Git workflow. This post borrows heavily from ideas presented there. It also borrows a few ideas from thoughtbot&amp;rsquo;s &lt;a href="https://github.com/thoughtbot/guides/blob/master/protocol/git/README.md"&gt;Git Protocol&lt;/a&gt;.&lt;/p&gt;
+    &lt;p&gt;There&amp;rsquo;s already a &lt;a href="http://nvie.com/posts/a-successful-git-branching-model/"&gt;really popular article&lt;/a&gt; that describes a Git workflow. This post borrows heavily from ideas presented there. It also borrows a few ideas from thoughtbot&amp;rsquo;s &lt;a href="https://github.com/thoughtbot/guides/blob/master/protocol/git/README.md"&gt;Git Protocol&lt;/a&gt;.&lt;/p&gt;
     
     &lt;p&gt;This workflow is based on a agile sprint model, where there will be (bi-)weekly releases to production with a number of features that have been completed &amp;amp; acceptance tested during the sprint.&lt;/p&gt;
     
