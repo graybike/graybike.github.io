@@ -46,120 +46,332 @@
       <id>http://blog.url.com/words</id>
       <link href="http://blog.url.com/words"/>
       <link href="http://blog.url.com/words/feed.xml" rel="self"/>
-      <updated>2015-11-14T16:00:00-08:00</updated>
+      <updated>2016-01-10T16:00:00-08:00</updated>
       <author>
         <name>Blog Author</name>
       </author>
+      <entry>
+        <title>Git Workflow For Small Teams</title>
+        <link rel="alternate" href="http://blog.url.com/words/2016-01-11-git-workflow-for-small-teams/"/>
+        <id>http://blog.url.com/words/2016-01-11-git-workflow-for-small-teams/</id>
+        <published>2016-01-10T16:00:00-08:00</published>
+        <updated>2016-01-19T00:37:33-08:00</updated>
+        <author>
+          <name>Article Author</name>
+        </author>
+        <content type="html">&lt;p&gt;I recently worked with a client to develop a git workflow for their small team of developers. Their requirements were:&lt;/p&gt;
+    
+    &lt;ul&gt;
+    &lt;li&gt;Continuous integration/automated deployment to staging/production&lt;/li&gt;
+    &lt;li&gt;Automated testing&lt;/li&gt;
+    &lt;li&gt;Code reviews&lt;/li&gt;
+    &lt;li&gt;Easy ways to revert releases&lt;/li&gt;
+    &lt;li&gt;Keep a history of discussions around&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;p&gt;There&amp;rsquo;s already a &lt;a href="http://nvie.com/posts/a-successful-git-branching-model/"&gt;really great article&lt;/a&gt; out there that hits on many of these points. This post borrows heavily from ideas presented in that post. It also borrows a few ideas from thoughtbot&amp;rsquo;s &lt;a href="https://github.com/thoughtbot/guides/blob/master/protocol/git/README.md"&gt;Git Protocol&lt;/a&gt;.&lt;/p&gt;
+    
+    &lt;p&gt;This workflow is based on a agile sprint model, where there will be (bi-)weekly releases to production with a number of features that have been completed &amp;amp; acceptance tested during the sprint.&lt;/p&gt;
+    
+    &lt;h3&gt;The Tools&lt;/h3&gt;
+    
+    &lt;ul&gt;
+    &lt;li&gt;&lt;a href="http://github.com"&gt;&lt;strong&gt;Github&lt;/strong&gt;&lt;/a&gt;: for repository hosting &amp;amp; code review.&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://circleci.com/"&gt;&lt;strong&gt;CircleCI&lt;/strong&gt;&lt;/a&gt;: for continuous integration. It integrates seamlessly with Github and is free for up to one container.&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://www.heroku.com/"&gt;&lt;strong&gt;Heroku&lt;/strong&gt;&lt;/a&gt;: for web hosting. CircleCI &amp;amp; Github both integrate well with Heroku.&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h3&gt;The Setup&lt;/h3&gt;
+    
+    &lt;p&gt;There are two main branches in the repository:&lt;/p&gt;
+    
+    &lt;ul&gt;
+    &lt;li&gt;&lt;code&gt;master&lt;/code&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;development&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;p&gt;The &lt;code&gt;master&lt;/code&gt; branch will always reflect what&amp;rsquo;s on production. No exceptions. Pushing to the &lt;code&gt;master&lt;/code&gt; branch will trigger a deploy directly to production. &lt;em&gt;Because of this, you better be damn sure you&amp;rsquo;re ready to push live before you merge to &lt;code&gt;master&lt;/code&gt;&lt;/em&gt;.&lt;/p&gt;
+    
+    &lt;p&gt;All completed features will be submitted to the &lt;code&gt;development&lt;/code&gt; branch via pull requests. It will auto-deploy to the staging server.&lt;/p&gt;
+    
+    &lt;h3&gt;Create a Feature or Bug Fix&lt;/h3&gt;
+    
+    &lt;p&gt;Branch off: &lt;code&gt;development&lt;/code&gt;&lt;br&gt;
+    Merge Into: &lt;code&gt;development&lt;/code&gt;&lt;br&gt;
+    Naming Convention: &lt;code&gt;&amp;lt;initials&amp;gt;-&amp;lt;branch name&amp;gt;&lt;/code&gt;&lt;/p&gt;
+    
+    &lt;p&gt;For non-urgent features or bug fixes, branch off the &lt;code&gt;development&lt;/code&gt; branch and create a feature or bug fix branch:&lt;/p&gt;
+    &lt;pre class="highlight plaintext"&gt;&lt;code&gt;git checkout development
+    git pull
+    git checkout -b &amp;lt;initials&amp;gt;-&amp;lt;branch name&amp;gt;
+    &lt;/code&gt;&lt;/pre&gt;
+    
+    &lt;p&gt;From within your feature branch, rebase regularly to incorporate the latest changes from &lt;code&gt;development&lt;/code&gt;:&lt;/p&gt;
+    &lt;pre class="highlight plaintext"&gt;&lt;code&gt;git fetch origin
+    git rebase origin/development
+    &lt;/code&gt;&lt;/pre&gt;
+    
+    &lt;p&gt;Resolve conflicts &amp;amp; create commits as you go along. &lt;/p&gt;
+    
+    &lt;p&gt;When your feature is ready for merging into &lt;code&gt;development&lt;/code&gt;, &lt;a href="https://help.github.com/articles/about-git-rebase/"&gt;use &lt;code&gt;git rebase&lt;/code&gt; interactively&lt;/a&gt; to squash all your commits into one. See the &amp;ldquo;Squashing Commits&amp;rdquo; section for more detail.&lt;/p&gt;
+    
+    &lt;p&gt;Share your branch.&lt;/p&gt;
+    &lt;pre class="highlight plaintext"&gt;&lt;code&gt;git push origin &amp;lt;initials&amp;gt;-&amp;lt;branch name&amp;gt;
+    &lt;/code&gt;&lt;/pre&gt;
+    
+    &lt;p&gt;&lt;a href="https://help.github.com/articles/using-pull-requests/"&gt;Create a pull request&lt;/a&gt; from this branch and request a code review. &lt;em&gt;Make sure you create a PR that merges into the &lt;code&gt;development&lt;/code&gt; branch, not the &lt;code&gt;master&lt;/code&gt; branch&lt;/em&gt;.&lt;/p&gt;
+    
+    &lt;p&gt;&lt;em&gt;Your PR should merge INTO &lt;code&gt;development&lt;/code&gt; FROM your feature branch.&lt;/em&gt;&lt;/p&gt;
+    
+    &lt;h4&gt;Squashing Commits&lt;/h4&gt;
+    
+    &lt;p&gt;Squashing commits is good for many reasons: &lt;/p&gt;
+    
+    &lt;ul&gt;
+    &lt;li&gt;allows you to create better commit messages &lt;/li&gt;
+    &lt;li&gt;rids your history of commits like &amp;ldquo;fix whitespace&amp;rdquo;&lt;/li&gt;
+    &lt;li&gt;makes it easy for reviewers to see what changes you&amp;rsquo;ve made in one go&lt;/li&gt;
+    &lt;li&gt;makes it easier to &lt;code&gt;bisect&lt;/code&gt; the Git history when debugging&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;p&gt;First, update your branch with the latest.&lt;/p&gt;
+    &lt;pre class="highlight plaintext"&gt;&lt;code&gt;git fetch origin
+    git rebase origin/master
+    &lt;/code&gt;&lt;/pre&gt;
+    
+    &lt;p&gt;Then, count the number of commits in your branch. If your branch has 3 commits, do the following:&lt;/p&gt;
+    &lt;pre class="highlight plaintext"&gt;&lt;code&gt;git rebase --interactive HEAD~3
+    &lt;/code&gt;&lt;/pre&gt;
+    
+    &lt;p&gt;This will open up an editor with only the 3 last commits from the Git history, leaving the rest of the commit history alone. It&amp;rsquo;ll probably look something like this (actual commits from the history of this post):&lt;/p&gt;
+    &lt;pre class="highlight plaintext"&gt;&lt;code&gt;pick 93accac fixing grammar
+    pick e054794 adjust spacing on code
+    pick c344407 consistent URL formatting
+    &lt;/code&gt;&lt;/pre&gt;
+    
+    &lt;p&gt;&lt;code&gt;reword&lt;/code&gt; &amp;amp; &lt;code&gt;squash&lt;/code&gt; the commits into a logical, easy to understand progression. Ideally you&amp;rsquo;ll squash them into one, but more than one is acceptable if it&amp;rsquo;s a really large feature. The goal here is to make things easy for the person reviewing your code.&lt;/p&gt;
+    
+    &lt;h3&gt;Merging in a feature&lt;/h3&gt;
+    
+    &lt;p&gt;Once your code has been reviewed, fix any issues in your branch. Once again, squash commits into one. When your branch is ready, &lt;a href="https://developer.atlassian.com/blog/2015/04/force-with-lease/"&gt;force push using &lt;code&gt;--force-with-lease&lt;/code&gt;&lt;/a&gt; to make sure you&amp;rsquo;re not overwriting anyone else&amp;rsquo;s code.&lt;/p&gt;
+    &lt;pre class="highlight plaintext"&gt;&lt;code&gt;git push --force-with-lease origin &amp;lt;initials&amp;gt;-&amp;lt;branch name&amp;gt;
+    &lt;/code&gt;&lt;/pre&gt;
+    
+    &lt;p&gt;Merge the feature branch into &lt;code&gt;development&lt;/code&gt;.&lt;/p&gt;
+    &lt;pre class="highlight plaintext"&gt;&lt;code&gt;git checkout development
+    git merge --ff-only &amp;lt;initials&amp;gt;-&amp;lt;branch name&amp;gt;
+    &lt;/code&gt;&lt;/pre&gt;
+    
+    &lt;p&gt;Once this is done, delete your branch.&lt;/p&gt;
+    &lt;pre class="highlight plaintext"&gt;&lt;code&gt;git push origin --delete &amp;lt;initials&amp;gt;-&amp;lt;branch name&amp;gt;
+    git branch --delete &amp;lt;initials&amp;gt;-&amp;lt;branch name&amp;gt;
+    &lt;/code&gt;&lt;/pre&gt;
+    
+    &lt;h4&gt;A Note on Fast Forward&lt;/h4&gt;
+    
+    &lt;p&gt;Why use &lt;code&gt;--ff-only&lt;/code&gt;? &lt;a href="https://sandofsky.com/blog/git-workflow.html"&gt;Benjamin Sandofsky recommends&lt;/a&gt; not using &lt;code&gt;--no-ff&lt;/code&gt;:&lt;/p&gt;
+    
+    &lt;blockquote&gt;
+    &lt;p&gt;So you add a new rule: “When you merge in your feature branch, use &lt;code&gt;–-no-ff&lt;/code&gt; to force a new commit.” This gets the job done, and you move on. […]&lt;/p&gt;
+    
+    &lt;p&gt;The &lt;code&gt;--no-ff&lt;/code&gt; band-aid, broken &lt;code&gt;bisect&lt;/code&gt;, and &lt;code&gt;blame&lt;/code&gt; mysteries are all symptoms that you’re using a screwdriver as a hammer. […]&lt;/p&gt;
+    &lt;/blockquote&gt;
+    
+    &lt;p&gt;Ben put together a &lt;a href="https://sandofsky.com/images/fast_forward.pdf"&gt;great diagram&lt;/a&gt; to visualize this. In a nutshell, &lt;code&gt;--no-ff&lt;/code&gt; is really only useful when you&amp;rsquo;re merging in multiple commits from a branch. Since we&amp;rsquo;re squashing branch commit histories into one logical commit, using &lt;code&gt;--ff-only&lt;/code&gt; works well. It will force the merge to explicitly fast forward, and will error out if it encounters issues.&lt;/p&gt;
+    
+    &lt;h3&gt;Release&lt;/h3&gt;
+    
+    &lt;p&gt;The &lt;code&gt;development&lt;/code&gt; branch is now full of tested features that are ready for deployment. To release, create a pull request that will be merging the &lt;code&gt;development&lt;/code&gt; branch into the &lt;code&gt;master&lt;/code&gt; branch.&lt;/p&gt;
+    
+    &lt;p&gt;&lt;em&gt;Your PR should merge INTO &lt;code&gt;master&lt;/code&gt; FROM &lt;code&gt;development&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
+    
+    &lt;p&gt;Set the title of the PR to be:&lt;/p&gt;
+    &lt;pre class="highlight plaintext"&gt;&lt;code&gt;YYYY-MM-DD Release
+    &lt;/code&gt;&lt;/pre&gt;
+    
+    &lt;p&gt;In the description of the PR, you can add details like:&lt;/p&gt;
+    
+    &lt;ul&gt;
+    &lt;li&gt;Features in the PR&lt;/li&gt;
+    &lt;li&gt;Trello/Asana Cards&lt;/li&gt;
+    &lt;li&gt;Airbrake/Honeybadger Notifications&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;p&gt;This can act as the weekly release report. Once the report is complete, you can hit the &amp;ldquo;Merge Pull Request&amp;rdquo; button. Once merged, the release will be auto-deployed to production. &lt;/p&gt;
+    
+    &lt;h3&gt;Hotfixes: Urgent Production Issues&lt;/h3&gt;
+    
+    &lt;p&gt;Branch off: &lt;code&gt;master&lt;/code&gt;&lt;br&gt;
+    Merge Into: &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;development&lt;/code&gt;&lt;br&gt;
+    Naming Convention: &lt;code&gt;&amp;lt;initials&amp;gt;-hotfix-&amp;lt;branch name&amp;gt;&lt;/code&gt;  &lt;/p&gt;
+    
+    &lt;p&gt;For issues that cannot wait until the end of a sprint cycle, create hotfix branch from the &lt;code&gt;master&lt;/code&gt; branch:&lt;/p&gt;
+    &lt;pre class="highlight plaintext"&gt;&lt;code&gt;git checkout master
+    git pull
+    git checkout -b &amp;lt;initials&amp;gt;-hotfix-&amp;lt;branch name&amp;gt;
+    &lt;/code&gt;&lt;/pre&gt;
+    
+    &lt;p&gt;Add your fix and rebase from &lt;code&gt;master&lt;/code&gt; regularly to keep up to date. Once your fix is complete, squash your commits into one and submit another pull request. This time, make sure you are merging into the &lt;code&gt;master&lt;/code&gt; branch.&lt;/p&gt;
+    
+    &lt;p&gt;&lt;em&gt;Your PR should merge INTO &lt;code&gt;master&lt;/code&gt; FROM your hotfix branch.&lt;/em&gt;&lt;/p&gt;
+    
+    &lt;p&gt;Once you&amp;rsquo;ve gotten approval, merge your hotfix branch into the &lt;code&gt;master&lt;/code&gt; branch.&lt;/p&gt;
+    &lt;pre class="highlight plaintext"&gt;&lt;code&gt;git checkout master
+    git merge --ff-only &amp;lt;initials&amp;gt;-hotfix-&amp;lt;branch name&amp;gt;
+    &lt;/code&gt;&lt;/pre&gt;
+    
+    &lt;p&gt;Merge your hotfix branch into development as well.&lt;/p&gt;
+    &lt;pre class="highlight plaintext"&gt;&lt;code&gt;git checkout development
+    git merge --ff-only &amp;lt;initials&amp;gt;-hotfix-&amp;lt;branch name&amp;gt;
+    &lt;/code&gt;&lt;/pre&gt;
+    
+    &lt;p&gt;Once this is done, delete your branch.&lt;/p&gt;
+    &lt;pre class="highlight plaintext"&gt;&lt;code&gt;git push origin --delete &amp;lt;initials&amp;gt;-hotfix-&amp;lt;branch name&amp;gt;
+    git branch --delete &amp;lt;initials&amp;gt;-hotfix-&amp;lt;branch name&amp;gt;
+    &lt;/code&gt;&lt;/pre&gt;
+    
+    &lt;h3&gt;Configuration&lt;/h3&gt;
+    
+    &lt;h4&gt;CircleCi&lt;/h4&gt;
+    
+    &lt;p&gt;Here&amp;rsquo;s the basic configuration I use for CircleCI. Make sure you&amp;rsquo;ve got your Heroku API Key &amp;amp; SSH key set up in CircleCI.&lt;/p&gt;
+    &lt;pre class="highlight yaml"&gt;&lt;code&gt;&lt;span class="s"&gt;deployment&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt;
+      &lt;span class="s"&gt;production&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt;
+        &lt;span class="s"&gt;branch&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt; &lt;span class="s"&gt;master&lt;/span&gt;
+        &lt;span class="s"&gt;commands&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt;
+          &lt;span class="pi"&gt;-&lt;/span&gt; &lt;span class="s"&gt;git push git@heroku.com:yourapp.git $CIRCLE_SHA1:master&lt;/span&gt;
+          &lt;span class="pi"&gt;-&lt;/span&gt; &lt;span class="s"&gt;heroku run rake db:migrate --app yourapp&lt;/span&gt;
+          &lt;span class="pi"&gt;-&lt;/span&gt; &lt;span class="s"&gt;heroku run 'rake cache:clear' --app yourapp&lt;/span&gt;
+      &lt;span class="s"&gt;staging&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt;
+        &lt;span class="s"&gt;branch&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt; &lt;span class="s"&gt;development&lt;/span&gt;
+        &lt;span class="s"&gt;commands&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt;
+          &lt;span class="pi"&gt;-&lt;/span&gt; &lt;span class="s"&gt;git push git@heroku.com:yourapp-staging.git $CIRCLE_SHA1:master&lt;/span&gt;
+          &lt;span class="pi"&gt;-&lt;/span&gt; &lt;span class="s"&gt;heroku run rake db:migrate --app yourapp-staging&lt;/span&gt;
+          &lt;span class="pi"&gt;-&lt;/span&gt; &lt;span class="s"&gt;heroku run 'rake cache:clear' --app yourapp-staging&lt;/span&gt;
+    &lt;/code&gt;&lt;/pre&gt;
+    
+    &lt;p&gt;This will auto-deploy your &lt;code&gt;development&lt;/code&gt; branch to staging, and will auto-deploy your &lt;code&gt;master&lt;/code&gt; branch to production. For both environments, after deploying, it will auto-run migrations &amp;amp; clear your cache. You can tweak these after-deploy commands to your liking.&lt;/p&gt;
+    
+    &lt;h4&gt;Github&lt;/h4&gt;
+    
+    &lt;p&gt;Set the default branch to be &lt;code&gt;development&lt;/code&gt; in the Settings tab of your repository. This makes sure than any pull request will default to merging into the &lt;code&gt;development&lt;/code&gt; branch.&lt;/p&gt;
+    
+    &lt;p&gt;Ensure you set both &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;development&lt;/code&gt; to be protected branches. Make sure that they require passing a CircleCI status check before merging.&lt;/p&gt;
+    
+    &lt;p&gt;&lt;hr&gt;&lt;/p&gt;
+    
+    &lt;p&gt;That&amp;rsquo;s about it. Got any comments? Questions? &lt;a href="hello@graybike.co"&gt;Shoot me an email&lt;/a&gt; or &lt;a href="https://twitter.com/ptrikutam"&gt;find me on twitter&lt;/a&gt;.&lt;/p&gt;
+    </content>
+      </entry>
       <entry>
         <title>Getting better at project estimation</title>
         <link rel="alternate" href="http://blog.url.com/words/2015-11-15-getting-better-at-project-estimation/"/>
         <id>http://blog.url.com/words/2015-11-15-getting-better-at-project-estimation/</id>
         <published>2015-11-14T16:00:00-08:00</published>
-        <updated>2015-11-16T11:39:56-08:00</updated>
+        <updated>2016-01-19T00:10:33-08:00</updated>
         <author>
           <name>Article Author</name>
         </author>
         <content type="html">&lt;p&gt;How many times have you started a project with some kind of assumption on the project duration, and how many times have you found that to be off? Pretty much everyone gets it wrong. What we can do to be better about it?&lt;/p&gt;
     
-    &lt;p&gt;One notorious example of this in the US was the development of the &lt;a href="https://www.healthcare.gov/"&gt;healthcare.gov&lt;/a&gt; website. Originally, the project was estimated to cost &lt;a href="http://uk.reuters.com/article/2013/10/17/uk-usa-healthcare-technology-insight-idUKBRE99G06120131017"&gt;about $93.7 million&lt;/a&gt;, but the final cost &lt;a href="http://www.bloomberg.com/news/articles/2014-09-24/obamacare-website-costs-exceed-2-billion-study-finds"&gt;exceeded $2 billion dollars&lt;/a&gt;. It doesn't really matter who is to blame for that drastic underestimation. My only point here is: whether a project is small or large, estimating cost is hard. Really hard. And almost everyone is likely to get at least part of it wrong.&lt;/p&gt;
+    &lt;p&gt;One notorious example of this in the US was the development of the &lt;a href="https://www.healthcare.gov/"&gt;healthcare.gov&lt;/a&gt; website. Originally, the project was estimated to cost &lt;a href="http://uk.reuters.com/article/2013/10/17/uk-usa-healthcare-technology-insight-idUKBRE99G06120131017"&gt;about $93.7 million&lt;/a&gt;, but the final cost &lt;a href="http://www.bloomberg.com/news/articles/2014-09-24/obamacare-website-costs-exceed-2-billion-study-finds"&gt;exceeded $2 billion dollars&lt;/a&gt;. It doesn&amp;rsquo;t really matter who is to blame for that drastic underestimation. My only point here is: whether a project is small or large, estimating cost is hard. Really hard. And almost everyone is likely to get at least part of it wrong.&lt;/p&gt;
     
-    &lt;p&gt;I'm going to explore a few things that go wrong when estimating projects. Not everything thing here may apply to you, but hopefully you'll find it at least some of it useful. Above all, I hope to provide a perspective for makers on where they could potentially go wrong when making estimates.&lt;/p&gt;
+    &lt;p&gt;I&amp;rsquo;m going to explore a few things that go wrong when estimating projects. Not everything thing here may apply to you, but hopefully you&amp;rsquo;ll find it at least some of it useful. Above all, I hope to provide a perspective for makers on where they could potentially go wrong when making estimates.&lt;/p&gt;
     
-    &lt;h3 id="how-does-it-work"&gt;How does it work?&lt;/h3&gt;
+    &lt;h3&gt;How does it work?&lt;/h3&gt;
     
     &lt;p&gt;Typically, when a developer or designer estimates a project, she might do a few things:&lt;/p&gt;
     
     &lt;ul&gt;
-      &lt;li&gt;Ask a few questions about the project and try to learn a bit more.&lt;/li&gt;
-      &lt;li&gt;Try to break the overall project down into smaller pieces.&lt;/li&gt;
-      &lt;li&gt;Confer with a few other folks and play &lt;a href="https://en.wikipedia.org/wiki/Planning_poker"&gt;"planning poker"&lt;/a&gt;.&lt;/li&gt;
-      &lt;li&gt;Think about times where she's built something similar before and try to remember how long it took.&lt;/li&gt;
+    &lt;li&gt;Ask a few questions about the project and try to learn a bit more.&lt;/li&gt;
+    &lt;li&gt;Try to break the overall project down into smaller pieces.&lt;/li&gt;
+    &lt;li&gt;Confer with a few other folks and play &lt;a href="https://en.wikipedia.org/wiki/Planning_poker"&gt;&amp;ldquo;planning poker&amp;rdquo;&lt;/a&gt;.&lt;/li&gt;
+    &lt;li&gt;Think about times where she&amp;rsquo;s built something similar before and try to remember how long it took.&lt;/li&gt;
     &lt;/ul&gt;
     
-    &lt;p&gt;Unfortunately, the estimate is usually needed in a short amount of time. She will have to take a shot in the dark to put some numbers together. She probably figures any inaccuracies can be made up by burning the midnight oil. The strange part is she's likely pretty confident about being able to deliver the project on time, even though she doesn't have much concrete evidence to prove the estimate will be accurate.&lt;/p&gt;
+    &lt;p&gt;Unfortunately, the estimate is usually needed in a short amount of time. She will have to take a shot in the dark to put some numbers together. She probably figures any inaccuracies can be made up by burning the midnight oil. The strange part is she&amp;rsquo;s likely pretty confident about being able to deliver the project on time, even though she doesn&amp;rsquo;t have much concrete evidence to prove the estimate will be accurate.&lt;/p&gt;
     
-    &lt;p&gt;This confidence comes from being overly optimistic, a type of &lt;a href="https://en.wikipedia.org/wiki/Optimism_bias"&gt;congitive bias&lt;/a&gt;. But I'll get more into that later. First, a story:&lt;/p&gt;
+    &lt;p&gt;This confidence comes from being overly optimistic, a type of &lt;a href="https://en.wikipedia.org/wiki/Optimism_bias"&gt;congitive bias&lt;/a&gt;. But I&amp;rsquo;ll get more into that later. First, a story:&lt;/p&gt;
     
-    &lt;p&gt;In Daniel Kahneman's excellent book, &lt;em&gt;&lt;a href="http://www.amazon.com/gp/product/0374533555"&gt;Thinking, Fast and Slow&lt;/a&gt;&lt;/em&gt;, he talks a lot about the psychology behind congitive biases. He describes an example where he and a small team were designing a curriculum to teach decision making to high school students. After working for one year (and making great progress), his team got together to estimate the remaining time to complete the project. They predicted that the project would take two years to complete. The project ended up taking eight years to finish.&lt;/p&gt;
+    &lt;p&gt;In Daniel Kahneman&amp;rsquo;s excellent book, &lt;em&gt;&lt;a href="http://www.amazon.com/gp/product/0374533555"&gt;Thinking, Fast and Slow&lt;/a&gt;&lt;/em&gt;, he talks a lot about the psychology behind congitive biases. He describes an example where he and a small team were designing a curriculum to teach decision making to high school students. After working for one year (and making great progress), his team got together to estimate the remaining time to complete the project. They predicted that the project would take two years to complete. The project ended up taking eight years to finish.&lt;/p&gt;
     
-    &lt;h3 id="the-outside-view"&gt;The outside view&lt;/h3&gt;
+    &lt;h3&gt;The outside view&lt;/h3&gt;
     
     &lt;p&gt;When estimating projects, people often fail to take into consideration a baseline prediction to use as a comparison.&lt;/p&gt;
     
-    &lt;p&gt;Essentially, this concept is the fact that when estimating projects, we fail to consider what other similar projects (the "outside view") took to complete. To make the estimate, we draw solely upon the evidence right in front of us (the "inside view") to make a judgement. This approach often fails due to a lack of actual evidence from similar projects.&lt;/p&gt;
+    &lt;p&gt;Essentially, this concept is the fact that when estimating projects, we fail to consider what other similar projects (the &amp;ldquo;outside view&amp;rdquo;) took to complete. To make the estimate, we draw solely upon the evidence right in front of us (the &amp;ldquo;inside view&amp;rdquo;) to make a judgement. This approach often fails due to a lack of actual evidence from similar projects.&lt;/p&gt;
     
-    &lt;p&gt;For many projects, not everyone has a baseline to compare to when trying to estimate a project. That's why clients go to the experts (that's us) to figure things out. The experts have worked on many projects like this and have a wide range of examples to draw from.&lt;/p&gt;
+    &lt;p&gt;For many projects, not everyone has a baseline to compare to when trying to estimate a project. That&amp;rsquo;s why clients go to the experts (that&amp;rsquo;s us) to figure things out. The experts have worked on many projects like this and have a wide range of examples to draw from.&lt;/p&gt;
     
-    &lt;p&gt;This is where it gets interesting. Of Kahneman's team working on the curriculum, most of the members did not have prior experience working on a similar project, nor did they know of other projects they could compare. However, one member of the project did know about other similar projects, and how long they took. Yet, even though he did have this larger data set to draw on, he ignored it and made his first prediction based on his experience in the projet thus far and intuition. &lt;strong&gt;He consciously ignored evidence that would help him estimate his project better.&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;This is where it gets interesting. Of Kahneman&amp;rsquo;s team working on the curriculum, most of the members did not have prior experience working on a similar project, nor did they know of other projects they could compare. However, one member of the project did know about other similar projects, and how long they took. Yet, even though he did have this larger data set to draw on, he ignored it and made his first prediction based on his experience in the projet thus far and intuition. &lt;strong&gt;He consciously ignored evidence that would help him estimate his project better.&lt;/strong&gt;&lt;/p&gt;
     
     &lt;p&gt;Only once he was asked a pointed question about how other projects of the type fared did he come up with an accurate estiamte.&lt;/p&gt;
     
     &lt;p&gt;This happens pretty often. To quote Kahneman:&lt;/p&gt;
     
     &lt;blockquote&gt;
-      &lt;p&gt;This is common pattern: people who have information about an individual case rarely feel the need to know the statistics of a class to which the case belongs.&lt;/p&gt;
+    &lt;p&gt;This is common pattern: people who have information about an individual case rarely feel the need to know the statistics of a class to which the case belongs.&lt;/p&gt;
     &lt;/blockquote&gt;
     
-    &lt;p&gt;We tend take the first and easiest piece of evidence (the project we've been involved in), and we never bother to look for additional evidence. It's sometimes referred to as &lt;a href="https://www.brainpickings.org/2014/08/27/willful-blindness-margaret-heffernan/"&gt;"willful blindness"&lt;/a&gt;: we instinctively ignore evidence even when it's right in front of us.&lt;/p&gt;
+    &lt;p&gt;We tend take the first and easiest piece of evidence (the project we&amp;rsquo;ve been involved in), and we never bother to look for additional evidence. It&amp;rsquo;s sometimes referred to as &lt;a href="https://www.brainpickings.org/2014/08/27/willful-blindness-margaret-heffernan/"&gt;&amp;ldquo;willful blindness&amp;rdquo;&lt;/a&gt;: we instinctively ignore evidence even when it&amp;rsquo;s right in front of us.&lt;/p&gt;
     
-    &lt;h3 id="optimism-bias"&gt;Optimism Bias&lt;/h3&gt;
+    &lt;h3&gt;Optimism Bias&lt;/h3&gt;
     
-    &lt;p&gt;Often when estimating projects, developers and designers tend to think in "best case" terms when estimating projects. How long will the authentication system take to build? Probably just a few hours. How soon can I get the entire onboarding flow mocked up? Probably a day, two days max.&lt;/p&gt;
+    &lt;p&gt;Often when estimating projects, developers and designers tend to think in &amp;ldquo;best case&amp;rdquo; terms when estimating projects. How long will the authentication system take to build? Probably just a few hours. How soon can I get the entire onboarding flow mocked up? Probably a day, two days max.&lt;/p&gt;
     
-    &lt;p&gt;More often than not, we simply ignore any chance of mishap or project delay, and we assume the best for estimation. Even if we &lt;em&gt;think&lt;/em&gt; we're assuming the worst, we probably aren't. We don't consider the fact that statistically speaking, it's very unlikely that we'll breeze through a project without any setbacks.&lt;/p&gt;
+    &lt;p&gt;More often than not, we simply ignore any chance of mishap or project delay, and we assume the best for estimation. Even if we &lt;em&gt;think&lt;/em&gt; we&amp;rsquo;re assuming the worst, we probably aren&amp;rsquo;t. We don&amp;rsquo;t consider the fact that statistically speaking, it&amp;rsquo;s very unlikely that we&amp;rsquo;ll breeze through a project without any setbacks.&lt;/p&gt;
     
-    &lt;h3 id="avoiding-the-planning-fallacy"&gt;Avoiding the planning fallacy&lt;/h3&gt;
+    &lt;h3&gt;Avoiding the planning fallacy&lt;/h3&gt;
     
-    &lt;p&gt;The two pitfalls described above are part of what is known as &lt;a href="https://en.wikipedia.org/wiki/Planning_fallacy"&gt;"The Planning Fallacy"&lt;/a&gt;. In other words, it's a matter of being too optimistic about a timeline, and ignoring evidence available to us indicating otherwise.&lt;/p&gt;
+    &lt;p&gt;The two pitfalls described above are part of what is known as &lt;a href="https://en.wikipedia.org/wiki/Planning_fallacy"&gt;&amp;ldquo;The Planning Fallacy&amp;rdquo;&lt;/a&gt;. In other words, it&amp;rsquo;s a matter of being too optimistic about a timeline, and ignoring evidence available to us indicating otherwise.&lt;/p&gt;
     
-    &lt;p&gt;To counter the "inside view", we need to understand our instinctive first guess may not always be completely accurate. That first guess isn't taking into account any of the unknowns, and we need to spend time researching what those could be. When we approach estimation with an analytical eye, looking for evidence to support our idea of how long something will take, we're more likely to land on an accurate estimate. Yes, this may take longer to come up with some accurate numbers – but it's well worth it. It's better to invest the time up front and mitigate our risk for delays down the line.&lt;/p&gt;
+    &lt;p&gt;To counter the &amp;ldquo;inside view&amp;rdquo;, we need to understand our instinctive first guess may not always be completely accurate. That first guess isn&amp;rsquo;t taking into account any of the unknowns, and we need to spend time researching what those could be. When we approach estimation with an analytical eye, looking for evidence to support our idea of how long something will take, we&amp;rsquo;re more likely to land on an accurate estimate. Yes, this may take longer to come up with some accurate numbers &amp;ndash; but it&amp;rsquo;s well worth it. It&amp;rsquo;s better to invest the time up front and mitigate our risk for delays down the line.&lt;/p&gt;
     
     &lt;blockquote&gt;
-      &lt;p&gt;The first 90 percent of the code accounts for the first 90 percent of the development time. The remaining 10 percent of the code accounts for the other 90 percent of the development time.&lt;/p&gt;
+    &lt;p&gt;The first 90 percent of the code accounts for the first 90 percent of the development time. The remaining 10 percent of the code accounts for the other 90 percent of the development time.&lt;/p&gt;
     
-      &lt;p&gt;&lt;cite&gt;Tom Cargill, Bell Labs&lt;/cite&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;cite&gt;Tom Cargill, Bell Labs&lt;/cite&gt;&lt;/p&gt;
     &lt;/blockquote&gt;
     
-    &lt;p&gt;We humans tend to think things will go better for us than they do for others. Unfortunately, it's pretty unlikely. It's important to bake in room for error &amp;amp; delays. When putting together an estimate, I always add in about 20 percent time as room for delay. If I'm able to finish ahead of schedule, it gives me room to add polish to make the project that much better. If nothing else, I can launch early! But, if something does delay the project, I've got a bit of padding to make sure it still gets out on time.&lt;/p&gt;
+    &lt;p&gt;We humans tend to think things will go better for us than they do for others. Unfortunately, it&amp;rsquo;s pretty unlikely. It&amp;rsquo;s important to bake in room for error &amp;amp; delays. When putting together an estimate, I always add in about 20 percent time as room for delay. If I&amp;rsquo;m able to finish ahead of schedule, it gives me room to add polish to make the project that much better. If nothing else, I can launch early! But, if something does delay the project, I&amp;rsquo;ve got a bit of padding to make sure it still gets out on time.&lt;/p&gt;
     
-    &lt;h3 id="diving-deeper"&gt;Diving Deeper&lt;/h3&gt;
+    &lt;h3&gt;Diving Deeper&lt;/h3&gt;
     
     &lt;p&gt;Project estimation is a matter of doing your due diligence. I view project estimation as starting the design/discovery phase early. Before we can produce any concrete numbers, we need to do some work up front. Mock up some wireframes to understand the interaction better. Ask lots of questions about behavior, and try to get into specifics. Think of edge cases and all possible scenarios.&lt;/p&gt;
     
-    &lt;p&gt;A good project proposal &amp;amp; estimate has the added benefit of acting as a project plan.  When you've gone to such great lengths to understand a project before coming up with an estimate, you're much more accurate and likely to predict challenges. Project research &amp;amp; planning should be the first phase of a project. When it's done, there is a concrete deliverable of research and a more accurate view of timelines.&lt;/p&gt;
+    &lt;p&gt;A good project proposal &amp;amp; estimate has the added benefit of acting as a project plan.  When you&amp;rsquo;ve gone to such great lengths to understand a project before coming up with an estimate, you&amp;rsquo;re much more accurate and likely to predict challenges. Project research &amp;amp; planning should be the first phase of a project. When it&amp;rsquo;s done, there is a concrete deliverable of research and a more accurate view of timelines.&lt;/p&gt;
     
-    &lt;h3 id="break-down-components-not-time"&gt;Break down components, not time&lt;/h3&gt;
+    &lt;h3&gt;Break down components, not time&lt;/h3&gt;
     
-    &lt;p&gt;Try to break things down as small as you can when estimating. It leaves less room for error, and it makes it much easier to find examples of other projects doing the same thing. It's very helpful to get as granular as possible when planning. Of course, this takes time. There's usually a lot of communication between designer &amp;amp; client to hash out the smaller details before an accurate estimate can be put forth.&lt;/p&gt;
+    &lt;p&gt;Try to break things down as small as you can when estimating. It leaves less room for error, and it makes it much easier to find examples of other projects doing the same thing. It&amp;rsquo;s very helpful to get as granular as possible when planning. Of course, this takes time. There&amp;rsquo;s usually a lot of communication between designer &amp;amp; client to hash out the smaller details before an accurate estimate can be put forth.&lt;/p&gt;
     
-    &lt;p&gt;However, one thing that is &lt;em&gt;not&lt;/em&gt; useful is trying to estimate in small units of time (hours). It's much easier to come up with an accurate estimate when you're dealing with a matter of days (preferably weeks). As designer &lt;a href="http://alistapart.com/column/creating-accurate-estimates"&gt;Matt Griffin mentions&lt;/a&gt; describes, there's a huge difference between a productive hour vs. a wasted hour. The difference averages out when we think in days or weeks instead of hours.&lt;/p&gt;
+    &lt;p&gt;However, one thing that is &lt;em&gt;not&lt;/em&gt; useful is trying to estimate in small units of time (hours). It&amp;rsquo;s much easier to come up with an accurate estimate when you&amp;rsquo;re dealing with a matter of days (preferably weeks). As designer &lt;a href="http://alistapart.com/column/creating-accurate-estimates"&gt;Matt Griffin mentions&lt;/a&gt; describes, there&amp;rsquo;s a huge difference between a productive hour vs. a wasted hour. The difference averages out when we think in days or weeks instead of hours.&lt;/p&gt;
     
-    &lt;h3 id="track-your-time-meticulously"&gt;Track your time meticulously&lt;/h3&gt;
+    &lt;h3&gt;Track your time meticulously&lt;/h3&gt;
     
-    &lt;p&gt;I can't stress this enough. Diligently tracking your time helps you understand exactly how long it takes to finish a task. It's a great way to look back and know how close you were to your original estimate. You'll know the breakdown of time between meetings, writing code, designing, etc. Over time, you'll build your own little database of projects to use as a baseline for how long a project may take you.&lt;/p&gt;
+    &lt;p&gt;I can&amp;rsquo;t stress this enough. Diligently tracking your time helps you understand exactly how long it takes to finish a task. It&amp;rsquo;s a great way to look back and know how close you were to your original estimate. You&amp;rsquo;ll know the breakdown of time between meetings, writing code, designing, etc. Over time, you&amp;rsquo;ll build your own little database of projects to use as a baseline for how long a project may take you.&lt;/p&gt;
     
-    &lt;h3 id="adjust-scope-not-schedule"&gt;Adjust scope, not schedule&lt;/h3&gt;
+    &lt;h3&gt;Adjust scope, not schedule&lt;/h3&gt;
     
-    &lt;p&gt;You'll get a client that says "we really need this project done a month earlier", and you think to yourself, "maybe I can just work nights &amp;amp; weekends and pull this off".&lt;/p&gt;
+    &lt;p&gt;You&amp;rsquo;ll get a client that says &amp;ldquo;we really need this project done a month earlier&amp;rdquo;, and you think to yourself, &amp;ldquo;maybe I can just work nights &amp;amp; weekends and pull this off&amp;rdquo;.&lt;/p&gt;
     
-    &lt;p&gt;Even if you manage to work day and night to pull off a project, the quality of your work will suffer drastically because you'll burn yourself out. More often, work will compound and you'll realize you have more work left to do, and you'll have to delay the project.&lt;/p&gt;
+    &lt;p&gt;Even if you manage to work day and night to pull off a project, the quality of your work will suffer drastically because you&amp;rsquo;ll burn yourself out. More often, work will compound and you&amp;rsquo;ll realize you have more work left to do, and you&amp;rsquo;ll have to delay the project.&lt;/p&gt;
     
-    &lt;p&gt;Committing to an unreasonable schedule is disingenuous. It's damaging to you, your client, and the project. The art of project estimation sometimes involves saying no. It's your job as the expert to convey the true cost of building things.&lt;/p&gt;
+    &lt;p&gt;Committing to an unreasonable schedule is disingenuous. It&amp;rsquo;s damaging to you, your client, and the project. The art of project estimation sometimes involves saying no. It&amp;rsquo;s your job as the expert to convey the true cost of building things.&lt;/p&gt;
     
-    &lt;p&gt;It's better to be realistic early on in a project and cut out the fat rather than realize you're going to miss your launch after you've announced it to the whole world.&lt;/p&gt;
+    &lt;p&gt;It&amp;rsquo;s better to be realistic early on in a project and cut out the fat rather than realize you&amp;rsquo;re going to miss your launch after you&amp;rsquo;ve announced it to the whole world.&lt;/p&gt;
     
-    &lt;h3 id="estimation-is-collaboration"&gt;Estimation is collaboration&lt;/h3&gt;
+    &lt;h3&gt;Estimation is collaboration&lt;/h3&gt;
     
     &lt;p&gt;Project estimation should be a collaborative process. Both you and the client should be heavily involved in the estimation phase. It gives opportunity to learn about the project and discover nuances that would normally get overlooked when the process is one-sided. It allows for client input and feedback, and gives both parties a view into what it will be like to work together.&lt;/p&gt;
     
     &lt;p&gt;Obviously, doing this takes time (are you sick of hearing me say this yet?). Giving project estimation the importance and space it needs will result in a more accurate estimate, a better project, and a happier working relationship.&lt;/p&gt;
     
-    &lt;hr /&gt;
+    &lt;p&gt;&lt;hr&gt;&lt;/p&gt;
     
-    &lt;p&gt;I work with a lot of companies to help them plan their projects and build products. If you'd like some help planning your next project, &lt;a href="&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#104;&amp;#101;&amp;#108;&amp;#108;&amp;#111;&amp;#064;&amp;#103;&amp;#114;&amp;#097;&amp;#121;&amp;#098;&amp;#105;&amp;#107;&amp;#101;&amp;#046;&amp;#099;&amp;#111;"&gt;I'd love to hear from you&lt;/a&gt;.&lt;/p&gt;
+    &lt;p&gt;I work with a lot of companies to help them plan their projects and build products. If you&amp;rsquo;d like some help planning your next project, &lt;a href="mailto:hello@graybike.co"&gt;I&amp;rsquo;d love to hear from you&lt;/a&gt;.&lt;/p&gt;
     
     &lt;p&gt;P.S. Much thanks to &lt;a href="http://pbj.me/"&gt;Patrick Johnson&lt;/a&gt; for editing this post. Go check out his work.&lt;/p&gt;
-    
     </content>
       </entry>
     </feed>
