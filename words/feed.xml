@@ -55,11 +55,11 @@
         <link rel="alternate" href="http://blog.url.com/words/2016-01-11-git-workflow-for-small-teams/"/>
         <id>http://blog.url.com/words/2016-01-11-git-workflow-for-small-teams/</id>
         <published>2016-01-10T16:00:00-08:00</published>
-        <updated>2016-01-19T00:43:55-08:00</updated>
+        <updated>2016-01-19T00:44:37-08:00</updated>
         <author>
           <name>Article Author</name>
         </author>
-        <content type="html">&lt;p&gt;I recently worked with a client to develop a git workflow for their small team of developers. Their requirements were:&lt;/p&gt;
+        <content type="html">&lt;p&gt;I recently worked with a client to develop a Git workflow for their small team of developers. Their requirements were:&lt;/p&gt;
     
     &lt;ul&gt;
     &lt;li&gt;Continuous integration/automated deployment to staging/production&lt;/li&gt;
