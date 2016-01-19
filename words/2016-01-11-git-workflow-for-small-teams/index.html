@@ -55,14 +55,13 @@
         <p>I recently worked with a client to develop a Git workflow for their small team of developers. Their requirements were:</p>
         
         <ul>
-        <li>Continuous integration/automated deployment to staging/production</li>
-        <li>Automated testing</li>
+        <li>Continuous integration/deployment to staging and production</li>
         <li>Code reviews</li>
         <li>Easy ways to revert releases</li>
         <li>Keep a history of discussions around</li>
         </ul>
         
-        <p>There&rsquo;s already a <a href="http://nvie.com/posts/a-successful-git-branching-model/">really great article</a> out there that hits on many of these points. This post borrows heavily from ideas presented in that post. It also borrows a few ideas from thoughtbot&rsquo;s <a href="https://github.com/thoughtbot/guides/blob/master/protocol/git/README.md">Git Protocol</a>.</p>
+        <p>There&rsquo;s already a [really popular article][git-workflow-article] that describes a Git workflow. This post borrows heavily from ideas presented there. It also borrows a few ideas from thoughtbot&rsquo;s <a href="https://github.com/thoughtbot/guides/blob/master/protocol/git/README.md">Git Protocol</a>.</p>
         
         <p>This workflow is based on a agile sprint model, where there will be (bi-)weekly releases to production with a number of features that have been completed &amp; acceptance tested during the sprint.</p>
         
@@ -200,10 +199,10 @@
         
         <h4>CircleCi</h4>
         
-        <p>Here&rsquo;s the basic configuration I use for CircleCI. Make sure you&rsquo;ve got your Heroku API Key &amp; SSH key set up in CircleCI.</p>
+        <p>Here&rsquo;s the basic configuration (<code>circle.yml</code>) I use for CircleCI. Make sure you&rsquo;ve got your <a href="https://circleci.com/docs/continuous-deployment-with-heroku">Heroku API Key &amp; SSH key set up in CircleCI</a>.</p>
         <pre class="highlight yaml"><code><span class="s">deployment</span><span class="pi">:</span>&#x000A;  <span class="s">production</span><span class="pi">:</span>&#x000A;    <span class="s">branch</span><span class="pi">:</span> <span class="s">master</span>&#x000A;    <span class="s">commands</span><span class="pi">:</span>&#x000A;      <span class="pi">-</span> <span class="s">git push git@heroku.com:yourapp.git $CIRCLE_SHA1:master</span>&#x000A;      <span class="pi">-</span> <span class="s">heroku run rake db:migrate --app yourapp</span>&#x000A;      <span class="pi">-</span> <span class="s">heroku run 'rake cache:clear' --app yourapp</span>&#x000A;  <span class="s">staging</span><span class="pi">:</span>&#x000A;    <span class="s">branch</span><span class="pi">:</span> <span class="s">development</span>&#x000A;    <span class="s">commands</span><span class="pi">:</span>&#x000A;      <span class="pi">-</span> <span class="s">git push git@heroku.com:yourapp-staging.git $CIRCLE_SHA1:master</span>&#x000A;      <span class="pi">-</span> <span class="s">heroku run rake db:migrate --app yourapp-staging</span>&#x000A;      <span class="pi">-</span> <span class="s">heroku run 'rake cache:clear' --app yourapp-staging</span>&#x000A;</code></pre>
         
-        <p>This will auto-deploy your <code>development</code> branch to staging, and will auto-deploy your <code>master</code> branch to production. For both environments, after deploying, it will auto-run migrations &amp; clear your cache. You can tweak these after-deploy commands to your liking.</p>
+        <p>This will auto-deploy your <code>development</code> branch to staging, and will auto-deploy your <code>master</code> branch to production. For both environments, after deploying, it will auto-run migrations &amp; clear your cache. You can tweak these after-deploy commands to your liking. You may also want to include <a href="https://circleci.com/docs/configuration#test">automated testing</a> in your builds.</p>
         
         <h4>Github</h4>
         

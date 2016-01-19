@@ -55,21 +55,20 @@
         <link rel="alternate" href="http://blog.url.com/words/2016-01-11-git-workflow-for-small-teams/"/>
         <id>http://blog.url.com/words/2016-01-11-git-workflow-for-small-teams/</id>
         <published>2016-01-10T16:00:00-08:00</published>
-        <updated>2016-01-19T00:44:37-08:00</updated>
+        <updated>2016-01-19T00:54:44-08:00</updated>
         <author>
           <name>Article Author</name>
         </author>
         <content type="html">&lt;p&gt;I recently worked with a client to develop a Git workflow for their small team of developers. Their requirements were:&lt;/p&gt;
     
     &lt;ul&gt;
-    &lt;li&gt;Continuous integration/automated deployment to staging/production&lt;/li&gt;
-    &lt;li&gt;Automated testing&lt;/li&gt;
+    &lt;li&gt;Continuous integration/deployment to staging and production&lt;/li&gt;
     &lt;li&gt;Code reviews&lt;/li&gt;
     &lt;li&gt;Easy ways to revert releases&lt;/li&gt;
     &lt;li&gt;Keep a history of discussions around&lt;/li&gt;
     &lt;/ul&gt;
     
-    &lt;p&gt;There&amp;rsquo;s already a &lt;a href="http://nvie.com/posts/a-successful-git-branching-model/"&gt;really great article&lt;/a&gt; out there that hits on many of these points. This post borrows heavily from ideas presented in that post. It also borrows a few ideas from thoughtbot&amp;rsquo;s &lt;a href="https://github.com/thoughtbot/guides/blob/master/protocol/git/README.md"&gt;Git Protocol&lt;/a&gt;.&lt;/p&gt;
+    &lt;p&gt;There&amp;rsquo;s already a [really popular article][git-workflow-article] that describes a Git workflow. This post borrows heavily from ideas presented there. It also borrows a few ideas from thoughtbot&amp;rsquo;s &lt;a href="https://github.com/thoughtbot/guides/blob/master/protocol/git/README.md"&gt;Git Protocol&lt;/a&gt;.&lt;/p&gt;
     
     &lt;p&gt;This workflow is based on a agile sprint model, where there will be (bi-)weekly releases to production with a number of features that have been completed &amp;amp; acceptance tested during the sprint.&lt;/p&gt;
     
@@ -234,7 +233,7 @@
     
     &lt;h4&gt;CircleCi&lt;/h4&gt;
     
-    &lt;p&gt;Here&amp;rsquo;s the basic configuration I use for CircleCI. Make sure you&amp;rsquo;ve got your Heroku API Key &amp;amp; SSH key set up in CircleCI.&lt;/p&gt;
+    &lt;p&gt;Here&amp;rsquo;s the basic configuration (&lt;code&gt;circle.yml&lt;/code&gt;) I use for CircleCI. Make sure you&amp;rsquo;ve got your &lt;a href="https://circleci.com/docs/continuous-deployment-with-heroku"&gt;Heroku API Key &amp;amp; SSH key set up in CircleCI&lt;/a&gt;.&lt;/p&gt;
     &lt;pre class="highlight yaml"&gt;&lt;code&gt;&lt;span class="s"&gt;deployment&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt;
       &lt;span class="s"&gt;production&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt;
         &lt;span class="s"&gt;branch&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt; &lt;span class="s"&gt;master&lt;/span&gt;
@@ -250,7 +249,7 @@
           &lt;span class="pi"&gt;-&lt;/span&gt; &lt;span class="s"&gt;heroku run 'rake cache:clear' --app yourapp-staging&lt;/span&gt;
     &lt;/code&gt;&lt;/pre&gt;
     
-    &lt;p&gt;This will auto-deploy your &lt;code&gt;development&lt;/code&gt; branch to staging, and will auto-deploy your &lt;code&gt;master&lt;/code&gt; branch to production. For both environments, after deploying, it will auto-run migrations &amp;amp; clear your cache. You can tweak these after-deploy commands to your liking.&lt;/p&gt;
+    &lt;p&gt;This will auto-deploy your &lt;code&gt;development&lt;/code&gt; branch to staging, and will auto-deploy your &lt;code&gt;master&lt;/code&gt; branch to production. For both environments, after deploying, it will auto-run migrations &amp;amp; clear your cache. You can tweak these after-deploy commands to your liking. You may also want to include &lt;a href="https://circleci.com/docs/configuration#test"&gt;automated testing&lt;/a&gt; in your builds.&lt;/p&gt;
     
     &lt;h4&gt;Github&lt;/h4&gt;
     
