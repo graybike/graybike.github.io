@@ -5,7 +5,7 @@ date: 2016-01-11
 type: ENGINEERING
 tags: engineering coding git workflow productivity process team
 author: Pavan Trikutam
-published: true
+published: false
 ---
 
 I recently worked with a client to develop a Git workflow for their small team of developers. Their requirements were:
