@@ -8,12 +8,12 @@ author: Pavan Trikutam
 published: false
 ---
 
-I recently worked with a client to develop a Git workflow for their small team of developers. Their requirements were:
+I recently worked with a client to develop a Git workflow for their small team of developers. We wanted a workflow that had:
 
 - Continuous integration/deployment to staging and production
 - Code reviews
-- Easy ways to revert releases
-- Keep a history of discussions around
+- A history of discussions / releases
+- Easy ways for non-technical folks to test completed features before they went live
 
 There's already a [really popular article] that describes a Git workflow. This post borrows heavily from ideas presented there. It also borrows a few ideas from thoughtbot's [Git Protocol].
 
@@ -40,7 +40,7 @@ There are two main branches in the repository:
 - `development`
 
 
-The `master` branch will always reflect what's on production. No exceptions. Pushing to the `master` branch will trigger a deploy directly to production. _Because of this, you better be damn sure you're ready to push live before you merge to `master`_.
+The `master` branch will always reflect what's on production. **No exceptions.** Pushing to the `master` branch will trigger a deploy directly to production.
 
 All completed features will be submitted to the `development` branch via pull requests. It will auto-deploy to the staging server.
 
@@ -113,8 +113,9 @@ Merge the feature branch into `development`.
 
     git checkout development
     git merge --ff-only <initials>-<branch name>
+    git push origin development
 
-Once this is done, delete your branch.
+Pushing up the `development` branch will automatically close your PR on Github. Once this is done, delete your branch.
 
     git push origin --delete <initials>-<branch name>
     git branch --delete <initials>-<branch name>
@@ -150,7 +151,13 @@ In the description of the PR, you can add details like:
 - Trello/Asana Cards
 - Airbrake/Honeybadger Notifications
 
-This can act as the weekly release report. Once the report is complete, you can hit the "Merge Pull Request" button. Once merged, the release will be auto-deployed to production. 
+This can act as the weekly release report. Once the report is complete, merge the branch into master:
+
+    git checkout master
+    git merge --ff-only development
+    git push origin master
+
+This should automatically close out your PR on Github and trigger production deploy. Your release is complete.
 
 ### Hotfixes: Urgent Production Issues
 
@@ -172,17 +179,34 @@ Once you've gotten approval, merge your hotfix branch into the `master` branch.
 
     git checkout master
     git merge --ff-only <initials>-hotfix-<branch name>
+    git push origin master
 
 Merge your hotfix branch into development as well.
 
     git checkout development
     git merge --ff-only <initials>-hotfix-<branch name>
+    git push origin development
 
 Once this is done, delete your branch.
 
     git push origin --delete <initials>-hotfix-<branch name>
     git branch --delete <initials>-hotfix-<branch name>
 
+### Migrations
+
+Branch off: `master`  
+Merge Into: `master` and `development`  
+Naming: `<initials>-migration-<branch name>`
+
+Migrations will be handled very similarly to hotfixes. The goal here is to use [zero-downtime deploys] as much as possible.
+
+In short: when trying to create a database migration, create a separate PR that only does the migration. In this PR, make sure to add in code that is compatible with both the old schema and new schema. Please read the [article referenced above][zero-downtime deploys] to figure out how to make code comaptible with various types of migrations.
+
+Merge it into master and development as you would with the hotfix branch.
+
+Once you're sure the migration has been completed without any issues, create a feature branch from the development branch build your feature that depends on the migration. Clean up the dual-schema compatible code and ensure it goes out with the next release.
+
+[zero-downtime deploys]: https://blog.codeship.com/rails-migrations-zero-downtime/
 
 ### Configuration
 
