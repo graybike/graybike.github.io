@@ -9,7 +9,7 @@
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <meta content='mGFqkZIpRsu-KTICkZB_Lk453ig5zwNKhB2WrqWtqTg' name='google-site-verification'>
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>GRAY BIKE - Creative Technology</title>
+    <title>Gray Bike</title>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700' rel='stylesheet' type='text/css'>
     <link href="../stylesheets/all.css" rel="stylesheet" type="text/css" />
     <script src="../javascripts/all.js" type="text/javascript"></script>
@@ -46,10 +46,62 @@
       <id>http://blog.url.com/words</id>
       <link href="http://blog.url.com/words"/>
       <link href="http://blog.url.com/words/feed.xml" rel="self"/>
-      <updated>2015-11-14T16:00:00-08:00</updated>
+      <updated>2016-02-02T16:00:00-08:00</updated>
       <author>
         <name>Blog Author</name>
       </author>
+      <entry>
+        <title>Building Great Client Relationships</title>
+        <link rel="alternate" href="http://blog.url.com/words/2016-02-03-building-great-client-relationships/"/>
+        <id>http://blog.url.com/words/2016-02-03-building-great-client-relationships/</id>
+        <published>2016-02-02T16:00:00-08:00</published>
+        <updated>2016-02-04T00:00:02-08:00</updated>
+        <author>
+          <name>Article Author</name>
+        </author>
+        <content type="html">&lt;p&gt;I&amp;rsquo;ve been a software consultant for 6 years now. I&amp;rsquo;ve worked with all sorts of clients: small businesses, non profits, individuals, and even large enterprise organizations. Admittedly, this is just a drop in the bucket over the span of an entire career, but during this time I&amp;rsquo;ve learned a ton.&lt;/p&gt;
+    
+    &lt;p&gt;Lately, I&amp;rsquo;ve been thinking a lot about about what it takes to have happy clients. I have great relationships with my clients because of three things: communication, responsiveness, and honesty. I know, it sounds super cheesy, I know. But these to me have been more important than the work itself.&lt;/p&gt;
+    
+    &lt;p&gt;Don&amp;rsquo;t get me wrong, the actual work you do is very important. &lt;em&gt;Do the best damn job you can.&lt;/em&gt; Seriously. However, giving yourself the space to do a good job is accomplished by being honest about what it&amp;rsquo;s going to take. It&amp;rsquo;s about communicating issues properly so you &amp;amp; your client can find solutions together.&lt;/p&gt;
+    
+    &lt;h3&gt;Communication&lt;/h3&gt;
+    
+    &lt;p&gt;As an expert in your field, it&amp;rsquo;s up to you to translate technical/advanced concepts into terms that non-technical folks can understand. They&amp;rsquo;re hiring you not only to do the job, but to communicate clearly what you&amp;rsquo;re doing.&lt;/p&gt;
+    
+    &lt;p&gt;Communication is about guidance. Give your clients enough information to make decisions on their own. Don&amp;rsquo;t just tell them why doing something is bad, help them understand &lt;em&gt;why&lt;/em&gt;. I can&amp;rsquo;t stand when developers say &amp;ldquo;We can&amp;rsquo;t do it because it&amp;rsquo;s the wrong way.&amp;rdquo; What&amp;rsquo;s obvious to you may not be obvious to the client. Take the time to talk about tradeoffs, costs, and timelines so clients can decide what&amp;rsquo;s best for their business.&lt;/p&gt;
+    
+    &lt;p&gt;Similarly, if they&amp;rsquo;re requesting something to be built or designed &amp;ndash; dig deeper. Find out what the core problem is, and see if you can work together to find a better way to solve it.&lt;/p&gt;
+    
+    &lt;p&gt;Doing this is hard. It takes practice. But it&amp;rsquo;s well worth it. When you&amp;rsquo;re able to effectively translate your knowledge about a problem or project, you&amp;rsquo;re bringing the client into the process and helping them make an informed decision.&lt;/p&gt;
+    
+    &lt;h3&gt;Responsiveness&lt;/h3&gt;
+    
+    &lt;p&gt;This one is so damn easy. I don&amp;rsquo;t understand why people aren&amp;rsquo;t better at this. So much of the fear of hiring a developer or a freelancer is that they&amp;rsquo;ll go silent when there are questions that need to be answered.&lt;/p&gt;
+    
+    &lt;p&gt;It makes sense. People want to know you&amp;rsquo;re available, that you&amp;rsquo;re not going to just disappear with all their money. They&amp;rsquo;re putting a lot of trust into you by agreeing to work with you. If you get an email, slack message, text, call, whatever &amp;ndash; just respond. That&amp;rsquo;s it. If you don&amp;rsquo;t know the answer, say &amp;ldquo;Let me check it out and get back to you.&amp;rdquo;&lt;/p&gt;
+    
+    &lt;p&gt;That&amp;rsquo;s so much better than silence. When you&amp;rsquo;re absoutely silent, you build resentment. By the end of the project, there is a much lower chance the client will be happy and want to work with you again.&lt;/p&gt;
+    
+    &lt;h3&gt;Honesty&lt;/h3&gt;
+    
+    &lt;p&gt;Being straight up with your clients (and prospective clients) is the best way to build trust. It lets them know you&amp;rsquo;re not just going agree to anything they request and that you really have their best interests at heart.&lt;/p&gt;
+    
+    &lt;p&gt;Sometimes when someone comes to me with an idea, I point them to a solution that doesn&amp;rsquo;t involve me at all. Things like showing them how to create an awesome onboarding process using &lt;a href="http://www.typeform.com/"&gt;Typeform&lt;/a&gt;, or telling them that &lt;a href="https://www.squarespace.com/"&gt;Squarespace&lt;/a&gt; can be a beautiful solution for what they&amp;rsquo;re looking for. Or that &lt;a href="https://www.shopify.com/"&gt;Shopify&lt;/a&gt; can be set up by someone with no coding experience at all. All of these tools have a ton of themes and add-ons that require no additional coding to manage. Often, the right answer is &amp;ldquo;You probably shouldn&amp;rsquo;t pay me a bunch of money to build something that you could get online for cheap, if not free.&amp;rdquo;&lt;/p&gt;
+    
+    &lt;p&gt;Other times, people will come to me with extremely unrealistic expectations. They might want to build a massive application within a month. Well, the reality of it is that while we could get &lt;em&gt;something&lt;/em&gt; out in a month, it won&amp;rsquo;t be good. And they&amp;rsquo;ll definitely end up paying for it down the line.&lt;/p&gt;
+    
+    &lt;p&gt;In both of these cases, I&amp;rsquo;d rather turn down the project or send back a realistic estimate, even if it&amp;rsquo;s not exactly what the client originally wanted.&lt;/p&gt;
+    
+    &lt;p&gt;-&lt;/p&gt;
+    
+    &lt;p&gt;Most of this stuff is pretty common sense. Building a good relationship is easy. Be a good communicator, be responsive and be honest. Over time, you&amp;rsquo;ll build up trust. If your clients trust you, they&amp;rsquo;ll be more open to your input on projects. They&amp;rsquo;ll be more open to referring work to you. They&amp;rsquo;ll do everything they can to help you be successful, since you&amp;rsquo;ve already done the same for them.&lt;/p&gt;
+    
+    &lt;p&gt;As an expert, our skills are temporary. Half of our knowledge becomes obselete every few years. However, as a consultant, as a collaborator &amp;ndash; the necessary skills don&amp;rsquo;t change. That&amp;rsquo;s why it&amp;rsquo;s really important to constantly practice them and get it right.&lt;/p&gt;
+    
+    &lt;p&gt;Comments? Questions? Drop me a line at &lt;a href="mailto:hello@graybike.co"&gt;hello@graybike.co&lt;/a&gt;. I&amp;rsquo;d love to hear from you.&lt;/p&gt;
+    </content>
+      </entry>
       <entry>
         <title>Getting better at project estimation</title>
         <link rel="alternate" href="http://blog.url.com/words/2015-11-15-getting-better-at-project-estimation/"/>
