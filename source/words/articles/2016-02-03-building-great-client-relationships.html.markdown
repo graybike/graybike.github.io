@@ -48,7 +48,7 @@ In both of these cases, I'd rather turn down the project or send back a realisti
 [Squarespace]: https://www.squarespace.com/
 [Shopify]: https://www.shopify.com/
 
--
+--
 
 Most of this stuff is pretty common sense. Building a good relationship is easy. Be a good communicator, be responsive and be honest. Over time, you'll build up trust. If your clients trust you, they'll be more open to your input on projects. They'll be more open to referring work to you. They'll do everything they can to help you be successful, since you've already done the same for them.
 
