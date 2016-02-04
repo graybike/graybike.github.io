@@ -10,7 +10,7 @@
     %meta{name:"google-site-verification", content:"mGFqkZIpRsu-KTICkZB_Lk453ig5zwNKhB2WrqWtqTg"}
 
     / Use title if it's in the page YAML frontmatter
-    %title= current_page.data.title || "#{current_page.data.title ? current_page.data.title + "| " : ''}GRAY BIKE - Creative Technology"
+    %title= "#{current_page.data.title ? current_page.data.title + " | " : ''}Gray Bike"
     %link{href:'http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700', rel:'stylesheet', type:'text/css'}
     = stylesheet_link_tag "all"
     = javascript_include_tag  "all"
