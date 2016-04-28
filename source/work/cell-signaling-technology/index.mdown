@@ -1,0 +1,78 @@
+---
+title: Reimagining ways to visualize biological protein pathways
+tags: UX Design, Front End Engineering, Data Visualization (D3)
+client: CST
+site_link: http://learn.cellsignal.com/interactive-signaling-pathway-demo
+---
+
+[Cell Signaling Technology] \(CST) is an industry leader in developing and producing antibodies and regents used to study the cell signaling pathways that impact human health. They maintain an in-house biology research program, and focus on cancer research.
+
+CST wanted to reimagine the way to understand and discover the various biological protein pathways present in all of our bodies. We partnered with [Captains of Industry] to develop a modern, interactive, and scientifically accurate visualization.
+
+The intended audience for this visualization was Very Smart Scientists&#x2122;, so we had to ensure scientific accuracy in everything we came up with. We made sure to keep in constant contact with their scientists and researchers to have them validate all of our decisions and designs. What we ended up with was a clean, simple, and interactive take on the dated scientific diagrams that existed to visualize protein pathways.
+
+### Data & Research
+
+Our first step in designing this visualization was to learn. We researched as much as we could about protein pathways so that we could provide accurate suggestions on how to develop this visualization. This was what they gave us as an example of how things were visualized in the past:
+
+<p class='case-study__image-display text-center'>
+  <img src='/images/work/cell-signal-technology/cst-akt-pathway-diagram.jpg'>
+  <span>One of CST's existing pathway diagrams. While useful, it's a bit cluttered and difficult to use.</span>
+</p>
+
+They also provided us with a large data set of Protein Pathways that they wanted to visualize. This came in the form of multiple complex spreadsheets.
+
+<p class='case-study__image-display text-center'>
+  <img src='/images/work/cell-signal-technology/cst-spreadsheet.jpg'>
+  <span>One of the spreadsheets we got from CST. Cells in the spreadsheet have been blurred to protect proprietary information.</span>
+</p>
+
+We took this spreadsheet, wrangled the data, understood all the protein types, and developed a new taxonomy and information architecture to display the various types of proteins. Every step of the way, we validated our designs with CST's scientific team. Eventually, we used a combination of shapes and colors to create a more modern taxonomy:
+
+<p class='case-study__image-display text-center'>
+  <img src='/images/work/cell-signal-technology/cst-protein-shapes.svg'>
+  <img src='/images/work/cell-signal-technology/cst-protein-classifications.jpg'>
+  <span>We chose to use these 5 shapes with a combination of colors to display the array of elements in a protein pathways.</span>
+</p>
+
+
+
+### Design & Engineering
+
+Once we had our information down, we set to designing the visualization itself. We made flowcharts, sketches, and storyboards to understand a user's flow, and the pathway display itself.
+
+<p class='case-study__image-display text-center'>
+  <img src='/images/work/cell-signal-technology/cst-flow-sketches.jpg'>
+  <span>Imagining the various screens this viz could contain.</span>
+</p>
+
+One of the key elements we focused on was the ability to zoom in to an individual pathway itself. 
+
+<p class='case-study__image-display text-center'>
+  <img src='/images/work/cell-signal-technology/cst-pathway-sketch.jpg'>
+  <span>One of the earlier versions of the isolated pathway view.</span>
+</p>
+
+
+In the end, we ended up with a simple and interactive way to explore the various protein pathways related to the products that CST offered.
+
+
+<p class='case-study__image-display text-center'>
+  <img src='/images/work/cell-signal-technology/cst-pathway-view.jpg'>
+  <span>The final design for the isolated pathway view.</span>
+</p>
+
+
+<p class='case-study__image-display text-center'>
+  <img src='/images/work/cell-signal-technology/cst-modal-view.jpg'>
+  <span>A modal box to display an individual protein's detailed information.</span>
+</p>
+
+CST debuted the visualization at an annual conference, and we're told it was the most popular item in their booth ;).
+
+> We came to Pavan with an complex, abstract problem: we needed a team member to help us develop an interactive data visualization to represent complex biology concepts while highlighting our client's product offering. Pavan's versatile knowledge surrounding data visualization was invaluable in creating a scientifically accurate visualization that was easy to understand and looked great. The visualization gave excellent exposure to our client's product line. Pavan is a great engineer, thinker, and communicator -- we'd hire him again in a heartbeat!
+>
+> <cite>Ted Dillon, Managing Producer at Captains of Industry</cite>
+
+[Cell Signaling Technology]: http://www.cellsignal.com/
+[Captains of Industry]: http://www.captainsofindustry.com/

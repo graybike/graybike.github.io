@@ -27,11 +27,13 @@ a {
   color: $action-color;
   text-decoration: none;
   transition: color $base-duration $base-timing;
+  border-bottom: 1px solid $action-color;
 
   &:active,
   &:focus,
   &:hover {
     color: shade($action-color, 40%);
+    border-bottom-color: shade($action-color, 40%);
   }
 }
 

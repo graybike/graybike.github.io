@@ -1,16 +1,13 @@
 .index {
 
   h1 {
-    @include text-width(7);
+    @include hero-text-styles();
     margin-top: padding-blocks(1);
-    position: relative;
-    line-height: $base-line-height;
-    // left: 10px;
-    font-family: $sans-serif;
-    // color: $blue-b2;
-    font-weight: 400;
-    text-align: center;
-    font-size: 2em;
+    margin-bottom: padding-blocks(1);
+    @include media($tablet) {
+      margin-top: padding-blocks(1);
+      margin-bottom: padding-blocks(1);
+    }
   }
 
   .about {
@@ -40,6 +37,9 @@
     @include media($tablet) {
       @include span-columns(12);
       @include shift(0);
+      .services, .clients {
+        @include span-columns(6);
+      }
     }
     p, ul {
       font-family: $sans-serif;
@@ -68,4 +68,11 @@
     margin: padding-blocks(6) auto;
   }
   
+}
+
+.main-content {
+  margin-bottom: padding-blocks(4);
+  @include media($mobile) {
+    margin-bottom: padding-blocks(2);
+  }
 }

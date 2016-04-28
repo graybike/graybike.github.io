@@ -5,40 +5,53 @@
   %section
     .about
       .bio
-        %p.tagline My name is Pavan Trikutam. I'm a full-stack developer with a strong eye for design. Gray Bike is what I call my consulting business because it's a heck of a lot easier for people to spell than my name.
-
-        %p Since 2009, I've worked as a technical partner for organizations of all sizes. Usually this involves a combination of design, code, and lots of collaboration. I love being involved in a project from the design phase, but I'm happy to jump in at any stage.
-
-        %p I'm comfortable working alone or with your existing team. If you want me to put together a team for a project, I can help there too.
+        %p
+          We're a small collective of designers and developers helping our clients build and improve their software. All projects are led by our founder, 
+          = succeed '.' do
+            %a{href:'https://twitter.com/ptrikutam'} Pavan Trikutam
+        %p
+          We have worked as a technical partner for organizations of all sizes. Usually this involves a combination of
+          = succeed ',' do
+            %a{href: '/work/cell-signaling-technology'} design
+          = succeed ',' do
+            %a{href: '/work/wootric'} code
+          and
+          = succeed '.' do
+            %a{href: '/work/soma-water'} lots of collaboration
+          We love being involved in a project from the design phase, but we're happy to jump in at any stage.
 
         %p
-          If you'd like to find out more or work with me,
-          %a{href: 'mailto:hello@graybike.co'} send me an email
-          or call me directly at
-          %a{href: 'tel:4153263397'} 415-326-3397.
-          You can also 
-          %a{href: 'https://twitter.com/ptrikutam'} find me on twitter.
+          If you'd like to find out more or work with us,
+          %a{href: 'mailto:hello@graybike.co'} shoot us an email
+          or call us directly at
+          = succeed '.' do
+            %a{href: 'tel:4153263397'} 415-326-3397
+          Or, read a bit more about us below.
 
       .services-clients
         .services
-          %p.subheading What I can do for you
+          %p.subheading What we can do for you
           %ul 
-            %li Estimate & plan your next project
+            %li Plan your next project
             %li Design & build a digital product
             %li Create a data visualization
         .clients
-          %p.subheading SOME FOLKS I'VE WORKED WITH
+          %p.subheading SOME OF OUR CLIENTS
           %ul
             %li Soma Water
+            %li Social Imprints
             %li Wootric
             %li Macy's & Bloomingdale's
             %li The Minerva Project
-            %li Cell Signal Technology
+            %li Cell Signaling Technology
             %li Captains of Industry
             %li Hummings
-            %li Command Line Interactive
+            
 
-  %section
-    .text-center.work-link
-      %a.cta__button{href:'/work', alt: "Work"}
-        .cta__cta-text CHECK OUT MY WORK
+  / %section.details.type-system-slab
+  /   .details__column
+  /     %h2 HOW WE WORK
+  /     %p All projects are led by our founder, Pavan Trikutam. The team size for a project can be anywhere from 1 to 10 depending on the needs of the project.
+  /   .details__section
+
+= partial "partials/cta"
