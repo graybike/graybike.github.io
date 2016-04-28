@@ -3,10 +3,10 @@
     %article.post.type-system-slab
       / - if current_article.data.type
       /   %p.type= current_article.data.type
-      %p.date
-        = current_article.date.strftime('%b %e, %Y')
       %h1
         = link_to current_article.title, current_article
       %h2
         = current_article.data.description
+      %p.date
+        = current_article.date.strftime('%b %e, %Y')
       ~ yield
