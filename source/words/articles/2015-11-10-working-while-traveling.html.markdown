@@ -5,13 +5,14 @@ date: 2015-11-10
 type: TRAVEL
 tags: freelance travel
 author: Pavan Trikutam
-published: false
+published: true
 ---
+
 *This post was originally posted on the [Hummings blog][hummings_post].*
 
 ### GET WORK
 
-First of all, find work that can be done remotely. This can be anything from being a virtual assistant, designer, developer, project manager, etc. I’m an engineer so as long as I have a laptop, wifi, and an outlet I’m good to go. There are tons of possibilities, and you don’t always have to be a freelancer to do it. Many companies (https://weworkremotely.com/) allow their employees to work remotely, as long as they get their stuff done.
+First of all, find work that can be done remotely. This can be anything from being a virtual assistant, designer, developer, project manager, etc. I’m an engineer so as long as I have a laptop, wifi, and an outlet I’m good to go. There are tons of possibilities, and you don’t always have to be a freelancer to do it. Many companies ([weworkremotely.com](https://weworkremotely.com/)) allow their employees to work remotely, as long as they get their stuff done.
 
 
 ### GET OUT
