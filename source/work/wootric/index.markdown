@@ -4,7 +4,7 @@ tags: Front End (Angular), Back End (Rails), Data Visualization (D3)
 client: Wootric
 ---
 
-[Wootric] is the Net Promoter Score® platform for boosting customer happiness.  Their  flexible, data-driven platform gathers customer feedback in your web or mobile app, and let’s you analyze NPS data by business drivers that are meaningful to you.
+[Wootric] is the Net Promoter Score® platform for boosting customer happiness.  Their  flexible, data-driven platform gathers customer feedback in your web or mobile app, and lets you analyze NPS data by business drivers that are meaningful to you.
 
 Wootric reached out to Gray Bike before embarking on a large rebuild of their analytics dashboard. In particular, they wanted help with the wrangling & displaying of their trends data. We were happy to dive into all levels of their stack to improve their code base and  bring their vision to life.
 
