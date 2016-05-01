@@ -1,6 +1,6 @@
 .project {
   // Basic Margins / padding
-  padding: padding-blocks(3) padding-blocks(1);
+  padding: padding-blocks(4) padding-blocks(1);
   @include media($mobile) {
     padding: padding-blocks(2) padding-blocks(1);
   }
