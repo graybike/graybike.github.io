@@ -1,95 +1,83 @@
 .work {
   .work-title {
+    @include hero-text-styles();
+
+    display: block;
+    @include media($tablet) {
+      display: none;
+    }
+
+    &.tablet {
+      display: none;
+      @include media($tablet) {
+        display: block;
+      }
+    }
+  }
+
+  .tags {
+    color: transparentize($base-font-color, 0.4);
+    border-bottom: 0;
+  }
+
+  .case-study__alert {
+    width: 80%;
+    margin: auto;
     font-family: $sans-serif;
     font-weight: 400;
-    font-size: 2em;
-    margin: padding-blocks(2) auto padding-blocks(4) auto;
-    @include media($tablet) {
-      margin: padding-blocks(1) auto padding-blocks(3) auto;
-    }
+    color: $medium-gray;
   }
-
-  p.date {
-    color: transparentize($base-font-color, 0.6);
-    font-family: $serif;
-    font-size: 0.8em;
-    margin-bottom: 0.5em;
-  }
-  .company-example {
-    margin: 0 auto padding-blocks(6);
-    @include media($mobile) {
-      margin: 0 auto padding-blocks(4);
-    }
-    @include outer-container;
-
-
-    &.no-margin-bottom {
-      margin-bottom: 0;
-    }
-
-    &.odd {
-      .company-example__description {
-        @include shift(3);
-        text-align: right;
-        @include media($tablet) {
-          @include shift(0);
-        }
-      }
-    }
-
-    .company-example__description {
-
-      h4 {
+  .case-study__text{
+    .case-study__image-display {
+      span {
         font-family: $sans-serif;
-        font-size: 1.1em;
-        font-weight: 600;
-        text-transform: uppercase;
+        font-weight: 400;
+        text-align: center;
+        font-size: 0.8em;
+        color: $medium-gray;
+        text-transform: none;  
+        font-style: italic;
       }
-
-      @include span-columns(8);
-      @include shift(1);
-      @include media($tablet) {
-        @include span-columns(12);
-        @include shift(0);
-      }
+      
     }
-
-    h3 {
-      text-transform: none;
-    }
-
-    
-
-    span.emphasize {
-      font-family: $serif;
-      font-weight: 600;
-      text-transform: none;
-      font-size: $base-font-size;
-    }
-
-    .company-example__image {
-      @include omega();
-      text-align: center;
-      img {
-        width: 100%;
-        max-width: 800px;
-      }
-      @include media($tablet) {
-        img { width: 75% }
-        
-      }
-      @include media($mobile) {
-        img { width: 100%; }
-      }
-    }
-    .company-example__testimony {
-      @include span-columns(10);
-      @include shift(1);
-
-      @include media($tablet) {
-        @include span-columns(12);
-        @include shift(0);
-      }
+    img, video {
+      width: 100%;
     }
   }
+
+  .case-study__client--large {
+    @include span-columns(2);
+    .type {
+      margin-bottom: 1em;
+    }
+
+    span {
+      display: none;
+    }
+
+    @include media($mobile) {
+      display: none;
+    }
+  }
+
+  .case-study__client--mobile {
+    display: none;
+    @include media($mobile) {
+      @include span-columns(12);
+      span {
+        font-size: 1em;
+      }
+      .type {
+        border-bottom: 0;
+        margin: 0;
+      }
+      display: block;
+      margin-bottom: 1em;
+    }
+  }
+
+  .case-study__text {
+    @include text-width(8, false);
+  }
+
 }

@@ -20,7 +20,7 @@ $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
-$base-padding-block: em(15);
+$base-padding-block: 1em;
 
 // Colors http://paletton.com/palette.php?uid=13n0u0k5vBR0vWY2tNB9wtQeAoY
 $blue-d2: #45717B;
@@ -45,7 +45,7 @@ $light-gray: #DDD;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$action-color: darken($blue,10%);
+$action-color: #5B8C98; //darken($blue,10%);
 
 // Border
 $base-border-color: $light-gray;
@@ -66,3 +66,12 @@ $base-timing: ease;
 
 // Navigation Height
 $navbar-height: 6em;
+
+
+// Colors for clients
+$client-colors: (
+  soma: #00c2ff,
+  wootric: #1B4959,
+  hummings: #53A6B8,
+  cst: #3e7998
+);

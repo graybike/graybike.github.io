@@ -1,0 +1,22 @@
+= wrap_layout :layout do
+  %section.work
+    .case-study__client--large.type-system-slab
+      %p.type= current_page.data.client
+      %span &#x2014;
+      %p.type.tags= current_page.data.tags
+    .case-study__client--mobile.type-system-slab
+      %p.type
+        %span.client= current_page.data.client
+        %span &#x2014;
+        %span.tags= current_page.data.tags
+    .case-study__text.type-system-slab
+      / %p
+      /   %span.type= current_page.data.client
+      /   %span &#x2014;
+      /   %span.type.tags= current_page.data.tags
+      %h1
+        = current_page.data.title 
+
+      / %hr
+      = yield
+      

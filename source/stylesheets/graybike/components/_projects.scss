@@ -1,0 +1,80 @@
+.project {
+  // Basic Margins / padding
+  padding: padding-blocks(3) padding-blocks(1);
+  @include media($mobile) {
+    padding: padding-blocks(2) padding-blocks(1);
+  }
+
+  // Misc  
+  &, h1, h2, h3, p {
+    color: #fff;  
+  }
+
+  h2 {
+    font-size: 2em;
+    font-weight: $base-font-weight;
+    margin-bottom: 0.6em;
+    font-family: $serif;
+    @include media($mobile) {
+      font-size: 1.33em;
+    }
+  }
+
+  hr {
+    @include hr-style();
+    border-bottom-color: #fff;
+  }
+
+  // Colors
+
+  @each $client, $client-color in $client-colors {
+    &.#{$client} {
+      background-color: $client-color;
+    }
+  }  
+
+  @each $client, $client-color in $client-colors {
+    .button.#{$client} {
+      @include button-styles($client-color);
+    }
+  }
+
+
+  // Grid / Layout
+  .project__description {
+    @include span-columns(8);
+
+    @include media($tablet) {
+      @include span-columns(10);
+    }
+
+    @include media($mobile) {
+      @include span-columns(12);
+    }
+  }
+
+  .project__ctas {
+    @include span-columns(12);
+
+    @include media($mobile) {
+      
+      text-align: center;
+      .button {
+        margin-bottom: padding-blocks(2);
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .project__link {
+    color: #fff;
+    font-family: $sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: padding-blocks(2);
+    border-bottom: 2px solid #fff;
+    padding-bottom: 0.25em;
+  }
+}

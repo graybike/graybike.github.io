@@ -13,7 +13,7 @@
 
 # Per-page layout changes:
 
-# page "words/*", :layout => :article_layout
+page "work/*", :layout => :work
 # With no layout
 # page "/path/to/file.html", :layout => false
 #

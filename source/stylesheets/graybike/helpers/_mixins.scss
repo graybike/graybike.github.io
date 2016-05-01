@@ -4,18 +4,35 @@
   @include transform(translateY(-50%));
 }
 
-@mixin text-width($large: 8) {
+@mixin text-width($large: 8, $shift: true) {
 
   @include span-columns($large);
-  @include shift((12 - $large) / 2);
+
+  @if $shift {
+    @include shift((12 - $large) / 2);
+  }
 
   @include media($tablet) {
     @include span-columns(10);
-    @include shift(1);
+    @if $shift {
+      @include shift(1);
+    }
   }
   
   @include media($mobile) {
     @include span-columns(12);
-    @include shift(0);
+    @if $shift {
+      @include shift(0);
+    }
+  }
+}
+
+@mixin button-styles($background-color: $action-color) {
+  background-color: $background-color;
+  color: $blue-b2;
+  border-color: $blue-b2;
+  &:hover {
+    background-color: $blue-b2;
+    color: $background-color;
   }
 }

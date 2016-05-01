@@ -1,34 +1,41 @@
+// $cta-color: #09BCE4;
+$cta-color: #5B8C98;
 .cta {
-  margin: padding-blocks(2);
-  &.no-bottom {
-    margin-bottom: 0;
-  }
-  p:first-child {
-    margin-bottom: padding-blocks(1);
-  }
-}
-.cta__button {
-  display: block;
-  margin: auto;
-  max-width: 300px;
-  min-width: 240px;
-  height: 50px;
-  
-  background-color: $blue-b2;
-  color: $action-color;
-  border: 3px solid $action-color;
-  
-  @include transition(all 0.3s ease-in-out);
-  .cta__cta-text {
-    position: relative;
-    top: 50%;
-    @include transform(translateY(-50%));  
-    font-family: $sans-serif;
-    font-weight: 600;
+  padding: padding-blocks(3) padding-blocks(1);
+  @include media($mobile) {
+    padding: padding-blocks(2) padding-blocks(1);
   }
 
-  &:hover {
-    background-color: $action-color;
-    color: $blue-b2;
+  background-color: $cta-color;
+  color: $white;
+
+  .cta__text {
+    @include span-columns(7);
+    h2 {
+      line-height: 50px;  
+      margin-bottom: 0;
+    }
+  }
+
+  .cta__buttons {
+    @include span-columns(5);
+
+    .button {
+      // @include button-styles($cta-color);
+      background-color: $blue-b2;
+      color: $cta-color;
+      border: none;
+    }
+  }
+
+
+  @include media($tablet) {
+    .cta__text, .cta__buttons {
+      @include span-columns(12);
+      text-align: center;
+    }
+    .cta__text h2 {
+      margin-bottom: 1em;
+    }
   }
 }
