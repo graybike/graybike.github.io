@@ -10,6 +10,11 @@ client: Soma Water
 
 Gray Bike is proud  to say we’ve been Soma’s technical partner (think outsourced CTO) for almost two years now. **We’ve provided engineering services that have helped grow their subscriber count over 300%** over the course of our partnership. We provide a small team of engineers, working remotely, to manage their entire engineering infrastructure. 
 
+
+> “Pavan has been our go-to guy to help with our engineering efforts at drinksoma.com. We came to him for help with a huge redesign of our e-commerce website. He was able to put a new face on our website and vastly improve the capabilities of our platform -- leading to many more sales and happier customers! He has a great ability to take our business problems and solve them with his engineering expertise. We look forward to continuing to work with him!”
+> 
+> <cite>Mike Del Ponte, Founder & CEO of Soma Water</cite>
+
 ### Redesigning the new website
 In early 2015, Soma wanted to rebuild their website to coincide with the launch of their new product, the [Soma Pitcher]. Their current site at the time didn’t support handling multiple products, provided for a inflexible checkout experience, and was in need of a general facelift. And it needed to work great on mobile and tablet devices, as well.
 
@@ -35,14 +40,18 @@ We worked closely with their creative director and front end developer to implem
 
 Major thanks to [Liang Shi], former Creative Director of Soma and [Patrick Johnson], our front-end guru extraordinaire. 
 
-> “Pavan has been our go-to guy to help with our engineering efforts at drinksoma.com. We came to him for help with a huge redesign of our e-commerce website. He was able to put a new face on our website and vastly improve the capabilities of our platform -- leading to many more sales and happier customers! He has a great ability to take our business problems and solve them with his engineering expertise. We look forward to continuing to work with him!”
-> 
-> <cite>Mike Del Ponte, Founder & CEO of Soma Water</cite>
-
 ### Moving to a new admin system
-When Soma’s website was originally built, their customer experience team was small and used a custom-built, out of date admin system to manage support tasks. As time went on, they began to outgrow the system and needed something more robust and stable.
+When Soma’s website was originally built, their customer experience team was small. At the time, they used a custom-built, out of date admin system to manage support and administrative tasks. While it served its purpose at the time, as the company grew, they began to outgrow the system. It was slow, buggy, and in many places difficult to use. They needed something that was easier to use, could scale better, and grow with their team.
 
-We’ve spent lots of time with their customer success team to understand how they work, where their pain points are, and where we could improve the system. We implemented a much more stable and well supported open source system, and spent the necessary time customizing a much more powerful, well supported open source admin system. With the newer, more stable system, the customer experience team is able to get things done quicker and scale with confidence.
+We spent lots of time with their customer success team to understand how they work, where their pain points are, and where we could improve the system. After researching a number of solutions, we identified a much more stable and well supported open source system. Of course, out of the box, it had limited functionality. We spent the time to customize it by bringing features from the old admin system, as well as adding a number of new features. With the newer, highly customized, and more stable system, the customer experience team is able to get things done quicker and scale with confidence.
+
+>Can't imagine a better engineering team to work with. Translating our business challenges into engineering solutions, Pavan communicates extremely well with all departments and has pulled through for us on every task we've thrown at him. Pavan excels at juggling projects that support the long-term vision of the company as well as emergencies, and consistently manages resources to accomplish both. 
+>
+>When tasked with a new project, he not only solves the problem at hand, but implements a solution that simultaneously strengthens/simplifies our systems for long-term stability. Most recently, Pavan and his team created a new Administration system for our CX department that not only saves us time, but allows us to scale up our team, squashing bugs in the process that existed long before Pavan's time. 
+>
+>Always friendly and upbeat, a great team player, and has thoroughly understood needs of our company. Thank you, Pavan!
+>
+><cite>Jeff Jureller, Head of Customer Experience of Soma Water</cite>
 
 <hr>
 
