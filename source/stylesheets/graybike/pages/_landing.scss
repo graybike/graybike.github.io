@@ -71,8 +71,10 @@
 }
 
 .main-content {
-  margin: padding-blocks(6);
+  margin-top: padding-blocks(6);
+  margin-bottom: padding-blocks(6);
   @include media($mobile) {
+    margin-top: padding-blocks(4);
     margin-bottom: padding-blocks(4);
   }
 }

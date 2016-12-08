@@ -1,14 +1,14 @@
 projects:
-  - title: Running Soma Water's Engineering Operations
-    description: Gray Bike manages everything engineering at Soma Water. From rebuilding their website to running their devops infrastructure, <strong>we've helped grow their subscriber base by over 300%</strong>. Consider us their outsourced CTO & engineering department. 
-    client_class: soma
-    case_study: /work/soma-water
-    site_link: https://www.drinksoma.com/
   - title: Visualizing Wootric's Net Promoter Score data set
     description: We helped Wootric with the wrangle & display their massive NPS score data set. We helped create a solid architecture for their front end team to build on well into the future.
     client_class: wootric
     case_study: /work/wootric
     site_link: https://demo.wootric.com/
+  - title: Running Soma Water's Engineering Operations
+    description: Gray Bike manages everything engineering at Soma Water. From rebuilding their website to running their devops infrastructure, <strong>we've helped grow their subscriber base by over 300%</strong>. Consider us their outsourced CTO & engineering department.
+    client_class: soma
+    case_study: /work/soma-water
+    site_link: https://www.drinksoma.com/
   - title: Reimagining ways to visualize biological protein pathways
     description: Cell Signaling Technology wanted to reimagine the way to understand and discover the various biological protein pathways present in our bodies. We partnered with Captains of Industry to develop a modern, interactive, and scientifically accurate visualization.
     client_class: cst
