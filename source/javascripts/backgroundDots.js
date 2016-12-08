@@ -3,18 +3,15 @@
   function backgroundDots(cssClass) {
     element = $(cssClass);
     var width = element.outerWidth(true),
-        height = element.outerHeight(true);
+        height = element.outerHeight(true),
+        circleRadius = 2;
 
     console.log("WORKING");
     console.log(element);
 
     var dotColors = ['#45717B', '#6A8990', '#95ADB3', '#C5D0D2', '#72aebb'];
-
     var sample = poissonDiscSampler(width, height, 10);
-
     var svg = d3.select(cssClass).select("svg");
-
-
 
     svg
       .attr("width", width)
@@ -35,7 +32,7 @@
           .delay(function() {
             return i;
           })
-            .attr("r", 2);
+            .attr("r", circleRadius);
     }
 
 
@@ -69,7 +66,8 @@
 
             // Reject candidates that are outside the allowed extent,
             // or closer than 2 * radius to any existing sample.
-            if (0 <= x && x < width && 0 <= y && y < height && far(x, y)) return sample(x, y);
+            if ((0 + circleRadius) <= x && x < (width - circleRadius) &&
+                (0 + circleRadius) <= y && y < (height - circleRadius) && far(x, y)) return sample(x, y);
           }
 
           queue[i] = queue[--queueSize];

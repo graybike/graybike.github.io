@@ -1,5 +1,5 @@
 $margin-top: 50px;
-$duration: 1.5s;
+$duration: .5s;
 
 .fade-up {
   @include animation(fadeup $duration ease forwards);
