@@ -121,8 +121,12 @@ if(t==e.dx){for((r||f>e.dy)&&(f=e.dy);++u<o;)i=n[u],i.x=a,i.y=c,i.dy=f,a+=i.dx=M
   var cssClass = '.dots-background';
   backgroundDots(cssClass);
 
+  var width = $(window).width(), height = $(window).height();
+
   $(window).on('resize', function() {
-    backgroundDots(cssClass);
+    if($(window).width() != width && $(window).height() != height){
+      backgroundDots(cssClass);
+    }
   })
 })();
 
