@@ -111,7 +111,11 @@
   var cssClass = '.dots-background';
   backgroundDots(cssClass);
 
+  var width = $(window).width(), height = $(window).height();
+
   $(window).on('resize', function() {
-    backgroundDots(cssClass);
+    if($(window).width() != width && $(window).height() != height){
+      backgroundDots(cssClass);
+    }
   })
 })();
