@@ -1,7 +1,18 @@
 .dots-background {
+  padding-top: padding-blocks(4);
+  padding-bottom: padding-blocks(4);
+  position: relative;
+  h1.fade-in {
+    z-index: 100;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 0 1px $light-gray;
+  }
 
   svg {
+    z-index: 0;
     position: absolute;
     left: 0;
+    top: 0;
   }
 }

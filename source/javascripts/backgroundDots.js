@@ -5,6 +5,8 @@
     var width = element.outerWidth(true),
         height = element.outerHeight(true);
 
+    console.log("WORKING");
+    console.log(element);
 
     var dotColors = ['#45717B', '#6A8990', '#95ADB3', '#C5D0D2', '#72aebb'];
 
@@ -27,13 +29,13 @@
           .attr("cy", s[1])
           .attr('fill', dotColors[Math.floor(Math.random() * dotColors.length)])
           .attr('r', 0)
-          .attr('opacity',0.5)
+          .attr('opacity',0.4)
           .transition()
           .duration(500)
           .delay(function() {
-            return i * 2;
+            return i;
           })
-            .attr("r", 2.5);
+            .attr("r", 2);
     }
 
 

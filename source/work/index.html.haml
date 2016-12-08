@@ -1,16 +1,19 @@
 ---
 layout: layout
 ---
-%section
-  %h2.text-center.work-title.desktop
-    %div We work with companies of all sizes to
-    %div build digital products for the web.
-    %div Here's a few selected projects.
-  %h2.text-center.work-title.tablet
-    %div We work with companies
-    %div of all sizes to build
-    %div digital products. Here's
-    %div a few selected projects.
+.dots-background
+  %section.text-center.index
+    %svg
+    %h1.fade-in Selected Projects
+  / %h2.text-center.work-title.desktop
+  /   / %div We work with companies of all sizes to
+  /   / %div build digital products for the web.
+  /   %div Here's a few selected projects.
+  / %h2.text-center.work-title.tablet
+  /   / %div We work with companies
+  /   / %div of all sizes to build
+  /   / %div digital products.
+  /   %div Here's a few selected projects.
 
 - data.work.projects.each_with_index do |project,index|
   .project{class: "#{index % 2 == 0 ? 'even' : 'odd' } #{project.client_class}"}
@@ -30,7 +33,7 @@ layout: layout
         /     READ THE CASE STUDY
         / %a{class: "project__link #{project.client_class}", href: project.site_link, alt: "Work"}
         /   VISIT SITE
-          
+
 
 
 = partial "partials/cta"

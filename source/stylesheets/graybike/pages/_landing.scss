@@ -11,16 +11,16 @@
   }
 
   .about {
-    margin: padding-blocks(6) auto;
-    @include media($tablet) {
-      margin: padding-blocks(4) auto;
-    }
+    // margin: padding-blocks(6) auto;
+    // @include media($tablet) {
+      // margin: padding-blocks(4) auto;
+    // }
   }
 
   // About
-  .about .bio {  
-    @include span-columns(7);  
-    font-weight: 300;  
+  .about .bio {
+    @include span-columns(7);
+    font-weight: 300;
     font-size: 1.25em;
 
     @include media($tablet) {
@@ -67,12 +67,12 @@
   .work-link {
     margin: padding-blocks(6) auto;
   }
-  
+
 }
 
 .main-content {
-  margin-bottom: padding-blocks(4);
+  margin: padding-blocks(6);
   @include media($mobile) {
-    margin-bottom: padding-blocks(2);
+    margin-bottom: padding-blocks(4);
   }
 }
