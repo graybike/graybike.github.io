@@ -6,9 +6,6 @@
         height = element.outerHeight(true),
         circleRadius = 2;
 
-    console.log("WORKING");
-    console.log(element);
-
     var dotColors = ['#45717B', '#6A8990', '#95ADB3', '#C5D0D2', '#72aebb'];
     var sample = poissonDiscSampler(width, height, 10);
     var svg = d3.select(cssClass).select("svg");
@@ -114,7 +111,8 @@
   var width = $(window).width(), height = $(window).height();
 
   $(window).on('resize', function() {
-    if($(window).width() != width && $(window).height() != height){
+    if($(window).width() !== width || $(window).height() !== height) {
+      width = $(window).width(), height = $(window).height();
       backgroundDots(cssClass);
     }
   })
