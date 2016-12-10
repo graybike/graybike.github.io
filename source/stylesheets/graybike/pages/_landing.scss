@@ -15,10 +15,6 @@
     @include hero-text-styles();
     margin-top: padding-blocks(1);
     margin-bottom: 0;
-    @include media($tablet) {
-      margin-top: padding-blocks(1);
-      margin-bottom: 0;
-    }
     font-weight: 400;
     letter-spacing: 1px;
 
