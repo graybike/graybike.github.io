@@ -1,20 +1,38 @@
 .index {
 
-  h1 {
-    @include hero-text-styles();
-    margin-top: padding-blocks(1);
-    margin-bottom: padding-blocks(1);
-    @include media($tablet) {
-      margin-top: padding-blocks(1);
-      margin-bottom: padding-blocks(1);
+  .spacing {
+    display: inline-block;
+    position: relative;
+    margin-left: -10px;
+    .light-bg {
+      display: inline-block;
+      padding: 10px;
+      background: $blue-b2;
     }
   }
 
-  .about {
-    // margin: padding-blocks(6) auto;
-    // @include media($tablet) {
-      // margin: padding-blocks(4) auto;
-    // }
+  h1 {
+    @include hero-text-styles();
+    margin-top: padding-blocks(1);
+    margin-bottom: 0;
+    @include media($tablet) {
+      margin-top: padding-blocks(1);
+      margin-bottom: 0;
+    }
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    .standout {
+      font-weight: 600;
+      color: $blue-d2;
+    }
+  }
+  h4.subtitle {
+    font-family: $sans-serif;
+    font-weight: 400;
+    color: $medium-gray;
+
+    padding-top: 0;
   }
 
   // About

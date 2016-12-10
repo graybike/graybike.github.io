@@ -4,14 +4,6 @@
   position: relative;
   h1.fade-in {
     z-index: 100;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-shadow: 0 1px $light-gray;
-
-    .text-span {
-      display: inline;
-      background: $blue-b2;
-    }
   }
 
   svg {
