@@ -7,9 +7,6 @@ site: "https://greencommons.herokuapp.com"
 code: https://github.com/greencommons/commons
 ---
 
-> Quote saying nice things.
-> <cite>Person who said the quote</cite>
-
 ## The Idea
 
 [Green Commons] is a knowledge-sharing, learning platform for environmental research and action. It provides a place for people working on environmental issues to find and share resources, information, and ideas; to build networks; and to work collaboratively . We aim to provide users the information and tools that will help them create amore sustainable world.
