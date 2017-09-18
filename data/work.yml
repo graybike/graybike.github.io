@@ -1,5 +1,5 @@
 projects:
-  - title: Visualizing Wootric's Net Promoter Score data set
+  - title: Visualizing Wootric's massive data set
     description: We helped Wootric with the wrangle & display their massive NPS score data set. We helped create a solid architecture for their front end team to build on well into the future.
     client_class: wootric
     case_study: /work/wootric
@@ -9,7 +9,7 @@ projects:
     client_class: soma
     case_study: /work/soma-water
     site_link: https://www.drinksoma.com/
-  - title: Reimagining ways to visualize biological protein pathways
+  - title: Reimagining ways to visualize biology
     description: Cell Signaling Technology wanted to reimagine the way to understand and discover the various biological protein pathways present in our bodies. We partnered with Captains of Industry to develop a modern, interactive, and scientifically accurate visualization.
     client_class: cst
     case_study: /work/cell-signaling-technology
