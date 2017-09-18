@@ -1,6 +1,6 @@
 projects:
-  - title: Designing & building an open-source knowledge-sharing platform from the ground up
-    description: We worked with Island Press to design & build a new open-source knowledge-sharing and learning platform for people working on environmental issues.
+  - title: Designing and building an open-source platform from the ground up
+    description: We worked with Island Press to design & build a new open-source knowledge-sharing and learning platform for environmental research and action.
     client_class: greencommons
     site_link: https://greencommons.herokuapp.com/
     case_study: /work/green-commons

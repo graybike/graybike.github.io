@@ -3,6 +3,7 @@ title: We've been running all engineering operations for Soma for 3 years.
 subheading: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
 tags: FRONT & BACK END ENGINEERING, DEVOPS, STRATEGY
 client: Soma Water
+site: https://www.drinksoma.com/
 ---
 
 <p class="text-center callout"><span>Update July 1st, 2017: Soma Water has been acquired by Full Circle Home, Inc.</span></p>

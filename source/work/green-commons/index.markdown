@@ -1,5 +1,5 @@
 ---
-title: Designing and building an open-source platform for people working on the environment.
+title: Designing and building an open-source knowledge-sharing platform from the ground up
 subheading: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
 tags: UX/UI Design, Front & Back-end Development (React, Rails, ElasticSearch), Product Strategy
 client: Island Press
@@ -15,13 +15,13 @@ Island Press, along with [David Weinberger](http://weinberger.org/), approached 
 
 Green Commons is an ongoing project, and we’ll continue to be their primary technical partner as the project grows, evolves, and scales. [Follow along with us!]
 
-### User Research & Discovery
+### User Research
 
 Though Island Press came prepared with a series of features and product ideas for the platform, our first step was to do extensive user reasearch. We interviewed journalists, scientists, policymakers, activists, and professors. Armed with many hours of interviews and data, we set about to design the platform from the ground up.
 
 ### Design
 
-From a series of documents outlining features, Gray Bike worked with the Island Press team to distill these down into a set of wireframes. With a limited budget, we wanted to focus as much effort as we could on the development side of things without sacrificing design. Gray Bike created a set of lightweight wireframes, and then translated them into a series of high-fidelity designs. Once functionality and wireframes were set, we started the development process concurrently while workig on higher fidelity wireframes.
+From a series of documents outlining features, Gray Bike worked with the Island Press team to distill these into a set of wireframes. With a limited budget, we wanted to focus as much effort as we could on the development side of things without sacrificing design. Gray Bike created a set of lightweight wireframes, and then translated them into a series of high-fidelity designs. Once functionality and wireframes were set, we started the development process concurrently while workig on higher fidelity wireframes.
 
 <p class='case-study__image-display text-center'>
   <img src='/images/work/green-commons/group-flow.jpg'>
