@@ -1,4 +1,9 @@
 projects:
+  - title: Designing & building a knowledge-sharing platform from the ground up
+    description: We worked with Island Press to design & build new knowledge-sharing and learning platform for people working on environmental issues.
+    client_class: greencommons
+    site_link: https://greencommons.herokuapp.com/
+    case_study: /work/green-commons
   - title: Visualizing Wootric's massive data set
     description: We helped Wootric with the wrangle & display their massive NPS score data set. We helped create a solid architecture for their front end team to build on well into the future.
     client_class: wootric
@@ -14,11 +19,12 @@ projects:
     client_class: cst
     case_study: /work/cell-signaling-technology
     site_link: http://learn.cellsignal.com/interactive-signaling-pathway-demo
-  - title: Developing Hummings' mobile-first finance web app
-    description: Hummings is a mobile-first personal finance companion app. They came to Gray Bike with early stage wireframes, and we guided them through UX revisions and product development. Once designs were finalized, our engineering team built out the entire app.
-    client_class: hummings
-    site_link: https://www.hellohummings.com/
+  # - title: Developing Hummings' mobile-first finance web app
+  #   description: Hummings is a mobile-first personal finance companion app. They came to Gray Bike with early stage wireframes, and we guided them through UX revisions and product development. Once designs were finalized, our engineering team built out the entire app.
+  #   client_class: hummings
+  #   site_link: https://www.hellohummings.com/
   # - title: Developing an onboarding flow for new students
   #   description: We worked with Minerva Schools to implement a brand new onboarding flow for their new students.
   #   client_class: minerva
   #   site_link: https://www.hellohummings.com/
+
