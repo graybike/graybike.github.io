@@ -1,10 +1,15 @@
 ---
-title: Visualizing Wootric's massive Net Promoter Score data set.
+title: Visualizing Wootric's massive data set.
 tags: Front End (Angular), Back End (Rails), Data Visualization (D3)
 client: Wootric
 ---
 
-[Wootric] is the Net Promoter Score® platform for boosting customer happiness.  Their  flexible, data-driven platform gathers customer feedback in your web or mobile app, and lets you analyze NPS data by business drivers that are meaningful to you.
+
+> “We came to Pavan when were completely rebuilding our SaaS analytics dashboard. That being said, his skill set is a good match for any project and size of company--he is the perfect combination of seasoned engineer, designer, and mentor that our young team needed. He took the time to understand our business and was able to immediately jump in and start improving code in all parts of our system. In addition to his full-stack experience, his knowledge of data visualization was invaluable. He worked extremely well with our team, providing mentorship and coaching without us prompting. The thing that sets Pavan apart from other freelance talent is that he is a pragmatist, always careful about the trade-off between progress, performance, and long-term maintainability--something that is absolutely critical for an early stage company. We would absolutely recommend Pavan & Gray Bike if you're looking for an experienced technical partner for your next project.”
+>
+> <cite>Deepa Subramanian, CEO of Wootric</cite>
+
+[Wootric] is the Net Promoter Score® platform for boosting customer happiness. A Net Promoter Score is an index ranging from -100 to 100 that measures the willingness of customers to recommend a company's products or services to others. Wootric's flexible, data-driven platform gathers customer feedback in your web or mobile app, and lets you analyze NPS data by business drivers that are meaningful to you.
 
 Wootric reached out to Gray Bike before embarking on a large rebuild of their analytics dashboard. In particular, they wanted help with the wrangling & displaying of their trends data. We were happy to dive into all levels of their stack to improve their code base and  bring their vision to life.
 
@@ -25,9 +30,6 @@ We also worked closely with their design team to iterate on the UX of the trends
   <p class="case-study__alert text-center">Whoops! Here's where we'd show you a nice HTML5 video of the fancy new trends tab, but your browser doesn't seem to support it. Here is a <a href="/images/work/wootric/trends-demo-trimmed.mp4">link to the video</a> instead.</p>
 </video>
 
-> “We came to Pavan when were completely rebuilding our SaaS analytics dashboard. That being said, his skill set is a good match for any project and size of company--he is the perfect combination of seasoned engineer, designer, and mentor that our young team needed. He took the time to understand our business and was able to immediately jump in and start improving code in all parts of our system. In addition to his full-stack experience, his knowledge of data visualization was invaluable. He worked extremely well with our team, providing mentorship and coaching without us prompting. The thing that sets Pavan apart from other freelance talent is that he is a pragmatist, always careful about the trade-off between progress, performance, and long-term maintainability--something that is absolutely critical for an early stage company. We would absolutely recommend Pavan & Gray Bike if you're looking for an experienced technical partner for your next project.”
->
-> <cite>Deepa Subramanian, CEO of Wootric</cite>
 
 Building out the new trends tab provided Wootric’s customers with insight into their NPS scores. Gray Bike was happy to provide its expertise and mentorship in this important time in Wootric’s growth.
 
