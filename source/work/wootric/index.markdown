@@ -2,6 +2,7 @@
 title: Visualizing Wootric's massive data set.
 tags: Front End (Angular), Back End (Rails), Data Visualization (D3)
 client: Wootric
+site: https://demo.wootric.com/
 ---
 
 
