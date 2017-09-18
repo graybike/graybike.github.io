@@ -45,7 +45,7 @@
       <id>http://blog.url.com/words</id>
       <link href="http://blog.url.com/words"/>
       <link href="http://blog.url.com/words/feed.xml" rel="self"/>
-      <updated>2016-02-02T16:00:00-08:00</updated>
+      <updated>2016-02-02T19:00:00-05:00</updated>
       <author>
         <name>Blog Author</name>
       </author>
@@ -53,8 +53,8 @@
         <title>Building Great Client Relationships</title>
         <link rel="alternate" href="http://blog.url.com/words/2016-02-03-building-great-client-relationships/"/>
         <id>http://blog.url.com/words/2016-02-03-building-great-client-relationships/</id>
-        <published>2016-02-02T16:00:00-08:00</published>
-        <updated>2016-02-04T00:07:32-08:00</updated>
+        <published>2016-02-02T19:00:00-05:00</published>
+        <updated>2016-02-04T03:07:32-05:00</updated>
         <author>
           <name>Article Author</name>
         </author>
@@ -105,8 +105,8 @@
         <title>Getting better at project estimation</title>
         <link rel="alternate" href="http://blog.url.com/words/2015-11-15-getting-better-at-project-estimation/"/>
         <id>http://blog.url.com/words/2015-11-15-getting-better-at-project-estimation/</id>
-        <published>2015-11-14T16:00:00-08:00</published>
-        <updated>2016-04-28T13:36:49-07:00</updated>
+        <published>2015-11-14T19:00:00-05:00</published>
+        <updated>2016-04-28T16:36:49-04:00</updated>
         <author>
           <name>Article Author</name>
         </author>
@@ -216,8 +216,8 @@
         <title>Working while traveling (or the other way around)</title>
         <link rel="alternate" href="http://blog.url.com/words/2015-11-10-working-while-traveling/"/>
         <id>http://blog.url.com/words/2015-11-10-working-while-traveling/</id>
-        <published>2015-11-09T16:00:00-08:00</published>
-        <updated>2016-04-28T13:51:22-07:00</updated>
+        <published>2015-11-09T19:00:00-05:00</published>
+        <updated>2016-04-28T16:51:22-04:00</updated>
         <author>
           <name>Article Author</name>
         </author>
