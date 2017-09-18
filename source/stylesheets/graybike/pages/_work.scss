@@ -25,6 +25,10 @@
     border-bottom: 0;
   }
 
+  .links {
+    border-bottom: 0;
+  }
+
   .case-study__alert {
     width: 80%;
     margin: auto;
@@ -54,6 +58,10 @@
     @include span-columns(2);
     .type {
       margin-bottom: 1em;
+      &.links {
+        display: block;
+        margin-bottom: 0.25em;
+      }
     }
 
     span {

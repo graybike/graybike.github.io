@@ -4,19 +4,35 @@
       %p.type= current_page.data.client
       %span &#x2014;
       %p.type.tags= current_page.data.tags
+      - if current_page.data.site
+        %p.type.links
+          %a{href: current_page.data.site} Visit Site
+      - if current_page.data.code
+        %p.type.links
+          %a{href: current_page.data.code} View Code
+
     .case-study__client--mobile.type-system-slab
       %p.type
         %span.client= current_page.data.client
         %span &#x2014;
         %span.tags= current_page.data.tags
+
+      %p.type
+        - if current_page.data.site
+          %span.links
+            %a{href: current_page.data.site} Visit Site
+        - if current_page.data.code
+          %span &#x2014;
+          %span.links
+            %a{href: current_page.data.code} View Code
     .case-study__text.type-system-slab
       / %p
       /   %span.type= current_page.data.client
       /   %span &#x2014;
       /   %span.type.tags= current_page.data.tags
       %h1
-        = current_page.data.title 
+        = current_page.data.title
 
       / %hr
       = yield
-      
+
