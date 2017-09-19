@@ -7,6 +7,12 @@ site: "https://greencommons.herokuapp.com"
 code: https://github.com/greencommons/commons
 ---
 
+> I have worked with Pavan for 18 months on [the Green Commons] project that includes ingesting ingestion in multiple formats, indexing it, making it openly accessible, providing social tools for people to collaborate on projects using that data, and making it available through an open API. I recommend him without reservation, and would gladly hire him again.
+>
+> He has strengths at every level of the project stack, from system architecture, to frameworks, to implementing features, to UX, to some web site design, all the way up to suggesting features and improving the ones already scheduled. He is entirely reliable, managing his time and that of the people he brought on board, hitting his marks, and pretty consistently coming in under budget. He is committed to doing good work that does good in the world. He is a trustworthy and delightful person.
+>
+> <cite>David Weinberger</cite>
+
 [Green Commons] is a knowledge-sharing, learning platform for environmental research and action. It provides a place for people working on environmental issues to find and share resources, information, and ideas; to build networks; and to work collaboratively.
 
 Island Press, along with [David Weinberger](http://weinberger.org/), approached Gray Bike in 2016 to embark on an ambitious project. They wanted to build a knowledge-sharing and learning platform geared towards people working on environmental issues. When they approached us, it was just an idea with a few documents outlining features. Over the course of the next 12 months, we worked closely with the Island Press team to go from idea to design to launch.
