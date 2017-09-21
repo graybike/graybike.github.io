@@ -6,8 +6,6 @@ client: Soma Water
 site: https://www.drinksoma.com/
 ---
 
-<p class="text-center callout"><span>Update July 1st, 2017: Soma Water has been acquired by Full Circle Home, Inc.</span></p>
-
 > “Pavan has been our go-to guy to help with our engineering efforts at drinksoma.com. We came to him for help with a huge redesign of our e-commerce website. He was able to put a new face on our website and vastly improve the capabilities of our platform -- leading to many more sales and happier customers! He has a great ability to take our business problems and solve them with his engineering expertise. We look forward to continuing to work with him!”
 >
 > <cite>Mike Del Ponte, Founder & CEO of Soma Water</cite>
@@ -29,8 +27,6 @@ site: https://www.drinksoma.com/
 Gray Bike is proud  to say we’ve been Soma’s technical partner (think outsourced CTO) for almost three years now. **We’ve provided engineering services that have helped grow their subscriber count over 300%** over the course of our partnership. We provide a small team of engineers, working remotely, to manage their entire e-commerce website and engineering infrastructure.
 
 On an ongoing basis, we manage Soma's e-commerce website. This includes fixing bugs, making updates, and building out new features. We also monitor the website for security issues, performance, and make sure everything runs smoothly.
-
-In July 2017, they were acquired by Full Circle Home, Inc.
 
 ### Redesigning the new website
 
