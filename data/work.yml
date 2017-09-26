@@ -2,7 +2,7 @@ projects:
   - title: Designing and building an open-source platform from the ground up
     description: We worked with Island Press to design & build a new open-source knowledge-sharing and learning platform for environmental research and action.
     client_class: greencommons
-    site_link: https://greencommons.herokuapp.com/
+    site_link: https://greencommons.net/
     case_study: /work/green-commons
   - title: Visualizing Wootric's massive data set
     description: We helped Wootric with the wrangle & display their massive NPS score data set. We helped create a solid architecture for their front end team to build on well into the future.

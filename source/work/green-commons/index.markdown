@@ -3,7 +3,7 @@ title: Designing and building an open-source knowledge-sharing platform from the
 subheading: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
 tags: UX/UI Design, Front & Back-end Development (React, Rails, ElasticSearch), Product Strategy
 client: Island Press
-site: "https://greencommons.herokuapp.com"
+site: "https://greencommons.net"
 code: https://github.com/greencommons/commons
 ---
 
@@ -60,7 +60,7 @@ Following an agile approach, we are continuing to work on a weekly basis to make
 </p>
 
 
-[Green Commons]: https://greencommons.herokuapp.com
+[Green Commons]: https://greencommons.net
 [Check out the code on Github.]: https://github.com/greencommons/commons
 [code base]: https://github.com/greencommons/commons
 [Follow along with us!]: https://github.com/greencommons/commons
